@@ -6,9 +6,9 @@ import java.util.Map;
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Address;
 import br.com.uniCad.utils.deserializers.AddressDeserializer;
-import br.com.uniCad.utils.deserializers.Deserializer;
+import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
-public class AddressDao extends Dao<Address> {
+public class AddressDao extends AbstractDao<Address> {
 
 	public AddressDao() {
 		super(Address.class);
@@ -22,7 +22,7 @@ public class AddressDao extends Dao<Address> {
 	}
 
 	@Override
-	protected Deserializer getDeserializer() {
+	protected AbstractDeserializer getDeserializer() {
 		// TODO Auto-generated method stub
 		return new AddressDeserializer();
 	}

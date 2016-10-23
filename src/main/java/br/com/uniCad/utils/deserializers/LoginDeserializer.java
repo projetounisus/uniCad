@@ -9,7 +9,7 @@ import org.jooq.Result;
 import br.com.uniCad.beans.Address;
 import br.com.uniCad.beans.Login;
 
-public class LoginDeserializer extends Deserializer<Login> {
+public class LoginDeserializer extends AbstractDeserializer<Login> {
 
 	@Override
 	public List<Login> fromDataBaseResult(Result<Record> result) {

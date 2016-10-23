@@ -31,10 +31,10 @@ import static org.jooq.impl.DSL.field;
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.constants.Constants;
 import br.com.uniCad.utils.Mapper;
-import br.com.uniCad.utils.deserializers.Deserializer;
+import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
-public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> {
-	public Dao(Class<?> currentBeanClass){
+public abstract class AbstractDao<T extends AbstractBean> implements Crud<AbstractBean> {
+	public AbstractDao(Class<?> currentBeanClass){
 		this.currentClassBean = currentBeanClass;
 	}
 	
@@ -88,7 +88,7 @@ public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> 
 				
 				if(propValue instanceof AbstractBean){
 					AbstractBean beanPropValue = (AbstractBean)propValue;
-					Dao foreignKeyDao = Mapper.beanToDao(beanPropValue);
+					AbstractDao foreignKeyDao = Mapper.beanToDao(beanPropValue);
 					propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto é reatribuição, consertar
 				}
 				
@@ -131,7 +131,7 @@ public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> 
 			
 			Result<Record> result = query.select().from(table(getTableName())).fetch();
 			
-			Deserializer<T> deserializer = this.getDeserializer();
+			AbstractDeserializer<T> deserializer = this.getDeserializer();
 			List<T> deserializedResult = deserializer.fromDataBaseResult(result);
 			
 			return (List<AbstractBean>) deserializedResult;
@@ -155,7 +155,7 @@ public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> 
 			
 			Record record = result.get(0);
 			
-			Deserializer<T> deserializer = this.getDeserializer();
+			AbstractDeserializer<T> deserializer = this.getDeserializer();
 			T deserializedRecord = deserializer.fromDataBaseRecord(record);
 			
 			return deserializedRecord;
@@ -180,7 +180,7 @@ public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> 
 			
 			Record record = result.get(0);
 			
-			Deserializer<T> deserializer = this.getDeserializer();
+			AbstractDeserializer<T> deserializer = this.getDeserializer();
 			T deserializedRecord = deserializer.fromDataBaseRecord(record);
 			
 			return deserializedRecord;
@@ -200,7 +200,7 @@ public abstract class Dao<T extends AbstractBean> implements Crud<AbstractBean> 
 	
 	//TODO: ver se é possível deslocar esta função para a AbstractBean de forma estática 
 	protected abstract String getTableName();
-	protected abstract Deserializer<T> getDeserializer();
+	protected abstract AbstractDeserializer<T> getDeserializer();
 	public abstract Map<String, String> getMapColumnToProperty();
 	protected abstract int insertInheritance(AbstractBean bean);
 	protected abstract boolean hasInheritance();

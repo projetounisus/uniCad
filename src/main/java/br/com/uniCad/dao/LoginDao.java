@@ -17,10 +17,10 @@ import org.jooq.impl.DSL;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Login;
-import br.com.uniCad.utils.deserializers.Deserializer;
+import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.LoginDeserializer;
 
-public class LoginDao extends Dao<Login> {
+public class LoginDao extends AbstractDao<Login> {
 
 	public LoginDao() {
 		super(Login.class);
@@ -33,7 +33,7 @@ public class LoginDao extends Dao<Login> {
 	}
 
 	@Override
-	protected Deserializer getDeserializer() {
+	protected AbstractDeserializer getDeserializer() {
 		// TODO Auto-generated method stub
 		return new LoginDeserializer();
 	}

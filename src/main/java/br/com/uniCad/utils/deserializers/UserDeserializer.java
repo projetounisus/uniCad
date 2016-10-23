@@ -15,7 +15,7 @@ import br.com.uniCad.beans.User;
 import br.com.uniCad.dao.AddressDao;
 import br.com.uniCad.dao.LoginDao;
 
-public class UserDeserializer extends Deserializer<User>{
+public class UserDeserializer extends AbstractDeserializer<User>{
 
 	@Override
 	public List<User> fromDataBaseResult(Result<Record> data) {

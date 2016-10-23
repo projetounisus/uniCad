@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.uniCad.beans.User;
 import br.com.uniCad.controllers.AbstractControllerRest;
-import br.com.uniCad.dao.Dao;
+import br.com.uniCad.dao.AbstractDao;
 import br.com.uniCad.dao.UserDao;
 
 @Controller
@@ -13,7 +13,7 @@ import br.com.uniCad.dao.UserDao;
 public class ControllerRestUser extends AbstractControllerRest<User>{
 
 	@Override
-	protected Dao getDao() {
+	protected AbstractDao getDao() {
 		// TODO Auto-generated method stub
 		return new UserDao();
 	}

@@ -12,7 +12,7 @@ import br.com.uniCad.beans.AtendimentUnity;
 import br.com.uniCad.constants.Constants.AtendimentUnityType;
 import br.com.uniCad.dao.AddressDao;
 
-public class AtendimentUnityDeserializer extends Deserializer<AtendimentUnity> {
+public class AtendimentUnityDeserializer extends AbstractDeserializer<AtendimentUnity> {
 
 	@Override
 	public List<AtendimentUnity> fromDataBaseResult(Result<Record> result) {

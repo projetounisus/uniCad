@@ -7,7 +7,7 @@ import org.jooq.Result;
 
 import br.com.uniCad.beans.AbstractBean;
 
-public abstract class Deserializer<T extends AbstractBean>{
+public abstract class AbstractDeserializer<T extends AbstractBean>{
 	abstract public List<T> fromDataBaseResult(Result<Record> result);
 	abstract public T fromDataBaseRecord(Record record);
 }

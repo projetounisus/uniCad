@@ -5,10 +5,10 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.SusProfessional;
-import br.com.uniCad.utils.deserializers.Deserializer;
+import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.SusProfessionalDeserializer;
 
-public class SusProfessionalDao extends Dao<SusProfessional> {
+public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 
 	public SusProfessionalDao() {
 		super(SusProfessional.class);
@@ -21,7 +21,7 @@ public class SusProfessionalDao extends Dao<SusProfessional> {
 	}
 
 	@Override
-	protected Deserializer<SusProfessional> getDeserializer() {
+	protected AbstractDeserializer<SusProfessional> getDeserializer() {
 		// TODO Auto-generated method stub
 		return new SusProfessionalDeserializer();
 	}

@@ -14,7 +14,7 @@ import br.com.uniCad.beans.User;
 import br.com.uniCad.dao.AtendimentUnityDao;
 import br.com.uniCad.dao.UserDao;
 
-public class SusProfessionalDeserializer extends Deserializer<SusProfessional> {
+public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfessional> {
 
 	@Override
 	public List<SusProfessional> fromDataBaseResult(Result<Record> result) {

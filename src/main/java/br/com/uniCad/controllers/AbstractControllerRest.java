@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.uniCad.beans.AbstractBean;
-import br.com.uniCad.dao.Dao;
+import br.com.uniCad.dao.AbstractDao;
 
 public abstract class AbstractControllerRest<T extends AbstractBean> {
-	protected abstract Dao getDao();
+	protected abstract AbstractDao getDao();
 	
 	@RequestMapping(name = "/", method = RequestMethod.GET)
 	public ResponseEntity<List<T>> list(){
-		Dao dao = getDao();
+		AbstractDao dao = getDao();
 		List<T> result = dao.list();
 		
 		ResponseEntity<List<T>> responseEntity = new ResponseEntity(result, HttpStatus.OK);
@@ -25,7 +25,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 	
 	@RequestMapping(name = "/", method = RequestMethod.POST)
 	 public ResponseEntity insert(@RequestBody T bean){
-		 Dao dao = getDao();
+		 AbstractDao dao = getDao();
 		 
 		 dao.insert(bean);
 		 

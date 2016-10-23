@@ -1,41 +1,33 @@
 package br.com.uniCad.dao;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
-import br.com.uniCad.beans.AtendimentUnity;
-import br.com.uniCad.utils.deserializers.AtendimentUnityDeserializer;
+import br.com.uniCad.beans.Pacient;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
-public class AtendimentUnityDao extends AbstractDao<AtendimentUnity> {
+public class PacientDao extends AbstractDao<Pacient>{
 
-	public AtendimentUnityDao() {
-		super(AtendimentUnity.class);
-		// TODO Auto-generated constructor stub
+	public PacientDao() {
+		super(Pacient.class);
 	}
 
 	@Override
 	protected String getTableName() {
 		// TODO Auto-generated method stub
-		return "unidade_atendimento";
+		return "usuario_comum";
 	}
 
 	@Override
-	protected AbstractDeserializer<AtendimentUnity> getDeserializer() {
+	protected AbstractDeserializer<Pacient> getDeserializer() {
 		// TODO Auto-generated method stub
-		return new AtendimentUnityDeserializer();
+		return null;
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
 		// TODO Auto-generated method stub
-		Map<String, String> map = new HashMap<String, String>();
-		map.put("endereco", "address");
-		map.put("nome", "name");
-		map.put("tipo", "type");
-		
-		return map;
+		return null;
 	}
 
 	@Override

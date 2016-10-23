@@ -8,22 +8,22 @@ import br.com.uniCad.beans.SusProfessional;
 import br.com.uniCad.beans.User;
 import br.com.uniCad.dao.AddressDao;
 import br.com.uniCad.dao.AtendimentUnityDao;
-import br.com.uniCad.dao.Dao;
+import br.com.uniCad.dao.AbstractDao;
 import br.com.uniCad.dao.LoginDao;
 import br.com.uniCad.dao.SusProfessionalDao;
 import br.com.uniCad.dao.UserDao;
 
 //FIXME: substtituir pela injeção de dependencias do Spring
 public class Mapper {
-	static public Dao beanToDao(AbstractBean bean){
+	static public AbstractDao beanToDao(AbstractBean bean){
 		
-		Dao dao = beanClassToDao(bean.getClass());
+		AbstractDao dao = beanClassToDao(bean.getClass());
 		
 		return dao;
 	}
 	
-	static public Dao beanClassToDao(Class clazz){
-		Dao dao;
+	static public AbstractDao beanClassToDao(Class clazz){
+		AbstractDao dao;
 		
 		if(clazz == Address.class)
 			dao = new AddressDao();

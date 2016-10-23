@@ -8,7 +8,7 @@ import org.jooq.Result;
 
 import br.com.uniCad.beans.Address;
 
-public class AddressDeserializer extends Deserializer<Address> {
+public class AddressDeserializer extends AbstractDeserializer<Address> {
 
 	@Override
 	public List<Address> fromDataBaseResult(Result<Record> result) {
