@@ -1,0 +1,21 @@
+@import "../../style.css";
+
+.register-container{
+	font-size: 15px;
+}
+
+.box {
+	position: relative;
+	border-radius: 3px;
+	background: #ffffff;
+	margin: 40px;
+	padding: 10px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	border-top: 3px solid #d2d6de;
+	border-top-color: #3c8dbc;
+	padding: 10px
+}
+s
+.box h3{
+	font-size: 15;
+}

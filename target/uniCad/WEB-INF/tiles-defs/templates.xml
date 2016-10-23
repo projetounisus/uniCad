@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="defaultTemplate" template="/pages/templateTiles/template.jsp">
+		<put-attribute name="head" value="/pages/templateTiles/defaultHead.jsp"/>
+		<put-attribute name="header" value="/pages/templateTiles/defaultHeader.jsp"/>
+		<put-attribute name="content" value=""/>
+	</definition>
+		
+	<definition name="login" extends="defaultTemplate">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="content" value="/pages/login.jsp"/>
+	</definition>
+	
+	<definition name="/forms/formUsuario" template="/pages/templateTiles/formDivTemplate.jsp">
+		<put-attribute name="content" value="/pages/forms/formUsuario.jsp"/>
+	</definition>
+	
+	<definition name="formTemplate" extends="defaultTemplate">
+		<put-attribute name="content" value="/pages/templateTiles/formTemplate.jsp"/>
+	</definition>
+	
+	<definition name="/forms/formRegistro" extends="defaultTemplate">
+		<put-attribute name="content" value="/pages/forms/formRegistro.jsp"/>
+	</definition>
+	
+	<definition name="mainPage" extends="defaultTemplate">
+		<put-attribute name="content" value="/pages/mainPage.jsp"/>
+	</definition>
+	
+</tiles-definitions>

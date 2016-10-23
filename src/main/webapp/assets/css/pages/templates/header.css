@@ -1,0 +1,28 @@
+@import "../../style.css";
+
+.main-header {
+  position: relative;
+  max-height: 50px;
+  z-index: 1030;
+	background-color: #3c8dbc;
+}
+
+.main-header.navbar {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+  margin-top: 0;
+  margin-left: 230px;
+  border: none;
+  min-height: 50px;
+  border-radius: 0;
+}
+
+.user-name{
+	float:right;
+	margin-right: 40px;
+}
+
+.logo-unisus{
+	float:left;
+}

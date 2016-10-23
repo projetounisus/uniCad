@@ -1,0 +1,11 @@
+@import "tileBox.css";
+
+.box button{
+	width: 150px;
+	right: 0px;
+	margin: 10px;
+}
+
+.box h2{
+	margin:25px;
+}
