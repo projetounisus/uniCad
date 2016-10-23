@@ -2,6 +2,15 @@ package br.com.uniCad.beans;
 
 public class Pacient extends AbstractBean{
 	private String cns;
+	private CurrentMedicStatus currentMedicStatus;
+
+	public CurrentMedicStatus getCurrentMedicStatus() {
+		return currentMedicStatus;
+	}
+
+	public void setCurrentMedicStatus(CurrentMedicStatus currentMedicStatus) {
+		this.currentMedicStatus = currentMedicStatus;
+	}
 
 	public String getCns() {
 		return cns;

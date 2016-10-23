@@ -2,7 +2,7 @@ package br.com.uniCad.beans;
 
 import java.util.Date;
 
-public class Register extends AbstractBean{
+public class MedicRegister extends AbstractBean{
 	private Address registerLocal;
 	private Date beginDate;
 	private Date endDate;
@@ -52,7 +52,7 @@ public class Register extends AbstractBean{
 	public void setResponsible(SusProfessional responsible) {
 		this.responsible = responsible;
 	}
-	public Register(int id, Address registerLocal, Date beginDate, Date endDate, String description,
+	public MedicRegister(int id, Address registerLocal, Date beginDate, Date endDate, String description,
 			AtendimentUnity atendimentUnity, Pacient pacient, SusProfessional responsible) {
 		super(id);
 		this.registerLocal = registerLocal;
@@ -63,7 +63,7 @@ public class Register extends AbstractBean{
 		this.pacient = pacient;
 		this.responsible = responsible;
 	}
-	public Register(Address registerLocal, Date beginDate, Date endDate, String description,
+	public MedicRegister(Address registerLocal, Date beginDate, Date endDate, String description,
 			AtendimentUnity atendimentUnity, Pacient pacient, SusProfessional responsible) {
 		super();
 		this.registerLocal = registerLocal;
@@ -74,7 +74,7 @@ public class Register extends AbstractBean{
 		this.pacient = pacient;
 		this.responsible = responsible;
 	}
-	public Register() {
+	public MedicRegister() {
 		super();
 	}
 }
