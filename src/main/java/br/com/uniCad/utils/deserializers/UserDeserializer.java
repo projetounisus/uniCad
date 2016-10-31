@@ -19,7 +19,6 @@ public class UserDeserializer extends AbstractDeserializer<User>{
 
 	@Override
 	public List<User> fromDataBaseResult(Result<Record> data) {
-		// TODO: Aplicar dynamic functions do java8 para melhor legibilidade
 		final List<User> deserialized = new ArrayList<User>();
 		
 		for(Record current : data){

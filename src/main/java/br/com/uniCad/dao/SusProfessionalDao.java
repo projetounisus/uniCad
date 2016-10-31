@@ -16,24 +16,17 @@ public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 
 	@Override
 	protected String getTableName() {
-		// TODO Auto-generated method stub
 		return "profissional_sus";
 	}
 
 	@Override
 	protected AbstractDeserializer<SusProfessional> getDeserializer() {
-		// TODO Auto-generated method stub
 		return new SusProfessionalDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
-		// TODO Auto-generated method stub
-//		UserDao userDao = new UserDao();
-//		Map<String, String> userMap = userDao.getMapColumnToProperty();
-//		
 		Map<String, String> map = new HashMap<String, String>();
-//		map.putAll(userMap);
 		map.put("unidade_atendimento", "atendimentUnity");
 		map.put("crm", "crm");
 		
@@ -42,7 +35,6 @@ public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
-		// TODO Auto-generated method stub
 		UserDao userDao = new UserDao();
 		int id = userDao.insert(bean);
 		
@@ -51,7 +43,6 @@ public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 
 	@Override
 	protected boolean hasInheritance() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 

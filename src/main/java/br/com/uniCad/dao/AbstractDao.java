@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -14,13 +13,10 @@ import java.util.Map.Entry;
 
 import org.jooq.DSLContext;
 import org.jooq.Field;
-import org.jooq.InsertSetMoreStep;
-import org.jooq.InsertSetStep;
 import org.jooq.SQLDialect;
-import org.jooq.Table;
+import org.jooq.UpdateSetFirstStep;
+import org.jooq.UpdateSetMoreStep;
 import org.jooq.impl.DSL;
-
-import com.fasterxml.jackson.databind.deser.impl.PropertyValue;
 
 import org.jooq.Record;
 import org.jooq.Result;
@@ -41,6 +37,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	private Class<?> currentClassBean;
 	static private Connection connection;
 	
+	// TODO: porque está público? 
 	public Connection getConnection() throws SQLException, ClassNotFoundException {
 		if(connection == null)
 		{
@@ -67,6 +64,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			
 			int beanId = bean.getId();
 			
+			// Casa haja herança, insere os dados do bean em todas as "super-tabelas"
 			if(this.hasInheritance())
 				beanId = this.insertInheritance(bean);
 			
@@ -86,10 +84,20 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 				declaredField.setAccessible(true);
 				Object propValue = declaredField.get(bean);
 				
+				// tratando chave estrangeira
 				if(propValue instanceof AbstractBean){
 					AbstractBean beanPropValue = (AbstractBean)propValue;
-					AbstractDao foreignKeyDao = Mapper.beanToDao(beanPropValue);
-					propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto é reatribuição, consertar
+					
+					//Caso não haja linha srefrenciada, insere na tabela referenciada
+					if(beanPropValue.getId() ==  0)
+					{
+						AbstractDao foreignKeyDao = Mapper.beanToDao(beanPropValue);
+						propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto é reatribuição, consertar
+					}
+					else //Casa haja linha referenciada, user seu Id
+					{
+						propValue = beanPropValue.getId();
+					}
 				}
 				
 				columns.add(field(columnName));
@@ -121,6 +129,47 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	
 	public void update(AbstractBean bean) {
 		// TODO Auto-generated method stub
+		
+		try {
+			Connection currentConnection = getConnection();
+			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
+			
+			UpdateSetFirstStep<Record> updateQuery = query.update(table(getTableName()));
+			
+			Map<String, String> mapColumnToProperty = this.getMapColumnToProperty();
+			UpdateSetMoreStep<Record> setQuery = updateQuery.set(field("id"),  bean.getId());
+			
+			for(Entry<String, String> currentMap :mapColumnToProperty.entrySet())
+			{
+				java.lang.reflect.Field declaredField = this.currentClassBean.getDeclaredField(currentMap.getValue());
+				Object value = declaredField.get(bean);
+				
+				String currentColumn = currentMap.getKey();
+				setQuery = updateQuery.set(field(currentColumn), value);
+			}
+			
+			setQuery.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 
@@ -168,7 +217,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 		return null;
 	}
 	
-	//TODO: reduzir estaa repetição de código
+	//TODO: reduzir esta repetição de código
 	public AbstractBean getByName(String name){
 		Connection currentConnection;
 		try {

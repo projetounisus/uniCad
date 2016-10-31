@@ -6,7 +6,7 @@ import br.com.uniCad.constants.Constants.AtendimentUnityType;
 public class AtendimentUnity extends AbstractBean {
 	private Address address;
 	private String name;
-	private AtendimentUnityType type;
+	private String  unityType;
 	public Address getAddress() {
 		return address;
 	}
@@ -19,24 +19,24 @@ public class AtendimentUnity extends AbstractBean {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Constants.AtendimentUnityType getType() {
-		return type;
+	public String getUnityType() {
+		return unityType;
 	}
-	public void setType(Constants.AtendimentUnityType type) {
-		this.type = type;
+	public void setUnityType(String type) {
+		this.unityType = type;
 	}
 	
-	public AtendimentUnity(int id, Address address, String name, AtendimentUnityType type) {
+	public AtendimentUnity(int id, Address address, String name, String type) {
 		super(id);
 		this.address = address;
 		this.name = name;
-		this.type = type;
+		this.unityType = type;
 	}
-	public AtendimentUnity(Address address, String name, AtendimentUnityType type) {
+	public AtendimentUnity(Address address, String name, String type) {
 		super();
 		this.address = address;
 		this.name = name;
-		this.type = type;
+		this.unityType = type;
 	}
 	public AtendimentUnity() {
 		super();

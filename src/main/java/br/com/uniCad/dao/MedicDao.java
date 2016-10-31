@@ -4,50 +4,50 @@ import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
-import br.com.uniCad.beans.AtendimentUnity;
-import br.com.uniCad.utils.deserializers.AtendimentUnityDeserializer;
+import br.com.uniCad.beans.Medic;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
+import br.com.uniCad.utils.deserializers.MedicDeserializer;
 
-public class AtendimentUnityDao extends AbstractDao<AtendimentUnity> {
+public class MedicDao extends AbstractDao<Medic>{
 
-	public AtendimentUnityDao() {
-		super(AtendimentUnity.class);
+	public MedicDao() {
+		super(Medic.class);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	protected String getTableName() {
 		// TODO Auto-generated method stub
-		return "unidade_atendimento";
+		return "medico";
 	}
 
 	@Override
-	protected AbstractDeserializer<AtendimentUnity> getDeserializer() {
+	protected AbstractDeserializer<Medic> getDeserializer() {
 		// TODO Auto-generated method stub
-		return new AtendimentUnityDeserializer();
+		return new MedicDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
 		// TODO Auto-generated method stub
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("endereco", "address");
-		map.put("nome", "name");
-		map.put("tipo", "unityType");
-		
+		map.put("especialidade", "speciality");
 		return map;
 	}
 
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
 		// TODO Auto-generated method stub
-		return 0;
+		SusProfessionalDao susProfessionalDao = new SusProfessionalDao();
+		int id = susProfessionalDao.insert(bean);
+		
+		return id;
 	}
 
 	@Override
 	protected boolean hasInheritance() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

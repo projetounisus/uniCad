@@ -6,7 +6,6 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Address;
 import br.com.uniCad.beans.AtendimentUnity;
 import br.com.uniCad.constants.Constants.AtendimentUnityType;
@@ -32,12 +31,10 @@ public class AtendimentUnityDeserializer extends AbstractDeserializer<Atendiment
 		String id = record.get("id").toString();
 		String name = (String)record.get("nome");
 		String addressId = record.get("endereco").toString();
-		
+		String type = record.get("tipo").toString();
 		
 		AddressDao addressDao = new AddressDao();
 		Address address = (Address) addressDao.getById(Integer.parseInt(addressId));
-		
-		AtendimentUnityType type = AtendimentUnityType.Clinic;
 		
 		AtendimentUnity atendimentUnity = new AtendimentUnity(Integer.parseInt(id), 
 				address,

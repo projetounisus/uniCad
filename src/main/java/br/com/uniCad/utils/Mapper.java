@@ -4,12 +4,14 @@ import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Address;
 import br.com.uniCad.beans.AtendimentUnity;
 import br.com.uniCad.beans.Login;
+import br.com.uniCad.beans.Speciality;
 import br.com.uniCad.beans.SusProfessional;
 import br.com.uniCad.beans.User;
 import br.com.uniCad.dao.AddressDao;
 import br.com.uniCad.dao.AtendimentUnityDao;
 import br.com.uniCad.dao.AbstractDao;
 import br.com.uniCad.dao.LoginDao;
+import br.com.uniCad.dao.SpecialityDao;
 import br.com.uniCad.dao.SusProfessionalDao;
 import br.com.uniCad.dao.UserDao;
 
@@ -35,7 +37,9 @@ public class Mapper {
 			dao = new SusProfessionalDao();
 		else if(clazz == AtendimentUnity.class)
 			dao = new AtendimentUnityDao();
-		else
+		else if(clazz == Speciality.class)
+			dao = new SpecialityDao();
+		else	
 			dao = null;
 		
 		return dao;
