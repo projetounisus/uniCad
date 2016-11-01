@@ -44,7 +44,8 @@ public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfess
 				partialBean.getBirthDate(), 
 				partialBean.getAddress(), 
 				partialBean.getLogin(), 
-				antendimentUnity, crm);
+				antendimentUnity, 
+				crm);
 		
 		return susProfessional;
 	}

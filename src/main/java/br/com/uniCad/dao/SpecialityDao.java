@@ -6,6 +6,7 @@ import java.util.Map;
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Speciality;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
+import br.com.uniCad.utils.deserializers.SpecialityDeserializer;
 
 public class SpecialityDao extends AbstractDao<Speciality> {
 
@@ -22,7 +23,7 @@ public class SpecialityDao extends AbstractDao<Speciality> {
 	@Override
 	protected AbstractDeserializer<Speciality> getDeserializer() {
 		// TODO Auto-generated method stub
-		return null;
+		return new SpecialityDeserializer();
 	}
 
 	@Override

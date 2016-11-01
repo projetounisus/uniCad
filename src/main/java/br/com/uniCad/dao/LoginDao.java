@@ -81,6 +81,7 @@ public class LoginDao extends AbstractDao<Login> {
 			e.printStackTrace();
 		}
 		
-		return null;	}
+		return null;	
+	}
 
 }

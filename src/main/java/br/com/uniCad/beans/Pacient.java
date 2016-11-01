@@ -1,6 +1,8 @@
 package br.com.uniCad.beans;
 
-public class Pacient extends AbstractBean{
+import java.util.Date;
+
+public class Pacient extends User{
 	private String cns;
 	private CurrentMedicStatus currentMedicStatus;
 
@@ -20,9 +22,11 @@ public class Pacient extends AbstractBean{
 		this.cns = cns;
 	}
 
-	public Pacient(int id, String cns) {
-		super(id);
+	public Pacient(int id, String completeName, String telephone, Date birthDate, Address address, Login login,
+			String cns, CurrentMedicStatus currentMedicStatus) {
+		super(id, completeName, telephone, birthDate, address, login);
 		this.cns = cns;
+		this.currentMedicStatus = currentMedicStatus;
 	}
 
 	public Pacient(String cns) {

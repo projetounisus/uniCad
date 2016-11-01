@@ -1,10 +1,12 @@
 package br.com.uniCad.dao;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Pacient;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
+import br.com.uniCad.utils.deserializers.PacientDeserializer;
 
 public class PacientDao extends AbstractDao<Pacient>{
 
@@ -14,32 +16,34 @@ public class PacientDao extends AbstractDao<Pacient>{
 
 	@Override
 	protected String getTableName() {
-		// TODO Auto-generated method stub
 		return "usuario_comum";
 	}
 
 	@Override
 	protected AbstractDeserializer<Pacient> getDeserializer() {
-		// TODO Auto-generated method stub
-		return null;
+		return new PacientDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
-		// TODO Auto-generated method stub
-		return null;
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("numero_cns", "cns");
+		map.put("estado_atual", "currentMedicStatus");
+		
+		return map;
 	}
 
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
-		// TODO Auto-generated method stub
-		return 0;
+		UserDao userDao = new UserDao();
+		int id = userDao.insert(bean);
+
+		return id;
 	}
 
 	@Override
 	protected boolean hasInheritance() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

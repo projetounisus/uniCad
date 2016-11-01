@@ -3,14 +3,18 @@ package br.com.uniCad.utils;
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Address;
 import br.com.uniCad.beans.AtendimentUnity;
+import br.com.uniCad.beans.CurrentMedicStatus;
 import br.com.uniCad.beans.Login;
+import br.com.uniCad.beans.Pacient;
 import br.com.uniCad.beans.Speciality;
 import br.com.uniCad.beans.SusProfessional;
 import br.com.uniCad.beans.User;
 import br.com.uniCad.dao.AddressDao;
 import br.com.uniCad.dao.AtendimentUnityDao;
+import br.com.uniCad.dao.CurrentMedicStatusDao;
 import br.com.uniCad.dao.AbstractDao;
 import br.com.uniCad.dao.LoginDao;
+import br.com.uniCad.dao.PacientDao;
 import br.com.uniCad.dao.SpecialityDao;
 import br.com.uniCad.dao.SusProfessionalDao;
 import br.com.uniCad.dao.UserDao;
@@ -39,7 +43,11 @@ public class Mapper {
 			dao = new AtendimentUnityDao();
 		else if(clazz == Speciality.class)
 			dao = new SpecialityDao();
-		else	
+		else if(clazz == Pacient.class)
+			dao = new PacientDao();
+		else if(clazz == CurrentMedicStatus.class)
+			dao = new CurrentMedicStatusDao();
+		else
 			dao = null;
 		
 		return dao;

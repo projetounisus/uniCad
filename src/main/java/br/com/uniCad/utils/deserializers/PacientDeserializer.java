@@ -6,8 +6,11 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.MedicRegister;
+import br.com.uniCad.beans.CurrentMedicStatus;
 import br.com.uniCad.beans.Pacient;
+import br.com.uniCad.beans.User;
+import br.com.uniCad.dao.CurrentMedicStatusDao;
+import br.com.uniCad.dao.UserDao;
 
 public class PacientDeserializer extends AbstractDeserializer<Pacient> {
 
@@ -24,8 +27,26 @@ public class PacientDeserializer extends AbstractDeserializer<Pacient> {
 
 	@Override
 	public Pacient fromDataBaseRecord(Record record) {
-		// TODO Auto-generated method stub
-		return null;
+		String idStr = record.get("id").toString();
+		String currentStatusIdStr = record.get("estado_atual").toString();
+		String cns = record.get("numero_cns").toString();
+		
+		UserDao userDao = new UserDao();
+		User partialBean = (User)userDao.getById(Integer.parseInt(idStr));
+		
+		CurrentMedicStatusDao currentMedicStatusDao = new CurrentMedicStatusDao();
+		CurrentMedicStatus currentMedicStatus = (CurrentMedicStatus)currentMedicStatusDao.getById(Integer.parseInt(currentStatusIdStr));
+		
+		Pacient pacient = new Pacient(Integer.parseInt(idStr), 
+				partialBean.getCompleteName(), 
+				partialBean.getTelephone(), 
+				partialBean.getBirthDate(), 
+				partialBean.getAddress(),
+				partialBean.getLogin(),
+				cns,
+				currentMedicStatus);
+		
+		return pacient;
 	}
 
 }

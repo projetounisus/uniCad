@@ -2,10 +2,12 @@ C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\AtendimentUnit
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\Medic.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\Pacient.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\controllers\AuthorizationController.java
+C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\controllersRest\ControllerRestPacient.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\UserDeserializer.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\Address.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\MedicRegister.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\dao\AddressDao.java
+C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\dao\CurrentMedicStatusDao.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\Login.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\AddressDeserializer.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\controllers\MainController.java
@@ -18,6 +20,7 @@ C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\AbstractBean.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\dao\MedicDao.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\dao\Crud.java
+C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\SusProfessionalDeserializer.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\User.java
 C:\Users\pixqu\workspace\uniCad\src\main\java\br\com\uniCad\beans\Speciality.java

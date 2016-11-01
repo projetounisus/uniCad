@@ -3,6 +3,7 @@ br\com\uniCad\dao\MedicDao.class
 br\com\uniCad\beans\User.class
 br\com\uniCad\dao\SusProfessionalDao.class
 br\com\uniCad\controllers\MainController.class
+br\com\uniCad\dao\CurrentMedicStatusDao.class
 br\com\uniCad\beans\MedicRegister.class
 br\com\uniCad\dao\AtendimentUnityDao.class
 br\com\uniCad\utils\deserializers\AtendimentUnityDeserializer.class
@@ -26,7 +27,9 @@ br\com\uniCad\controllersRest\ControllerRestSpeciality.class
 br\com\uniCad\controllersRest\ControllerRestUser.class
 br\com\uniCad\utils\deserializers\AddressDeserializer.class
 br\com\uniCad\beans\AbstractBean.class
+br\com\uniCad\controllersRest\ControllerRestPacient.class
 br\com\uniCad\dao\AddressDao.class
+br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.class
 br\com\uniCad\dao\LoginDao.class
 br\com\uniCad\constants\Constants$AtendimentUnityType.class
 br\com\uniCad\controllersRest\ControllerRestMedicRegister.class
