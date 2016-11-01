@@ -24,7 +24,7 @@ public class CurrentMedicStatusDeserializer extends AbstractDeserializer<Current
 	@Override
 	public CurrentMedicStatus fromDataBaseRecord(Record record) {
 		String idStr = record.get("id").toString();
-		String bloodType = record.get("tipo_saguineo").toString();
+		String bloodType = record.get("tipo_sanguineo").toString();
 		String weightStr = record.get("peso").toString();
 		String heightStr = record.get("altura").toString();
 		String allergies = record.get("alergia").toString();
