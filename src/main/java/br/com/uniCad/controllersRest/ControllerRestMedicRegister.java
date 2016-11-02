@@ -1,7 +1,6 @@
 package br.com.uniCad.controllersRest;
 
 import br.com.uniCad.beans.MedicRegister;
-import br.com.uniCad.controllers.AbstractControllerRest;
 import br.com.uniCad.dao.AbstractDao;
 import br.com.uniCad.dao.MedicRegisterDao;
 
