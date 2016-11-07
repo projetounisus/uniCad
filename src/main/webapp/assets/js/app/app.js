@@ -7,7 +7,7 @@ angular.module('app',['ngRoute'])
 	})
 	.when('/user-list', {
 		templateUrl: '/uniCad/appPages/usersPage',
-		controller: 'usersControllers'
+		controller: 'usersCtrl'
 	})
 	.otherwise('/');
 });
