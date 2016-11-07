@@ -9,14 +9,14 @@
 
 <input type="hidden" id="userId" value="${userId}"/>
 
-<header class="main-header">
+<header class="main-header" ng-controller="templateHeaderCtrl">
       <nav class="navbar">
         <h1 class="item logo-unisus">UniCad</h1>
 
         <div class="item user-name dropdown">
           <div class="dropdown">
             <div class="dropdown-toggle" type="button" id="loginOptions" data-toggle="dropdown">
-            	${userName}
+            	{{user.login.userName}}
             	<span class="caret"></span></div>
             <ul class="dropdown-menu item user-name dropdown" role="menu" aria-labelledby="loginOptions">
               <li role="presentation" id="editarOption"><a role="menuitem" tabindex="-1" href="#">Editar</a></li>

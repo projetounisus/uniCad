@@ -14,34 +14,5 @@
 	rel="stylesheet" type="text/css" />
 
 <div class="centered-div-horizontal">
-	<div>
-		<h3>Registros Recentes</h3>
-	</div>
 	
-	<div id="registerListContainer" class="register-list-container">
-
-		<script id="registersList" type="text/x-handlebars-template">
-          {{#each register}}
-            <div class="box box-primary register-container">
-              <h3><span>{{nome}}</span></h3>
-              <div>
-                <span><h4>Responsáveis</h4></span>
-                <div>
-                  {{#each profissionaisResponsaveis}}
-                    <span>{{this}}</span>
-                  {{/each}}
-                </div>
-
-                <span><h4>Pacientes</h4></span>
-                <div>
-                  {{#each pacientes}}
-                    <span>{{this}}</span>
-                  {{/each}}
-                </div>
-              </div>
-            </div>
-          {{/	each}}
-		</script>
-	</div>
-
 </div>

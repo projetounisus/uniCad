@@ -29,5 +29,9 @@
 	<definition name="mainPage" extends="defaultTemplate">
 		<put-attribute name="content" value="/pages/mainPage.jsp"/>
 	</definition>
+
+	<definition name="homePage" template="/pages/appPages/appPageTemplate.jsp">
+		<put-attribute name="content" value="/pages/appPages/homePage.jsp"/>
+	</definition>
 	
 </tiles-definitions>

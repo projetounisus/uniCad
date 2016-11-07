@@ -194,7 +194,7 @@
 		                <goal>copy-resources</goal>
 		            </goals>
 		            <configuration>
-	                	<outputDirectory>C:/apache-tomcat-8.5.4/webapps/uniSusWeb/pages</outputDirectory>
+	                	<outputDirectory>C:/tomcat/apache-tomcat-9.0.0.M11/webapps/uniSusWeb/pages</outputDirectory>
 	                	<resources>          
 	                    	<resource>
 	                        <directory>src/main/webapp/pages</directory>
@@ -219,7 +219,7 @@
                <version>2.0</version>
                <configuration>
                    <warName>uniCad</warName>
-                   <outputDirectory>C:/apache-tomcat-8.5.4/webapps</outputDirectory>
+                   <outputDirectory>C:/tomcat/apache-tomcat-9.0.0.M11/webapps</outputDirectory>
                </configuration>
 		</plugin>
 	</plugins>

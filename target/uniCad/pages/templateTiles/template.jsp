@@ -13,8 +13,11 @@
 	<title>UniCad</title>
 	<tiles:insertAttribute name="head"/>
 </head>
-<body>
+<body ng-app="app">
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="content"/>
+
+	<div ng-view>
+	</div>
 </body>
 </html>

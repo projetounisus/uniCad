@@ -7,6 +7,6 @@ public class Constants {
 	}
 	
 	final static public String userNameDataBase = "root";
-	final static public String userPasswordDataBase = "!uniaodosus123!";
+	final static public String userPasswordDataBase = "1s22S23p6database";
 	final static public String connectionString = "jdbc:mysql://localhost:3306/unisus";
 }
