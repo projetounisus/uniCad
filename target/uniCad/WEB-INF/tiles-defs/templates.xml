@@ -33,5 +33,9 @@
 	<definition name="homePage" template="/pages/appPages/appPageTemplate.jsp">
 		<put-attribute name="content" value="/pages/appPages/homePage.jsp"/>
 	</definition>
-	
+
+	<definition name="usersPage" template="/pages/appPages/appPageTemplate.jsp">
+		<put-attribute name="content" value="/pages/appPages/usersPage.jsp"/>
+	</definition>
+
 </tiles-definitions>

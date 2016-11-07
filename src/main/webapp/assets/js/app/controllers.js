@@ -6,9 +6,9 @@ angular.module('app')
 		$scope.user = user;
 	});
 }])
-.controller('mainPageCtrl', ['$scope', '$location', function($scope, $location){
+.controller('mainPageCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
 	$scope.listUsers = function(){
-		$location.path = "/user-list";
+		$location.path("/user-list");
 	};	
 }])
 .controller('usersCtrl', ['$scope', 'usersService', function($scope, usersService){
