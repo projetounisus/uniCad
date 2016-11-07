@@ -9,7 +9,7 @@ angular.module('app')
 .service('usersService', ['$http', function($http){
 	return {
 		getUsers: function(){
-			return http.get('users');
+			return $http.get('user');
 		}
 	};
 }]);
