@@ -14,6 +14,6 @@
 				</div>
 			</div>
 		</div>
-	</div>>
+	</div>
 	<button class="mdl-button mdl-button--fab"><i class="material-icons">add_circle</i></button>
 </div>

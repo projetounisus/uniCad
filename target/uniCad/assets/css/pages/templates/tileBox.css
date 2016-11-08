@@ -5,3 +5,7 @@
 	border-top: 3px solid rgb(63,81,181);
 	margin: 25px;
 }
+
+.mdl-card.box{
+	min-height:0px;
+}
