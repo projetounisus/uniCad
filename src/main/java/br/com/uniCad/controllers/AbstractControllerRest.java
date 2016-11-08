@@ -31,4 +31,11 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		 
 		 return new ResponseEntity<T>(HttpStatus.OK);
 	 }
+
+	 @RequestMapping(name = "/", method = RequestMethod.PUT)
+	 public ResponseEntity<?> update(@RequestBody T bean){
+		//TODO: implementar esta jeringonça
+
+		 return null;
+	 }
 }

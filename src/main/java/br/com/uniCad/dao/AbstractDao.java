@@ -37,7 +37,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	private Class<?> currentClassBean;
 	static private Connection connection;
 	
-	// TODO: porque está público? 
+	// TODO: porque estï¿½ pï¿½blico? 
 	public Connection getConnection() throws SQLException, ClassNotFoundException {
 		if(connection == null)
 		{
@@ -64,7 +64,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			
 			int beanId = bean.getId();
 			
-			// Casa haja herança, insere os dados do bean em todas as "super-tabelas"
+			// Casa haja heranï¿½a, insere os dados do bean em todas as "super-tabelas"
 			if(this.hasInheritance())
 				beanId = this.insertInheritance(bean);
 			
@@ -88,11 +88,11 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 				if(propValue instanceof AbstractBean){
 					AbstractBean beanPropValue = (AbstractBean)propValue;
 					
-					//Caso não haja linha srefrenciada, insere na tabela referenciada
+					//Caso nï¿½o haja linha srefrenciada, insere na tabela referenciada
 					if(beanPropValue.getId() ==  0)
 					{
 						AbstractDao foreignKeyDao = Mapper.beanToDao(beanPropValue);
-						propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto é reatribuição, consertar
+						propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto ï¿½ reatribuiï¿½ï¿½o, consertar
 					}
 					else //Casa haja linha referenciada, user seu Id
 					{
@@ -172,7 +172,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 		
 		
 	}
-
+	
 	public List<AbstractBean> list() {
 		try {
 			Connection currentConnection = getConnection();
@@ -217,7 +217,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 		return null;
 	}
 	
-	//TODO: reduzir esta repetição de código
+	//TODO: reduzir esta repetiÃ§Ã£o de cÃ³digo
 	public AbstractBean getByName(String name){
 		Connection currentConnection;
 		try {
@@ -242,12 +242,36 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 		return null;
 	}
 	
+	// Ou faÃ§o um join para trazer os ids relacionados a ele, ou tenho de receber o objeto inteiro
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		try {
+			Connection currentConnection = getConnection();
+			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
+
+			Map<String, String> mapColumnToProperty = this.getMapColumnToProperty();
+
+			for(Entry<String, String> currentEntry : mapColumnToProperty.entrySet()){
+				String property = currentEntry.getValue();
+
+				java.lang.reflect.Field declaredField = this.currentClassBean.getDeclaredField(property);
+
+				// tratando chave estrangeira
+				if(declaredField.getClass().isAssignableFrom(AbstractBean.class)){
+					
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		}
+
 	}
 	
-	//TODO: ver se é possível deslocar esta função para a AbstractBean de forma estática 
+	//TODO: ver se ï¿½ possï¿½vel deslocar esta funï¿½ï¿½o para a AbstractBean de forma estï¿½tica 
 	protected abstract String getTableName();
 	protected abstract AbstractDeserializer<T> getDeserializer();
 	public abstract Map<String, String> getMapColumnToProperty();
