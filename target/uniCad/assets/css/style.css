@@ -4,7 +4,7 @@ html { width: 100%; height:100%; overflow:hidden; }
 
 body {
 	width: 100%;
-	height:100%;
+	height: 100%;
 	font-family: 'Open Sans', sans-serif;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
 	background-color: #eee;
@@ -50,12 +50,10 @@ body {
 	margin:5px;
 }
 
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url(../icons/ic_mode_edit_black_24px.svg) format('edit'),
-       url(../icons/ic_add_circle_black_24px.svg) format('add')
+.row-list-buttons{
+	float: right;
+}
+
+.row-list-title{
+	float: left;
 }

@@ -1,15 +1,7 @@
 @import "../../style.css";
 
-.register-container{
-	font-size: 15px;
-}
-
 .box {
 	border-radius: 3px;
 	border-top: 3px solid rgb(63,81,181);
 	margin: 25px;
-}
-
-.box h3{
-	font-size: 15;
 }

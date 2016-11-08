@@ -246,6 +246,8 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	public void delete(int id) {
 		// TODO Auto-generated method stub
 		try {
+			AbstractBean currentBean = this.getById(id);
+
 			Connection currentConnection = getConnection();
 			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
 
@@ -258,14 +260,22 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 
 				// tratando chave estrangeira
 				if(declaredField.getClass().isAssignableFrom(AbstractBean.class)){
-					
+					AbstractBean foreignBean = (AbstractBean)declaredField.get(currentBean);
+
+					AbstractDao abstractDao = Mapper.beanToDao(foreignBean);
+					abstractDao.delete(foreignBean.getId());
 				}
 			}
+
+			query.delete(table(this.getTableName())).where(field("id").equal(id));
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (NoSuchFieldException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		}
 

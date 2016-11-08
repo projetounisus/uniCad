@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.dao.AbstractDao;
@@ -37,5 +35,13 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		//TODO: implementar esta jeringonça
 
 		 return null;
+	 }
+
+	 @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
+	 public ResponseEntity delete(@PathVariable("id") int id){
+		 AbstractDao dao = this.getDao();
+		 dao.delete(id);
+
+		 return new ResponseEntity(HttpStatus.MULTI_STATUS.OK);
 	 }
 }
