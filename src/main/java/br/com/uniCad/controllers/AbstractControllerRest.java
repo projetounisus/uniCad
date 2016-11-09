@@ -12,7 +12,7 @@ import br.com.uniCad.dao.AbstractDao;
 public abstract class AbstractControllerRest<T extends AbstractBean> {
 	protected abstract AbstractDao getDao();
 	
-	@RequestMapping(name = "/", method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<T>> list(){
 		AbstractDao dao = getDao();
 		List<T> result = dao.list();
@@ -21,7 +21,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		return responseEntity;
 	}
 	
-	@RequestMapping(name = "/", method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST)
 	 public ResponseEntity insert(@RequestBody T bean){
 		 AbstractDao dao = getDao();
 		 
@@ -30,14 +30,14 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		 return new ResponseEntity<T>(HttpStatus.OK);
 	 }
 
-	 @RequestMapping(name = "/", method = RequestMethod.PUT)
+	 @RequestMapping(method = RequestMethod.PUT)
 	 public ResponseEntity<?> update(@RequestBody T bean){
 		//TODO: implementar esta jeringonça
 
 		 return null;
 	 }
 
-	 @RequestMapping(value="/{id}", method = RequestMethod.DELETE)
+	 @RequestMapping(method = RequestMethod.POST)
 	 public ResponseEntity delete(@PathVariable("id") int id){
 		 AbstractDao dao = this.getDao();
 		 dao.delete(id);
