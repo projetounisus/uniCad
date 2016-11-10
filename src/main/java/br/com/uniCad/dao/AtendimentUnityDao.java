@@ -5,8 +5,10 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.AtendimentUnity;
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.utils.deserializers.AtendimentUnityDeserializer;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
+import org.springframework.dao.DeadlockLoserDataAccessException;
 
 public class AtendimentUnityDao extends AbstractDao<AtendimentUnity> {
 
@@ -39,14 +41,16 @@ public class AtendimentUnityDao extends AbstractDao<AtendimentUnity> {
 	}
 
 	@Override
-	protected int insertInheritance(AbstractBean bean) {
-		// TODO Auto-generated method stub
+	protected int insertInheritance(AbstractBean bean){
 		return 0;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence {
+		throw new DoesntHaveInheritence();
 	}
 
 	@Override
 	protected boolean hasInheritance() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

@@ -11,8 +11,9 @@ import br.com.uniCad.dao.AbstractDao;
 
 public abstract class AbstractControllerRest<T extends AbstractBean> {
 	protected abstract AbstractDao getDao();
-	
-	@RequestMapping(method = RequestMethod.GET)
+	//TODO: implementar dee forma correta
+
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ResponseEntity<List<T>> list(){
 		AbstractDao dao = getDao();
 		List<T> result = dao.list();
@@ -21,24 +22,24 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		return responseEntity;
 	}
 	
-	@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	 public ResponseEntity insert(@RequestBody T bean){
 		 AbstractDao dao = getDao();
 		 
 		 dao.insert(bean);
 		 
-		 return new ResponseEntity<T>(HttpStatus.OK);
+		 return new ResponseEntity<T>(bean, HttpStatus.OK);
 	 }
 
-	 @RequestMapping(method = RequestMethod.PUT)
+	 @RequestMapping(value = "/update", method = RequestMethod.PUT)
 	 public ResponseEntity<?> update(@RequestBody T bean){
 		//TODO: implementar esta jeringonça
 
 		 return null;
 	 }
 
-	 @RequestMapping(method = RequestMethod.POST)
-	 public ResponseEntity delete(@PathVariable("id") int id){
+	 @RequestMapping(value ="/delete", method = RequestMethod.POST)
+	 public ResponseEntity delete(@RequestParam(value = "id", required = true) int id){
 		 AbstractDao dao = this.getDao();
 		 dao.delete(id);
 

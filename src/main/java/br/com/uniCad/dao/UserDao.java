@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import org.jooq.DSLContext;
 import org.jooq.Field;
 import org.jooq.Record;
@@ -57,6 +58,10 @@ public class UserDao extends AbstractDao<User>{
 	protected int insertInheritance(AbstractBean bean) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence {
+		throw new DoesntHaveInheritence();
 	}
 
 	@Override

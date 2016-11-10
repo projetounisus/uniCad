@@ -57,3 +57,19 @@ body {
 .row-list-title{
 	float: left;
 }
+
+.list-card{
+	margin: 10px;
+	min-height: 0px;
+}
+
+.add-bean{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	margin: 25px;
+}
+
+.list-card-title{
+	font-size: 20px;
+}

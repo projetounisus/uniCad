@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import org.jooq.DSLContext;
 import org.jooq.Field;
 import org.jooq.SQLDialect;
@@ -88,7 +89,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 				if(propValue instanceof AbstractBean){
 					AbstractBean beanPropValue = (AbstractBean)propValue;
 					
-					//Caso n�o haja linha srefrenciada, insere na tabela referenciada
+					//Caso n�o haja linha refrenciada, insere na tabela referenciada
 					if(beanPropValue.getId() ==  0)
 					{
 						AbstractDao foreignKeyDao = Mapper.beanToDao(beanPropValue);
@@ -123,7 +124,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return -1;
 	}
 	
@@ -251,6 +252,12 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			Connection currentConnection = getConnection();
 			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
 
+			if(this.hasInheritance()){
+				this.deleteInheritance(currentBean);
+			}
+
+			query.delete(table(this.getTableName())).where(field("id").equal(id)).execute();
+
 			Map<String, String> mapColumnToProperty = this.getMapColumnToProperty();
 
 			for(Entry<String, String> currentEntry : mapColumnToProperty.entrySet()){
@@ -258,16 +265,17 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 
 				java.lang.reflect.Field declaredField = this.currentClassBean.getDeclaredField(property);
 
+				declaredField.setAccessible(true);
+				Object propValue = declaredField.get(currentBean);
+
 				// tratando chave estrangeira
-				if(declaredField.getClass().isAssignableFrom(AbstractBean.class)){
+				if(propValue instanceof AbstractBean){
 					AbstractBean foreignBean = (AbstractBean)declaredField.get(currentBean);
 
 					AbstractDao abstractDao = Mapper.beanToDao(foreignBean);
 					abstractDao.delete(foreignBean.getId());
 				}
 			}
-
-			query.delete(table(this.getTableName())).where(field("id").equal(id));
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -277,6 +285,8 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
+		} catch (DoesntHaveInheritence doesntHaveInheritence) {
+			doesntHaveInheritence.printStackTrace();
 		}
 
 	}
@@ -285,7 +295,9 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	protected abstract String getTableName();
 	protected abstract AbstractDeserializer<T> getDeserializer();
 	public abstract Map<String, String> getMapColumnToProperty();
+	// TODO: esses métodos podem acessar o this?
 	protected abstract int insertInheritance(AbstractBean bean);
+	protected abstract void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence;
 	protected abstract boolean hasInheritance();
 	
 

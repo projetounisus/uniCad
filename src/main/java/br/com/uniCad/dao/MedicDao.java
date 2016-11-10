@@ -5,6 +5,7 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Medic;
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.MedicDeserializer;
 
@@ -42,6 +43,10 @@ public class MedicDao extends AbstractDao<Medic>{
 		int id = susProfessionalDao.insert(bean);
 		
 		return id;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) {
+
 	}
 
 	@Override

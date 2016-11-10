@@ -5,6 +5,7 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.MedicRegister;
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.MedicRegisterDeserializer;
 
@@ -29,7 +30,7 @@ public class MedicRegisterDao extends AbstractDao<MedicRegister> {
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubz
 		Map<String, String> map = new HashMap<String, String>();
 		
 		map.put("local_ocorrencia", "atendimentUnity");
@@ -47,6 +48,10 @@ public class MedicRegisterDao extends AbstractDao<MedicRegister> {
 	protected int insertInheritance(AbstractBean bean) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) {
+
 	}
 
 	@Override

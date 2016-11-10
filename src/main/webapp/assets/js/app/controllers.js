@@ -17,4 +17,29 @@ angular.module('app')
 	request.success(function(users){
 		$scope.users = users;
 	});
+
+	$scope.delete = function(bean){
+		var indexToRemove = $scope.users.indexOf(bean);
+		$scope.users.splice(indexToRemove, 1);
+
+		var request = usersService.delete(bean.id);
+
+		request.success(function(response){
+			console.log("bean: " + bean.id + " has deleted");
+		});
+	};
+
+	$scope.createOrAdd = function(currentUser){
+		if(currentUser.id === undefined || currentUser.id === null || currentUser.id === 0)
+		{
+			usersService.create(currentUser)
+			.success(function(data, status){
+				$scope.users.push(data);
+			});
+		}
+	}
+
+	$scope.add = function(){
+
+	}
 }]);

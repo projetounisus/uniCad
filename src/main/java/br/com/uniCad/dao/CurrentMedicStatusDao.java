@@ -5,6 +5,7 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.CurrentMedicStatus;
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.CurrentMedicStatusDeserializer;
 
@@ -40,6 +41,10 @@ public class CurrentMedicStatusDao extends AbstractDao<CurrentMedicStatus>{
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
 		return 0;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence {
+		throw new DoesntHaveInheritence();
 	}
 
 	@Override

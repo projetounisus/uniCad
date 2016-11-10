@@ -5,6 +5,7 @@ import java.util.Map;
 
 import br.com.uniCad.beans.AbstractBean;
 import br.com.uniCad.beans.Pacient;
+import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.PacientDeserializer;
 
@@ -39,6 +40,10 @@ public class PacientDao extends AbstractDao<Pacient>{
 		int id = userDao.insert(bean);
 
 		return id;
+	}
+
+	protected void deleteInheritance(AbstractBean bean) {
+
 	}
 
 	@Override

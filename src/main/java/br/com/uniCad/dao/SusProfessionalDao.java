@@ -41,6 +41,10 @@ public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 		return id;
 	}
 
+	protected void deleteInheritance(AbstractBean bean) {
+
+	}
+
 	@Override
 	protected boolean hasInheritance() {
 		return true;
