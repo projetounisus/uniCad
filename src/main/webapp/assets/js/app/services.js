@@ -32,4 +32,31 @@ angular.module('app')
 		delete: _delete,
 		create: _create
 	};
+}])
+.service('medicService', ['$http', function($http){
+	
+	var _getMedics = function(){
+		return $http.get('medic/list/');
+	}
+
+	var _delete = function(id){
+		return $http.post('medic/delete/?id=' + id);
+	}
+
+	var _create = function(bean){
+		return $http({
+			url: 'medic/create/', 
+			method: 'POST',
+			data: bean,
+			headers: {
+   				'Content-Type': 'application/json'
+ 				}
+			});
+	}
+
+	return {
+		getMedics: _getMedics,
+		delete: _delete,
+		create: _create
+	};
 }]);

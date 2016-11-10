@@ -27,15 +27,16 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 
 	@Override
 	public Medic fromDataBaseRecord(Record record) {
-		// TODO Verificar se é possível obter todos os dados utilizando somente um nível acima na herança
+		// TODO Verificar se ï¿½ possï¿½vel obter todos os dados utilizando somente um nï¿½vel acima na heranï¿½a
 		SusProfessionalDao susProfessionalDao = new SusProfessionalDao();
 		SpecialityDao specialityDao = new SpecialityDao();
 		
 		String idStr = record.get("id").toString();
-		String specialityIdStr = record.get("especialidade").toString();
+		String crm = record.get("crm").toString();
+		//String specialityIdStr = record.get("especialidade").toString();
 		
 		SusProfessional partialProfessionalBean = (SusProfessional)susProfessionalDao.getById(Integer.parseInt(idStr));
-		Speciality speciality = (Speciality)specialityDao.getById(Integer.parseInt(specialityIdStr));
+		//Speciality speciality = (Speciality)specialityDao.getById(Integer.parseInt(specialityIdStr));
 		
 		Medic medic = new Medic(Integer.parseInt(idStr), 
 				partialProfessionalBean.getCompleteName(),
@@ -44,8 +45,8 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 				partialProfessionalBean.getAddress(),
 				partialProfessionalBean.getLogin(),
 				partialProfessionalBean.getAtendimentUnity(),
-				partialProfessionalBean.getCrm(),
-				speciality);
+				crm,
+				new Speciality());
 		
 		return medic;
 	}

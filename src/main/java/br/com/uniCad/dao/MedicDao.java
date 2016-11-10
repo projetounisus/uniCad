@@ -30,9 +30,10 @@ public class MedicDao extends AbstractDao<Medic>{
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
-		// TODO Auto-generated method stub
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("especialidade", "speciality");
+		//TODO: implemenatar mapeamento de muitos para muitos
+		//map.put("especialidade", "speciality");
+		map.put("crm", "crm");
 		return map;
 	}
 

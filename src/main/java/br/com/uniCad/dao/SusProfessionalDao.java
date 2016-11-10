@@ -28,8 +28,7 @@ public class SusProfessionalDao extends AbstractDao<SusProfessional> {
 	public Map<String, String> getMapColumnToProperty() {
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("unidade_atendimento", "atendimentUnity");
-		map.put("crm", "crm");
-		
+
 		return map;
 	}
 

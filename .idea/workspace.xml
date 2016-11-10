@@ -2,173 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a5c0835-855f-4456-bd1d-45949a7a0e0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/exceptions/DoesntHaveInheritence.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app/pages/usersPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/AtendimentUnity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/CurrentMedicStatus.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/MedicRegister.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/Pacient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/constants/Constants$AtendimentUnityType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/constants/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/controllers/AuthorizationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/controllers/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/controllersRest/ControllerRestAtendimentUnity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/controllersRest/ControllerRestSusProfessional.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/controllersRest/ControllerRestUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/AbstractDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/AddressDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/AtendimentUnityDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/ComomUserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/Crud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/LoginDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/PacientDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/SusProfessionalDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/Mapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/AddressDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/AtendimentUnityDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/LoginDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/PacientDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/UserDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/AbstractBean.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/AtendimentUnity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/Pacient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/SusProfessional.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/constants/Constants$AtendimentUnityType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/constants/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllers/AbstractControllerRest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllers/AuthorizationController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllers/MainController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllersRest/ControllerRestAtendimentUnity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllersRest/ControllerRestSusProfessional.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/controllersRest/ControllerRestUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/AddressDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/AtendimentUnityDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/Crud.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/LoginDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/SusProfessionalDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/Mapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/AddressDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/AtendimentUnityDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/LoginDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/UserDeserializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/jboss-deployment-structure.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/commons-beanutils-1.8.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/commons-digester-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jackson-annotations-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jackson-core-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jackson-core-asl-1.9.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jackson-databind-2.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jcl-over-slf4j-1.7.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jooq-3.8.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jsp-api-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/mysql-connector-java-5.1.38.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/servlet-api-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/slf4j-api-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/slf4j-log4j12-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/slf4j-simple-1.7.21.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-aop-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-beans-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-context-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-core-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-expression-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-jdbc-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-orm-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-session-1.0.0.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-tx-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-web-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/spring-webmvc-4.3.2.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/standard-1.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-api-3.0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-autotag-core-runtime-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-core-3.0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-jsp-3.0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-request-api-1.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-request-jsp-1.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-request-servlet-1.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-servlet-3.0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/lib/tiles-template-3.0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/tiles-defs/templates.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/3rdparty/bootstrap/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/3rdParty/normalize.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/pages/form.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/pages/mainPage.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/pages/templates/formStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/pages/templates/header.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/pages/templates/tileBox.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/3rdParty/handlebars-v4.0.5.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/3rdParty/jquery-1.9.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/3rdParty/jquery-3.1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/3rdParty/jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/3rdParty/jquery.mask.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/pages/mainPage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/pages/templates/form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/pages/templates/header.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/assets/js/utils/utils.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/forms/formEndereco.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/forms/formRegistro.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/forms/formUsuario.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/mainPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/defaultHead.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/defaultHeader.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/formDivTemplate.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/formTemplate.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/inputTemplates/ufSelect.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/uniCad/pages/templateTiles/template.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/SusProfessional.class" afterPath="$PROJECT_DIR$/target/classes/br/com/uniCad/beans/SusProfessional.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/SusProfessionalDao.class" afterPath="$PROJECT_DIR$/target/classes/br/com/uniCad/dao/SusProfessionalDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" afterPath="$PROJECT_DIR$/target/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/SusProfessional.class" afterPath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/beans/SusProfessional.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/SusProfessionalDao.class" afterPath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/dao/SusProfessionalDao.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" afterPath="$PROJECT_DIR$/target/uniCad/WEB-INF/classes/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AbstractControllerRest.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AbstractControllerRest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AbstractDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AbstractDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AddressDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AddressDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AtendimentUnityDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AtendimentUnityDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/CurrentMedicStatusDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/CurrentMedicStatusDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.sql" afterPath="$PROJECT_DIR$/database/database.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/Medic.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/Medic.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/SusProfessional.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/SusProfessional.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/PacientDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/PacientDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SpecialityDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SpecialityDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/UserDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/MedicDeserializer.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/MedicDeserializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles-defs/templates.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles-defs/templates.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app/app.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/assets/js/app/services.js" afterPath="$PROJECT_DIR$/src/main/webapp/assets/js/app/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/appPages/appPageCrudTemplate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/appPages/appPageCrudTemplate.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/appPages/homePage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/appPages/homePage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/mainPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/mainPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHead.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHead.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHeader.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHeader.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/formDivTemplate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/formDivTemplate.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/formTemplate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/formTemplate.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/template.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/template.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/uniCad/WEB-INF/tiles-defs/templates.xml" afterPath="$PROJECT_DIR$/target/uniCad/WEB-INF/tiles-defs/templates.xml" />
     </list>
     <ignored path="uniCad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,76 +44,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AbstractControllerRest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractControllerRest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AbstractControllerRest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state relative-caret-position="306">
+              <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CurrentMedicStatusDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/CurrentMedicStatusDao.java">
+      <file leaf-file-name="LoginDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AbstractDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="267" column="48" selection-start-line="267" selection-start-column="48" selection-end-line="267" selection-end-column="48" />
-              <folding>
-                <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
-                <element signature="method#list#0;class#AbstractDao#0" expanded="false" />
-                <element signature="method#getById#0;class#AbstractDao#0" expanded="false" />
-                <element signature="method#getByName#0;class#AbstractDao#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorizationController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AuthorizationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AtendimentUnityDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AtendimentUnityDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComomUserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/ComomUserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="580">
+              <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -267,8 +67,8 @@
       <file leaf-file-name="MedicRegisterDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="318">
+              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -279,6 +79,66 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MedicDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Medic.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/Medic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SusProfessionalDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SusProfessionalDeserializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MedicDeserializer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/MedicDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SusProfessional.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/SusProfessional.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -312,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHeader.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHead.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/exceptions/doesntHaveInheritence.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/exceptions/DoesntHaveInheritence.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AtendimentUnityDao.java" />
@@ -321,11 +180,17 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/PacientDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SpecialityDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/AbstractDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AbstractControllerRest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/SusProfessional.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/Medic.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/MedicDeserializer.java" />
       </list>
     </option>
   </component>
@@ -337,10 +202,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -403,6 +267,66 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appPages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -429,6 +353,10 @@
               <option name="myItemId" value="uniCad" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -456,7 +384,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="exceptions" />
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deserializers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uniCad" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,104 +474,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllersRest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="constants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uniCad" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="beans" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -885,7 +764,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -899,7 +778,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20522387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42669585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -935,34 +814,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="68" column="38" selection-start-line="68" selection-start-column="38" selection-end-line="68" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/tiles-defs/templates.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/templateTiles/defaultHead.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1004,6 +855,9 @@
         <state relative-caret-position="255">
           <caret line="44" column="128" selection-start-line="44" selection-start-column="128" selection-end-line="44" selection-end-column="128" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
             <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#list#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#getById#0;class#AbstractDao#0" expanded="false" />
@@ -1074,6 +928,9 @@
         <state relative-caret-position="255">
           <caret line="44" column="128" selection-start-line="44" selection-start-column="128" selection-end-line="44" selection-end-column="128" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
             <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#list#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#getById#0;class#AbstractDao#0" expanded="false" />
@@ -1152,13 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/templateTiles/template.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1185,10 +1035,10 @@
         <state relative-caret-position="187">
           <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding>
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="false" />
+            <element signature="e#198#199#0" expanded="false" />
+            <element signature="e#249#250#0" expanded="false" />
+            <element signature="e#279#280#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1209,18 +1059,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SpecialityDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,14 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="47" column="56" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1251,7 +1086,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1219#1220#0" expanded="false" />
+            <element signature="e#1234#1235#0" expanded="false" />
+            <element signature="e#1409#1410#0" expanded="false" />
+            <element signature="e#1428#1429#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1263,27 +1104,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/AbstractBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/CurrentMedicStatusDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#466#467#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
+            <element signature="e#551#552#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1320#1321#0" expanded="false" />
+            <element signature="e#1339#1340#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1292,6 +1129,9 @@
         <state relative-caret-position="2227">
           <caret line="267" column="48" selection-start-line="267" selection-start-column="48" selection-end-line="267" selection-end-column="48" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#988#989#0" expanded="false" />
+            <element signature="e#1035#1036#0" expanded="false" />
             <element signature="method#update#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#list#0;class#AbstractDao#0" expanded="false" />
             <element signature="method#getById#0;class#AbstractDao#0" expanded="false" />
@@ -1304,15 +1144,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1324,10 +1158,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/appPages/usersPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="42" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/controllers/AbstractControllerRest.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/AbstractBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicRegisterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/LoginDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/SusProfessionalDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/SusProfessionalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/SusProfessional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/dao/MedicDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/beans/Medic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/uniCad/utils/deserializers/MedicDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding />
         </state>
       </provider>

@@ -38,4 +38,9 @@
 		<put-attribute name="content" value="/pages/appPages/usersPage.jsp"/>
 	</definition>
 
+	<definition name="medicPage" template="/pages/appPages/appPageTemplate.jsp">
+		<put-attribute name="content" value="/pages/appPages/medicPage.jsp"/>
+	</definition>
+
+
 </tiles-definitions>

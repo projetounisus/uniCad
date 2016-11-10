@@ -28,7 +28,6 @@ public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfess
 	@Override
 	public SusProfessional fromDataBaseRecord(Record record) {
 		String id = record.get("id").toString();
-		String crm = record.get("crm").toString();
 		String atendimentUnityId = record.get("unidade_atendimento").toString();
 		
 		UserDao userDao = new UserDao();
@@ -44,8 +43,7 @@ public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfess
 				partialBean.getBirthDate(), 
 				partialBean.getAddress(), 
 				partialBean.getLogin(), 
-				antendimentUnity, 
-				crm);
+				antendimentUnity);
 		
 		return susProfessional;
 	}

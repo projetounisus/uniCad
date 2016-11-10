@@ -1,4 +1,4 @@
-<div ng-controller="usersCtrl">
+<div ng-controller="medicCtrl">
 	<div class = container>
 		<div class="row">
 				
@@ -34,19 +34,41 @@
 	        </div>
 	        
 	        <div class="modal-body">
+	    		<h3>Dados pessoais</h3>
 	    		<input type="text" placeholder="Nome completo" ng-model="currentUser.completeName"/>
 	    		<input type="text" placeholder="cpf" ng-model="currentUser.cpf"/>
 	    		<input type="date" ng-model="currentUser.birthDate"/>
 
-	    		<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
-	    		<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
-
-    			<input type="text" placeholder="país" ng-model="currentUser.address.country"/>
+	    		<h4>Moradia</h4>
+	    		<input type="text" placeholder="país" ng-model="currentUser.address.country"/>
 	    		<input type="text" placeholder="estado" ng-model="currentUser.address.uf"/>
 	    		<input type="text" placeholder="Cidade" ng-model="currentUser.address.city"/>
 	    		<input type="text" placeholder="Bairro" ng-model="currentUser.address.neighborhood"/>
 	    		<input type="text" placeholder="rua" ng-model="currentUser.address.street"/>
 	    		<input type="text" placeholder="numero" ng-model="currentUser.address.number"/>
+
+	    		<h3>Dados de login</h3>
+	    		<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
+	    		<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
+
+    			<h3>Dados de serviço</h3>
+    			<input type="text" placeholder="CRM" ng-model="currentUser.crm"/>
+
+    			<h4>Escpecialidade</h4>
+    			<input type="text" placeholder="Nome" ng-model="currentUser.speciality.name"/>
+    			<input type="text" placeholder="Descriação" ng-model="currentUser.speciality.description"/>
+
+    			<h4>Unidade de atendimento</h4>
+    			<input type="text" placeholder="Nome unidade atendimento" ng-model="currentUser.atendimentUnity.name"/>
+    			<input type="text" placeholder="Tipo unidade atendimento" ng-model="currentUser.atendimentUnity.unityType"/>
+
+    			<h4>Enedereço da unidade de atendimento</h4>
+	    		<input type="text" placeholder="país" ng-model="currentUser.atendimentUnity.address.country"/>
+	    		<input type="text" placeholder="estado" ng-model="currentUser.atendimentUnity.address.uf"/>
+	    		<input type="text" placeholder="Cidade" ng-model="currentUser.atendimentUnity.address.city"/>
+	    		<input type="text" placeholder="Bairro" ng-model="currentUser.atendimentUnity.address.neighborhood"/>
+	    		<input type="text" placeholder="rua" ng-model="currentUser.atendimentUnity.address.street"/>
+	    		<input type="text" placeholder="numero" ng-model="currentUser.atendimentUnity.address.number"/>
 	        </div>
 	        
 	        <div class="modal-footer">

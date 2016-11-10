@@ -158,8 +158,7 @@ DROP TABLE IF EXISTS `medico`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `medico` (
   `id` int(11) NOT NULL,
-  `crm` int(11) NOT NULL,
-  `unidade_atendimento` int(11) NOT NULL,
+  `crm` varchar(11) NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `medico_ibfk_1` FOREIGN KEY (`id`) REFERENCES `profissional_sus` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
