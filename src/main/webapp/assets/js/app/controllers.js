@@ -7,6 +7,12 @@ angular.module('app')
 	});
 }])
 .controller('mainPageCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
+	$scope.params = [
+		{paramName:"CNS", paramCode: 1},
+		{paramName:"CPF", paramCode: 2},
+		{paramName: "RG", paramCode: 3}
+	];
+
 	$scope.listUsers = function(){
 		$location.path("/user-list");
 	};

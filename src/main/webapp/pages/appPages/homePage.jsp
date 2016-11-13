@@ -75,26 +75,27 @@
 									</h4>
 
 									<div>
-										Lista todas as ocorreências médicas revelantes para o atendimento atual de forma a auxiliar à consulta ao paciente. <\br>
-										O dados podem ser pesquisando o usuário por CNS, RG ou CPF.
+										Lista todas as ocorreências médicas revelantes para o atendimento atual de forma a auxiliar à consulta ao paciente. <br/>
+										O dados podem ser pesquisados o usuário por CNS, RG ou CPF.
+										<br/>
+										<br/>
 									</div>
 
 									<!-- Ajustar os etilos destes inputs e extenálos no style.css  -->
 									<div class="container mdl-card-container">
 										<div class="row">
-											<div class="col-md-4">
-												<select style="margin:5px">
-													<option>Mock</option>
+											<div class="col-md-4 col-xs-4">
+												<select style="margin:5px; height:30px;" ng-options="paramName as param.paramName for param in params" ng-model="paramName">
 												</select> 
 											</div>
 											
-											<div class="col-md-4">
+											<div class="col-md-4 col-xs-4">
 												
-												<input type="text" name="" style="margin:5px"/> 
+												<input type="text" name="" style="margin:5px; height:30px;"/> 
 											</div>
 											
-											<div class="col-md-4">
-												<button class="btn btn-primary" style="margin:5px">Consultar</button>
+											<div class="col-md-4 col-xs-4">
+												<button class="btn btn-primary" style="margin:5px; height:30px;">Consultar</button>
 											</div>
 										</div>
 									</div>
