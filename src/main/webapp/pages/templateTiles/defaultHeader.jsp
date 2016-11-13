@@ -12,7 +12,7 @@
         
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">UniCad</span>
-          <span class="mdl-layout__tab">{{user.login.userName}}</span>
+          <span class="mdl-layout__tab user-header">{{user.login.userName}}</span>
         </div>
       </header>
 </div>

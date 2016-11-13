@@ -83,3 +83,7 @@ body {
 .mdl-card-container{
 	width:100%;
 }
+
+.user-header{
+	float: right;
+}
