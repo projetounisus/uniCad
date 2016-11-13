@@ -12,7 +12,7 @@
 	<title>UniCad</title>
 	<tiles:insertAttribute name="head"/>
 </head>
-<body ng-app="app">
+<body ng-app="app" style="overflow: auto">
 	<tiles:insertAttribute name="header"/>
 	<tiles:insertAttribute name="content"/>
 

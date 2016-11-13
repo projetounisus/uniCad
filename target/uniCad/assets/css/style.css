@@ -87,3 +87,7 @@ body {
 .user-header{
 	float: right;
 }
+
+.section-main-page {
+  margin-bottom: 48px;
+}
