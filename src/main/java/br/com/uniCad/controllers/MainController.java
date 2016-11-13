@@ -66,7 +66,8 @@ public class MainController {
 
 	@RequestMapping(path = "/appPages/{page}")
 	public ModelAndView getAppPage(@PathVariable String page){
-		return new ModelAndView(page);
+		ModelAndView modelAndView = new ModelAndView(page);
+		return modelAndView;
 	}
 
 	@RequestMapping(path = "/loggedUser", method = RequestMethod.GET)

@@ -73,3 +73,13 @@ body {
 .list-card-title{
 	font-size: 20px;
 }
+
+.card-title{
+	border-bottom: 1px solid rgb(25,25,25);
+	padding: 20px;
+	margin: 20px;
+}
+
+.mdl-card-container{
+	width:100%;
+}
