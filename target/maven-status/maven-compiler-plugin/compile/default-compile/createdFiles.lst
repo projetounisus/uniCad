@@ -13,9 +13,9 @@ br\com\uniCad\utils\deserializers\MedicDeserializer.class
 br\com\uniCad\beans\Pacient.class
 br\com\uniCad\controllersRest\ControllerRestSusProfessional.class
 br\com\uniCad\dao\PacientDao.class
+br\com\uniCad\controllersRest\AbstractControllerRest.class
 br\com\uniCad\controllersRest\ControllerRestMedic.class
 br\com\uniCad\utils\deserializers\PacientDeserializer.class
-br\com\uniCad\controllers\AbstractControllerRest.class
 br\com\uniCad\beans\AbstractBean.class
 br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.class
 br\com\uniCad\dao\LoginDao.class

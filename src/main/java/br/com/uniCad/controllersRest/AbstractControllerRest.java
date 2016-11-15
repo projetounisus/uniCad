@@ -1,4 +1,4 @@
-package br.com.uniCad.controllers;
+package br.com.uniCad.controllersRest;
 
 import java.util.List;
 

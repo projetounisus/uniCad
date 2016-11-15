@@ -70,7 +70,7 @@ public class MainController {
 		return modelAndView;
 	}
 
-	@RequestMapping(path = "/loggedUser", method = RequestMethod.GET)
+	@RequestMapping(path = "/loggedUser", method = RequestMethod.GET, produces = "text/html; charset=utf-8")
 	public ResponseEntity<?> getLoggedUser(HttpSession session){
 		User loggedUser  = (User)session.getAttribute("user");
 		return new ResponseEntity(loggedUser , HttpStatus.OK);

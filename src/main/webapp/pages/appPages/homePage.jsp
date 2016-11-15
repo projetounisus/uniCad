@@ -1,8 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-15" pageEncoding="ISO-8859-15"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page isELIgnored="false" %>
-
 <div ng-controller="mainPageCtrl" class="main-container">
 	<div class="container">
 		<div class="mdl-layout__tab-panel is-active">
@@ -100,9 +96,31 @@
 										</div>
 									</div>
 								</div>
+							</div>
+
+							<div class="col-md-6">
+								<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
+								
+									<h4>
+										Registros médicos
+									</h4>
+
+									<div>
+										Cria um novo registro médico, incrementando o conjunto de dados médicos e relacionando a ocorrências passadas para auxílio de atendimentos futuros
+										<br/>
+									</div>
+
+									<div class="container mdl-card-container">
+										<div class="row">
+											<div class="col-md-4 col-xs-4 col-md-offset-4 col-xs-ofsset-4">
+													<button class="btn btn-primary" style="margin:5px; height:30px; width:100%">Registrar</button>
+											</div>		
+										</div>
+									</div>
+								</div>
 							</div>								
 						</div>
-					</div>
+					</div>					
 				</div>
 			</section>	
 		</div>
