@@ -6,7 +6,7 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.CurrentMedicStatus;
+import br.com.uniCad.model.beans.CurrentMedicStatus;
 
 public class CurrentMedicStatusDeserializer extends AbstractDeserializer<CurrentMedicStatus> {
 

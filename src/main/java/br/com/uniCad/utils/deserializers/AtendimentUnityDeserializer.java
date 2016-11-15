@@ -6,10 +6,10 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Address;
-import br.com.uniCad.beans.AtendimentUnity;
 import br.com.uniCad.constants.Constants.AtendimentUnityType;
-import br.com.uniCad.dao.AddressDao;
+import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.beans.AtendimentUnity;
+import br.com.uniCad.model.dao.AddressDao;
 
 public class AtendimentUnityDeserializer extends AbstractDeserializer<AtendimentUnity> {
 

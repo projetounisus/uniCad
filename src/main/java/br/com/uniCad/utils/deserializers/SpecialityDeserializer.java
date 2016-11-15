@@ -6,7 +6,7 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Speciality;
+import br.com.uniCad.model.beans.Speciality;
 
 public class SpecialityDeserializer extends AbstractDeserializer<Speciality>{
 

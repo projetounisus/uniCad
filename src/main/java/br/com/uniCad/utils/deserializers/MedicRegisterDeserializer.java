@@ -8,15 +8,15 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Address;
-import br.com.uniCad.beans.AtendimentUnity;
-import br.com.uniCad.beans.MedicRegister;
-import br.com.uniCad.beans.Pacient;
-import br.com.uniCad.beans.SusProfessional;
-import br.com.uniCad.dao.AddressDao;
-import br.com.uniCad.dao.AtendimentUnityDao;
-import br.com.uniCad.dao.PacientDao;
-import br.com.uniCad.dao.SusProfessionalDao;
+import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.beans.AtendimentUnity;
+import br.com.uniCad.model.beans.MedicRegister;
+import br.com.uniCad.model.beans.Pacient;
+import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.dao.AddressDao;
+import br.com.uniCad.model.dao.AtendimentUnityDao;
+import br.com.uniCad.model.dao.PacientDao;
+import br.com.uniCad.model.dao.SusProfessionalDao;
 
 public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegister>{
 
@@ -55,7 +55,7 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			Pacient pacient = (Pacient)pacientDao.getById(Integer.parseInt(pacientId));
 			java.util.Date beginDate = simpleDateFormat.parse(record.get("dt-inicio").toString());
 			java.util.Date endDate = simpleDateFormat.parse(record.get("dt-fim").toString());
-			// TODO inserir a coluna de descriação no banco para obter aqui
+			// TODO inserir a coluna de descriaï¿½ï¿½o no banco para obter aqui
 			//String description = record.get("descricao").toString();
 			
 			MedicRegister medicRegister = new MedicRegister(Integer.parseInt(id), address, beginDate, endDate, null, atendimentUnity, pacient, medic);

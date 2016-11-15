@@ -6,11 +6,11 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.CurrentMedicStatus;
-import br.com.uniCad.beans.Pacient;
-import br.com.uniCad.beans.User;
-import br.com.uniCad.dao.CurrentMedicStatusDao;
-import br.com.uniCad.dao.UserDao;
+import br.com.uniCad.model.beans.CurrentMedicStatus;
+import br.com.uniCad.model.beans.Pacient;
+import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.CurrentMedicStatusDao;
+import br.com.uniCad.model.dao.UserDao;
 
 public class PacientDeserializer extends AbstractDeserializer<Pacient> {
 

@@ -6,8 +6,8 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Address;
-import br.com.uniCad.beans.Login;
+import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.beans.Login;
 
 public class LoginDeserializer extends AbstractDeserializer<Login> {
 

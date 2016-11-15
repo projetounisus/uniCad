@@ -6,11 +6,11 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.AtendimentUnity;
-import br.com.uniCad.beans.SusProfessional;
-import br.com.uniCad.beans.User;
-import br.com.uniCad.dao.AtendimentUnityDao;
-import br.com.uniCad.dao.UserDao;
+import br.com.uniCad.model.beans.AtendimentUnity;
+import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.AtendimentUnityDao;
+import br.com.uniCad.model.dao.UserDao;
 
 public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfessional> {
 

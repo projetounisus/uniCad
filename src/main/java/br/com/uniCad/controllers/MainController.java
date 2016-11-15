@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import br.com.uniCad.beans.Login;
-import br.com.uniCad.beans.User;
-import br.com.uniCad.dao.LoginDao;
-import br.com.uniCad.dao.UserDao;
+import br.com.uniCad.model.beans.Login;
+import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.LoginDao;
+import br.com.uniCad.model.dao.UserDao;
 
 @Controller
 @RequestMapping
@@ -51,11 +51,11 @@ public class MainController {
 			}
 			
 			ModelAndView respostaLoginFalhou = new ModelAndView();
-			respostaLoginFalhou.addObject("respostaLogin", "usuário ou senha incorretos");
+			respostaLoginFalhou.addObject("respostaLogin", "usuï¿½rio ou senha incorretos");
 			return respostaLoginFalhou;
 		
 		}catch(Exception e){
-			// TODO: Não deve ser devolvido na resposta do login,
+			// TODO: Nï¿½o deve ser devolvido na resposta do login,
 			// deve ser tratado pelo handler de exce??o global
 			
 			ModelAndView respostaLoginFalhou = new ModelAndView();

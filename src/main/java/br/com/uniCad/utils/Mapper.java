@@ -1,25 +1,25 @@
 package br.com.uniCad.utils;
 
-import br.com.uniCad.beans.AbstractBean;
-import br.com.uniCad.beans.Address;
-import br.com.uniCad.beans.AtendimentUnity;
-import br.com.uniCad.beans.CurrentMedicStatus;
-import br.com.uniCad.beans.Login;
-import br.com.uniCad.beans.Pacient;
-import br.com.uniCad.beans.Speciality;
-import br.com.uniCad.beans.SusProfessional;
-import br.com.uniCad.beans.User;
-import br.com.uniCad.dao.AddressDao;
-import br.com.uniCad.dao.AtendimentUnityDao;
-import br.com.uniCad.dao.CurrentMedicStatusDao;
-import br.com.uniCad.dao.AbstractDao;
-import br.com.uniCad.dao.LoginDao;
-import br.com.uniCad.dao.PacientDao;
-import br.com.uniCad.dao.SpecialityDao;
-import br.com.uniCad.dao.SusProfessionalDao;
-import br.com.uniCad.dao.UserDao;
+import br.com.uniCad.model.beans.AbstractBean;
+import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.beans.AtendimentUnity;
+import br.com.uniCad.model.beans.CurrentMedicStatus;
+import br.com.uniCad.model.beans.Login;
+import br.com.uniCad.model.beans.Pacient;
+import br.com.uniCad.model.beans.Speciality;
+import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.AbstractDao;
+import br.com.uniCad.model.dao.AddressDao;
+import br.com.uniCad.model.dao.AtendimentUnityDao;
+import br.com.uniCad.model.dao.CurrentMedicStatusDao;
+import br.com.uniCad.model.dao.LoginDao;
+import br.com.uniCad.model.dao.PacientDao;
+import br.com.uniCad.model.dao.SpecialityDao;
+import br.com.uniCad.model.dao.SusProfessionalDao;
+import br.com.uniCad.model.dao.UserDao;
 
-//FIXME: substtituir pela injeção de dependencias do Spring
+//FIXME: substtituir pela injeï¿½ï¿½o de dependencias do Spring
 public class Mapper {
 	static public AbstractDao beanToDao(AbstractBean bean){
 		

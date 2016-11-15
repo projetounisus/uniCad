@@ -6,7 +6,7 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Address;
+import br.com.uniCad.model.beans.Address;
 
 public class AddressDeserializer extends AbstractDeserializer<Address> {
 

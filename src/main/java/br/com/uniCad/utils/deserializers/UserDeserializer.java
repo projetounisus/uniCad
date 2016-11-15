@@ -9,11 +9,11 @@ import java.util.List;
 import org.jooq.Record;
 import org.jooq.Result;
 
-import br.com.uniCad.beans.Address;
-import br.com.uniCad.beans.Login;
-import br.com.uniCad.beans.User;
-import br.com.uniCad.dao.AddressDao;
-import br.com.uniCad.dao.LoginDao;
+import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.beans.Login;
+import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.AddressDao;
+import br.com.uniCad.model.dao.LoginDao;
 
 public class UserDeserializer extends AbstractDeserializer<User>{
 
@@ -61,7 +61,7 @@ public class UserDeserializer extends AbstractDeserializer<User>{
 			e.printStackTrace();
 		}
 		
-		return null; //FIXME: levantar exceções e parar de retornar null
+		return null; //FIXME: levantar exceï¿½ï¿½es e parar de retornar null
 	}
 	
 }
