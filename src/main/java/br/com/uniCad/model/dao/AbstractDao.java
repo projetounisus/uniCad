@@ -145,12 +145,23 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 				Object value = declaredField.get(bean);
 
 				String currentColumn = currentMap.getKey();
+				
+				if(value instanceof AbstractBean)
+				{
+					this.update((AbstractBean)value);
+					continue;
+				}
 
 				fieldObjectHashMap.put(field(currentColumn), value);
 			}
 
-			query.update(table(getTableName())).set(fieldObjectHashMap);
-
+			Field<Object> idField = field("id");
+			
+			query.update(table(getTableName()))
+			.set(fieldObjectHashMap)
+			.where(idField.equal(bean.getId()))
+			.execute();
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -170,8 +181,6 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
 	}
 	
 	public List<AbstractBean> list() {

@@ -66,7 +66,7 @@ public class MainController {
 
 	@RequestMapping(path = "/appPages/{page}")
 	public ModelAndView getAppPage(@PathVariable String page){
-		ModelAndView modelAndView = new ModelAndView(page);
+		ModelAndView modelAndView = new ModelAndView(page);		
 		return modelAndView;
 	}
 
