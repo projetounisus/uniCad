@@ -19,7 +19,11 @@ angular.module('app')
 
 	$scope.listMedics = function(){
 		$location.path("/medic-list");
-	};	
+	};
+
+	$scope.listSpecilaities = function(){
+		$location.path("/specliaties");	
+	}	
 }])
 .controller('usersCtrl', ['$scope', 'usersService', function($scope, usersService){
 	var request = usersService.getUsers();

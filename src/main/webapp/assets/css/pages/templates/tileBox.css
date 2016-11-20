@@ -3,6 +3,8 @@
 .box {
 	border-radius: 3px;
 	border-top: 3px solid rgb(63,81,181);
-	margin: 25px;
-	padding: 10px;
+	width: 100%;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	margin-right: : 5px;
 }
