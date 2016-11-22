@@ -64,7 +64,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			
 			int beanId = bean.getId();
 			
-			// Casa haja heran�a, insere os dados do bean em todas as "super-tabelas"
+			// Casa haja herança, insere os dados do bean em todas as "super-tabelas"
 			if(this.hasInheritance())
 				beanId = this.insertInheritance(bean);
 			
