@@ -29,17 +29,17 @@
 									<div class="container mdl-card-container">
 										<div class="row">
 											<div class="col-md-4 col-xs-4">
-												<select style="margin:5px; height:30px;" ng-options="paramName as param.paramName for param in params" ng-model="paramName">
+												<select style="margin:5px; height:30px;width: 100%;" ng-options="paramName as param.paramName for param in params" ng-model="paramName">
 												</select> 
 											</div>
 											
 											<div class="col-md-4 col-xs-4">
 												
-												<input type="text" name="" style="margin:5px; height:30px;"/> 
+												<input type="text" name="" style="margin:5px; height:30px;width: 100%;"/> 
 											</div>
 											
 											<div class="col-md-4 col-xs-4">
-												<button class="btn btn-primary" style="margin:5px; height:30px;">Consultar</button>
+												<button class="btn btn-primary" style="margin:5px; height:30px;width: 100%;">Consultar</button>
 											</div>
 										</div>
 									</div>

@@ -25,7 +25,6 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	 public ResponseEntity insert(@RequestBody T bean){
 		 AbstractDao dao = getDao();
-		 
 		 dao.insert(bean);
 		 
 		 return new ResponseEntity<T>(bean, HttpStatus.OK);

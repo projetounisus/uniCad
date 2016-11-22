@@ -44,7 +44,7 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			String id = record.get("id").toString();
 			String addressId = record.get("local_ocorrencia").toString();
 			String atendimentUnityId = record.get("uni_atendimento").toString();
-			String medicId = record.get("responsaveis").toString();
+			String medicId = record.get("profissional_responsavel").toString();
 			String pacientId = record.get("paciente").toString();
 			
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -53,8 +53,8 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			AtendimentUnity atendimentUnity = (AtendimentUnity)atendimentUnityDao.getById(Integer.parseInt(atendimentUnityId));
 			SusProfessional medic = (SusProfessional)susProfessionalDao.getById(Integer.parseInt(medicId));
 			Pacient pacient = (Pacient)pacientDao.getById(Integer.parseInt(pacientId));
-			java.util.Date beginDate = simpleDateFormat.parse(record.get("dt-inicio").toString());
-			java.util.Date endDate = simpleDateFormat.parse(record.get("dt-fim").toString());
+			java.util.Date beginDate = simpleDateFormat.parse(record.get("dt_inicio").toString());
+			java.util.Date endDate = simpleDateFormat.parse(record.get("dt_fim").toString());
 			// TODO inserir a coluna de descria��o no banco para obter aqui
 			//String description = record.get("descricao").toString();
 			

@@ -38,7 +38,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	static private Connection connection;
 	
 	// TODO: porque est� p�blico? 
-	public Connection getConnection() throws SQLException, ClassNotFoundException {
+	protected Connection getConnection() throws SQLException, ClassNotFoundException {
 		if(connection == null)
 		{
 			Class.forName("com.mysql.jdbc.Driver");

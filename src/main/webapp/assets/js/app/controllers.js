@@ -22,8 +22,12 @@ angular.module('app')
 	};
 
 	$scope.listSpecilaities = function(){
-		$location.path("/specliaties");	
+		$location.path("/specialities");	
 	}	
+
+	$scope.listMedicRegisters = function(){
+		$location.path("/medicRegisters");
+	}
 }])
 .controller('usersCtrl', ['$scope', 'usersService', function($scope, usersService){
 	var request = usersService.getUsers();
@@ -80,4 +84,7 @@ angular.module('app')
 			});
 		}
 	};
+}])
+.controller('medicRegisterCtrl', ['$scope', function($scope){
+	$scope.registers = [];
 }]);
