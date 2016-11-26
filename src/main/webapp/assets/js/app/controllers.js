@@ -105,6 +105,8 @@ angular.module('app')
 
 	$scope.currentSelectionParam = 1;
 
+	$scope.searchPanelVisible = true;
+
 	$scope.setSelectionParam = function(selectionParam){
 		$scope.currentSelectionParam = selectionParam.id;
 	};
@@ -113,8 +115,10 @@ angular.module('app')
 		var paramValue = $scope.paramSearchValue;
 		var request = $pacientRegisterService.getPacientRegisters(paramValue, $scope.currentSelectionParam);
 
-		request.success(function(registers){
-			$scope.registers = registers;
+		request.success(function(data){
+			$scope.pacient = data.pacient;
+			$scope.registers = data.registers;
+			$scope.searchPanelVisible = false;
 		});
 	}
 }]);

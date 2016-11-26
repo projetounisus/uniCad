@@ -5,6 +5,7 @@ br\com\uniCad\model\dao\AddressDao.class
 br\com\uniCad\model\beans\AtendimentUnity.class
 br\com\uniCad\controllers\rest\ControllerRestPacient.class
 br\com\uniCad\controllers\MainController.class
+br\com\uniCad\controllers\RegisterPacientController$RegisterPacientDto.class
 br\com\uniCad\controllers\rest\ControllerRestMedicRegister.class
 br\com\uniCad\utils\deserializers\AtendimentUnityDeserializer.class
 br\com\uniCad\utils\Mapper.class

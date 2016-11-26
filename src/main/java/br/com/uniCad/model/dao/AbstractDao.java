@@ -301,7 +301,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 
 	}
 	
-	public List<AbstractBean> getWithCustomParamSearch(Map<String, Object> columnsToValues){
+	public List<T> getWithCustomParamSearch(Map<String, Object> columnsToValues){
 		
 		try {
 			
@@ -327,7 +327,7 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			Record record = result.get(0);
 			
 			AbstractDeserializer<T> deserializer = this.getDeserializer();
-			List<AbstractBean> fromDataBaseResult = (List<AbstractBean>)deserializer.fromDataBaseResult(result);
+			List<T> fromDataBaseResult = deserializer.fromDataBaseResult(result);
 			
 			return fromDataBaseResult;
 		} catch (ClassNotFoundException e) {

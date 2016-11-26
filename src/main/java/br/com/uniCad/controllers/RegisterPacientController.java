@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.uniCad.model.beans.AbstractBean;
+import br.com.uniCad.model.beans.MedicRegister;
+import br.com.uniCad.model.beans.Pacient;
+import br.com.uniCad.model.beans.User;
 import br.com.uniCad.model.dao.AbstractDao;
 import br.com.uniCad.model.dao.MedicRegisterDao;
 import br.com.uniCad.model.dao.PacientDao;
@@ -21,6 +24,30 @@ import br.com.uniCad.model.dao.UserDao;
 @Controller
 @RequestMapping("/medicRegisters")
 public class RegisterPacientController {
+	
+	public class RegisterPacientDto{
+		public User pacient;
+		public List<MedicRegister> registers;
+		
+		public User getPacient() {
+			return pacient;
+		}
+		public void setPacient(User pacient) {
+			this.pacient = pacient;
+		}
+		public List<MedicRegister> getRegisters() {
+			return registers;
+		}
+		public void setRegisters(List<MedicRegister> registers) {
+			this.registers = registers;
+		}
+		
+		public RegisterPacientDto(User pacient, List<MedicRegister> registers) {
+			super();
+			this.pacient = pacient;
+			this.registers = registers;
+		}
+	}
 	
 	@RequestMapping(value = "/historic/", method = RequestMethod.GET)
 	public ResponseEntity<?> getPacientRegisters(@RequestParam String paramValue, @RequestParam int paramType){
@@ -51,8 +78,10 @@ public class RegisterPacientController {
 		
 		HashMap columnsToValues = new HashMap();
 		columnsToValues.put("paciente", pacient.getId());
-		List<AbstractBean> registersByUser = medicRegisterDao.getWithCustomParamSearch(columnsToValues);
+		List<MedicRegister> registersByUser = medicRegisterDao.getWithCustomParamSearch(columnsToValues);
 		
-		return new ResponseEntity<Object>(registersByUser, HttpStatus.OK);
+		RegisterPacientDto responseDto = new RegisterPacientDto((User)pacient, registersByUser);
+		
+		return new ResponseEntity<Object>(responseDto, HttpStatus.OK);
 	}
 }
