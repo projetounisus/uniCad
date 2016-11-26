@@ -7,11 +7,15 @@ angular.module('app')
 	});
 }])
 .controller('mainPageCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
-	$scope.params = [
-		{paramName:"CNS", paramCode: 1},
-		{paramName:"CPF", paramCode: 2},
-		{paramName: "RG", paramCode: 3}
+	$scope.selectionParams = [
+		{paramName:"CNS", paramCode: 0},
+		{paramName:"CPF", paramCode: 1},
+		{paramName: "RG", paramCode: 2}
 	];
+
+	$scope.selectionMode = {
+		currentMode: 0
+	};
 
 	$scope.listUsers = function(){
 		$location.path("/user-list");
@@ -26,8 +30,13 @@ angular.module('app')
 	}	
 
 	$scope.listMedicRegisters = function(){
-		$location.path("/medicRegisters");
+		$location.path("/medic-registers");
 	}
+
+	$scope.insertSelectionParamInput = function(selectionModeCode){
+		$scope.selectionMode.currentMode = selectionMode;
+	};
+
 }])
 .controller('usersCtrl', ['$scope', 'usersService', function($scope, usersService){
 	var request = usersService.getUsers();
@@ -85,6 +94,27 @@ angular.module('app')
 		}
 	};
 }])
-.controller('medicRegisterCtrl', ['$scope', function($scope){
+.controller('medicRegisterCtrl', ['$scope', 'pacientRegisterService', function($scope, $pacientRegisterService){
+	$scope.selectionParams = [
+		{name: 'CPF', id: 1},
+		{name: 'RG', id: 2},
+		{name: 'CNS', id: 3}
+	];
+
 	$scope.registers = [];
+
+	$scope.currentSelectionParam = 1;
+
+	$scope.setSelectionParam = function(selectionParam){
+		$scope.currentSelectionParam = selectionParam.id;
+	};
+
+	$scope.getPacientRegisters = function(){
+		var paramValue = $scope.paramSearchValue;
+		var request = $pacientRegisterService.getPacientRegisters(paramValue, $scope.currentSelectionParam);
+
+		request.success(function(registers){
+			$scope.registers = registers;
+		});
+	}
 }]);

@@ -14,5 +14,10 @@ angular.module('app',['ngRoute'])
 		templateUrl: '/uniCad/appPages/medicPage',
 		controller: 'medicCtrl'
 	})
+	.when('/medic-registers',
+	{
+		templateUrl: '/uniCad/appPages/medicRegisters',
+		controller: 'medicRegisterCtrl'
+	})
 	.otherwise('/');
 });

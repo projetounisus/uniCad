@@ -40,6 +40,7 @@ br\com\uniCad\model\beans\Speciality.class
 br\com\uniCad\model\beans\Medic.class
 br\com\uniCad\model\dao\SusProfessionalDao.class
 br\com\uniCad\utils\deserializers\MedicRegisterDeserializer.class
+br\com\uniCad\controllers\RegisterPacientController.class
 br\com\uniCad\model\dao\AbstractDao.class
 br\com\uniCad\model\dao\MedicRegisterDao.class
 br\com\uniCad\controllers\rest\ControllerRestSusProfessional.class

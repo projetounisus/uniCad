@@ -59,4 +59,13 @@ angular.module('app')
 		delete: _delete,
 		create: _create
 	};
+}])
+.service('pacientRegisterService', ['$http', function($http){
+	var _getPacientRegisters = function(paramValue, paraCode){
+		return $http.get("medicRegisters/historic/?paramValue=" + paramValue + "&paramType=" + paraCode);
+	};
+
+	return {
+		getPacientRegisters : _getPacientRegisters
+	};
 }]);

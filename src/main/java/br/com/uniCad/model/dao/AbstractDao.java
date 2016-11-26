@@ -11,6 +11,7 @@ import java.util.Map.Entry;
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 
+import org.jooq.Condition;
 import org.jooq.DSLContext;
 import org.jooq.Field;
 import org.jooq.SQLDialect;
@@ -204,9 +205,9 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 	}
 	
 	public AbstractBean getById(int id) {
-		Connection currentConnection;
+		
 		try {
-			currentConnection = getConnection();
+			Connection currentConnection = getConnection();
 			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
 			
 			Field<Object> field = field("id");
@@ -298,6 +299,47 @@ public abstract class AbstractDao<T extends AbstractBean> implements Crud<Abstra
 			doesntHaveInheritence.printStackTrace();
 		}
 
+	}
+	
+	public List<AbstractBean> getWithCustomParamSearch(Map<String, Object> columnsToValues){
+		
+		try {
+			
+			Connection currentConnection = this.getConnection();
+			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
+			
+			List<Condition> conditions = new ArrayList<Condition>();
+			
+			for(Entry<String, Object> currentCondition : columnsToValues.entrySet()){
+				String key = currentCondition.getKey();
+				Object value = currentCondition.getValue();
+			
+				Field<Object> field = field(key);
+				
+				conditions.add(field.equal(value));
+			}
+			
+			Field<Object> field = field("id");
+			Result<Record> result = query.select()
+					.from(table(getTableName()))
+					.where(conditions).fetch();
+			
+			Record record = result.get(0);
+			
+			AbstractDeserializer<T> deserializer = this.getDeserializer();
+			List<AbstractBean> fromDataBaseResult = (List<AbstractBean>)deserializer.fromDataBaseResult(result);
+			
+			return fromDataBaseResult;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+		
 	}
 	
 	//TODO: ver se � poss�vel deslocar esta fun��o para a AbstractBean de forma est�tica 
