@@ -8,6 +8,7 @@ C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\exceptions\D
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\RegisterTypeDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\AuthorizationController.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\Mapper.java
+C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\RegisterTypeDao.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\PacientDao.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\RegisterType.java

@@ -80,4 +80,13 @@ angular.module('app')
 		getPacientRegisters : _getPacientRegisters,
 		create: _create 
 	};
+}])
+.service('atendimentUnityService', ['$http', function($http){
+	var _getAtendimentUnities = function(){
+		return $http.get('unity/list/');
+	};
+
+	return {
+		getAtendimentUnities: _getAtendimentUnities
+	}; 
 }]);

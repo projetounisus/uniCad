@@ -57,13 +57,21 @@
     			<h3>Dados de serviço</h3>
     			<input type="text" placeholder="CRM" ng-model="currentUser.crm"/>
 
+					<!--<select ng-model="currentUser.speciality" ng-repeat="optionSpeciality.id for optionSpeciality in specialities">
+						<option value =""> Seleciosne uma especialidade</option>
+					</select>-->
+
     			<h4>Escpecialidade</h4>
     			<input type="text" placeholder="Nome" ng-model="currentUser.speciality.name"/>
     			<input type="text" placeholder="Descriação" ng-model="currentUser.speciality.description"/>
 
     			<h4>Unidade de atendimento</h4>
-    			<input type="text" placeholder="Nome unidade atendimento" ng-model="currentUser.atendimentUnity.name"/>
-    			<input type="text" placeholder="Tipo unidade atendimento" ng-model="currentUser.atendimentUnity.unityType"/>
+					<select ng-options="atendimentUnityOption.name for atendimentUnityOption in atendimentUnities" ng-model="currentUser.atendimentUnity">
+						<option value="">Escolha uma unidade de atendimento</option>
+					</select>
+
+    			<!--<input type="text" placeholder="Nome unidade atendimento" ng-model="currentUser.atendimentUnity.name"/>
+    			<input type="text" placeholder="Tipo unidade atendimento" ng-model="currentUser.atendimentUnity.unityType"/>-->
 
     			<h4>Enedereço da unidade de atendimento</h4>
 	    		<input type="text" placeholder="país" ng-model="currentUser.atendimentUnity.address.country"/>

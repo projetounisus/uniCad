@@ -66,8 +66,18 @@ angular.module('app')
 		}
 	};
 }])
-.controller('medicCtrl', ['$scope', 'medicService', function($scope, medicService){
+.controller('medicCtrl', ['$scope', 'medicService','atendimentUnityService', function($scope, medicService, atendimentUnityService){
 	var request = medicService.getMedics();
+
+	var _buildModal = function(){
+		var request = atendimentUnityService.getAtendimentUnities();
+
+		request.success(function (unities){
+			$scope.atendimentUnities = unities;
+		});
+	};
+	
+	_buildModal();
 
 	request.success(function(medics){
 		$scope.users = medics;

@@ -22,7 +22,7 @@
 <script src="<c:url value="/assets/js/app/resources/angular.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/assets/js/app/resources/angular-route.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/assets/3rdparty/bootstrap/js/bootstrap.js"/>" type="text/javascript"></script>
-<script src="<c:url value="/assets/js/3rdParty/ui-bootstrap-tpls-2.2.0.js"/>" type="text/javascript"></script>
+<!--<script src="<c:url value="/assets/js/3rdParty/ui-bootstrap-tpls-2.2.0.js"/>" type="text/javascript"></script>-->
 
 <script src="<c:url value="/assets/js/app/app.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/assets/js/app/controllers.js"/>" type="text/javascript"></script>
