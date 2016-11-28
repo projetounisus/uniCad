@@ -8,6 +8,13 @@ public class User extends AbstractBean{
 	private Date birthDate;
 	private Address address;
 	private Login login;
+	private String genre;
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
 	public String getCompleteName() {
 		return completeName;
 	}
@@ -39,21 +46,23 @@ public class User extends AbstractBean{
 		this.login = login;
 	}
 	
-	public User(int id, String completeName, String telephone, Date birthDate, Address address, Login login) {
+	public User(int id, String completeName, String telephone, Date birthDate, Address address, Login login, String genre) {
 		super(id);
 		this.completeName = completeName;
 		this.telephone = telephone;
 		this.birthDate = birthDate;
 		this.address = address;
 		this.login = login;
+		this.genre = genre;
 	}
-	public User(String completeName, String telephone, Date birthDate, Address address, Login login) {
+	public User(String completeName, String telephone, Date birthDate, Address address, Login login, String genre) {
 		super();
 		this.completeName = completeName;
 		this.telephone = telephone;
 		this.birthDate = birthDate;
 		this.address = address;
 		this.login = login;
+		this.genre = genre;
 	}
 	public User() {
 		super();

@@ -11,7 +11,7 @@
 						<div class="container mdl-card-container">
 							<div class="row">
 								
-								<div class="col-md-4">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<h4>
 											<a ng-click="listMedicRegisters()">Histórico de pacientes</a>
@@ -26,7 +26,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 									
 										<h4>
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 									
 										<h4>
@@ -65,7 +65,7 @@
 						
 						<div class="container mdl-card-container">
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados usuários possibilitando a pesquisa do mesmo via CPF, CNS ou número da identidade -->
 
@@ -79,7 +79,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 box-col ">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->
@@ -94,7 +94,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->
@@ -119,7 +119,7 @@
 						
 						<div class="container mdl-card-container">
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados usuários possibilitando a pesquisa do mesmo via CPF, CNS ou número da identidade -->
 
@@ -133,7 +133,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-6">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->

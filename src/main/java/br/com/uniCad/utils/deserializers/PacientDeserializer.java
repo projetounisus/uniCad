@@ -44,7 +44,8 @@ public class PacientDeserializer extends AbstractDeserializer<Pacient> {
 				partialBean.getAddress(),
 				partialBean.getLogin(),
 				cns,
-				currentMedicStatus);
+				currentMedicStatus,
+				partialBean.getGenre());
 		
 		return pacient;
 	}

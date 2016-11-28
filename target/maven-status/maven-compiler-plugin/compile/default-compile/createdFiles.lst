@@ -1,7 +1,9 @@
 br\com\uniCad\model\dao\MedicDao.class
 br\com\uniCad\constants\Constants.class
+br\com\uniCad\model\beans\ClinicGroup.class
 br\com\uniCad\model\beans\User.class
 br\com\uniCad\model\dao\AddressDao.class
+br\com\uniCad\model\services\MedicRegistersService.class
 br\com\uniCad\model\beans\AtendimentUnity.class
 br\com\uniCad\controllers\rest\ControllerRestPacient.class
 br\com\uniCad\controllers\MainController.class
@@ -9,6 +11,7 @@ br\com\uniCad\controllers\RegisterPacientController$RegisterPacientDto.class
 br\com\uniCad\controllers\rest\ControllerRestMedicRegister.class
 br\com\uniCad\utils\deserializers\AtendimentUnityDeserializer.class
 br\com\uniCad\utils\Mapper.class
+br\com\uniCad\model\beans\SysAdmin.class
 br\com\uniCad\controllers\AuthorizationController.class
 br\com\uniCad\utils\deserializers\SpecialityDeserializer.class
 br\com\uniCad\utils\deserializers\MedicDeserializer.class
@@ -20,11 +23,14 @@ br\com\uniCad\model\beans\AbstractBean.class
 br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.class
 br\com\uniCad\model\dao\ComomUserDao.class
 br\com\uniCad\constants\Constants$AtendimentUnityType.class
+br\com\uniCad\utils\deserializers\RegisterTypeDeserializer.class
 br\com\uniCad\model\dao\UserDao.class
 br\com\uniCad\utils\deserializers\AbstractDeserializer.class
 br\com\uniCad\controllers\rest\AbstractControllerRest.class
 br\com\uniCad\utils\deserializers\SusProfessionalDeserializer.class
 br\com\uniCad\controllers\rest\ControllerRestSpeciality.class
+br\com\uniCad\model\beans\AdminClincGroup.class
+br\com\uniCad\model\beans\RegisterType.class
 br\com\uniCad\utils\deserializers\LoginDeserializer.class
 br\com\uniCad\controllers\rest\ControllerRestUser.class
 br\com\uniCad\model\beans\CurrentMedicStatus.class

@@ -46,7 +46,8 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 				partialProfessionalBean.getLogin(),
 				partialProfessionalBean.getAtendimentUnity(),
 				crm,
-				new Speciality());
+				new Speciality(),
+				partialProfessionalBean.getGenre());
 		
 		return medic;
 	}

@@ -111,14 +111,35 @@ angular.module('app')
 		$scope.currentSelectionParam = selectionParam.id;
 	};
 
+	// Espeífico... estranho, ajustar isso
+	var _getPacientAgeFromBirthDateString = function(dateString){
+		var pacientBirthDate = new Date(dateString);
+		var currentDate = new Date();
+
+		var pacientYear = pacientBirthDate.getFullYear();
+		var currentYear = currentDate.getFullYear();
+
+		return currentYear - pacientYear;
+	};
+
+	$scope.createOrAdd = function(bean){
+		var request = $pacientRegisterService.create(bean);
+
+		request.sucess(function(data){
+			$scope.registers.push(data);
+		});
+	};
+
 	$scope.getPacientRegisters = function(){
 		var paramValue = $scope.paramSearchValue;
 		var request = $pacientRegisterService.getPacientRegisters(paramValue, $scope.currentSelectionParam);
 
 		request.success(function(data){
-			$scope.pacient = data.pacient;
-			$scope.registers = data.registers;
 			$scope.searchPanelVisible = false;
+			$scope.registers = data.registers;
+
+			$scope.pacient = data.pacient;
+			$scope.pacient.age = _getPacientAgeFromBirthDateString(data.pacient.birthDate);
 		});
-	}
+	};
 }]);

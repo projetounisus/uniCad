@@ -23,8 +23,8 @@ public class Medic extends SusProfessional {
 	}
 
 	public Medic(int id, String completeName, String telephone, Date birthDate, Address address, Login login,
-			AtendimentUnity atendimentUnity, String crm, Speciality speciality) {
-		super(id, completeName, telephone, birthDate, address, login, atendimentUnity);
+			AtendimentUnity atendimentUnity, String crm, Speciality speciality, String genre) {
+		super(id, completeName, telephone, birthDate, address, login, atendimentUnity, genre);
 		this.crm = crm;
 		this.speciality = speciality;
 	}

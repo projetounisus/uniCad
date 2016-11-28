@@ -36,6 +36,7 @@ public class UserDeserializer extends AbstractDeserializer<User>{
 		String birthDate = record.get("dt_nascimento").toString();
 		String enderecoId = record.get("endereco").toString();
 		String loginId = record.get("login").toString();
+		String genre = record.get("genero").toString();
 		
 		AddressDao addressDao = new AddressDao();
 		Address address = (Address)addressDao.getById(Integer.parseInt(enderecoId));
@@ -50,7 +51,8 @@ public class UserDeserializer extends AbstractDeserializer<User>{
 				(String)record.get("telefone"),
 				format.parse(birthDate),
 				address, 
-				login);
+				login, 
+				genre);
 			
 			return deserializedUser;
 		} catch (NumberFormatException e) {

@@ -65,7 +65,19 @@ angular.module('app')
 		return $http.get("medicRegisters/historic/?paramValue=" + paramValue + "&paramType=" + paraCode);
 	};
 
+	var _create = function(bean){
+		return $http({
+			url:'medicRegister/create/',
+			method:	'POST',
+			data: bean,
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+	}
+
 	return {
-		getPacientRegisters : _getPacientRegisters
+		getPacientRegisters : _getPacientRegisters,
+		create: _create 
 	};
 }]);

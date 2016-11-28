@@ -22,7 +22,9 @@
 	<button class="mdl-button mdl-button--fab mdl-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal">
             <i class="material-icons" role="presentation">add</i>
             <span class="visuallyhidden">Add</span>
-  	<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+  						<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
+						</span>
+	</button>
 
   	<div class="modal fade" id="create-form" role="dialog">
 	    <div class="modal-dialog">

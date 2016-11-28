@@ -46,6 +46,7 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			String atendimentUnityId = record.get("uni_atendimento").toString();
 			String medicId = record.get("profissional_responsavel").toString();
 			String pacientId = record.get("paciente").toString();
+			String description = record.get("descricao").toString();
 			
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 			
@@ -58,7 +59,15 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			// TODO inserir a coluna de descria��o no banco para obter aqui
 			//String description = record.get("descricao").toString();
 			
-			MedicRegister medicRegister = new MedicRegister(Integer.parseInt(id), address, beginDate, endDate, null, atendimentUnity, pacient, medic);
+			MedicRegister medicRegister = new MedicRegister(
+					Integer.parseInt(id),
+					address, 
+					beginDate, 
+					endDate, 
+					description, 
+					atendimentUnity, 
+					pacient, 
+					medic);
 			
 			return medicRegister;
 		} catch (IllegalArgumentException e) {

@@ -51,6 +51,7 @@ public class UserDao extends AbstractDao<User>{
 		map.put("login", "login");
 		map.put("telefone", "telephone");
 		map.put("nome", "completeName");
+		map.put("genero", "genre");
 		
 		return map;
 	}

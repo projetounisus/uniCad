@@ -23,8 +23,8 @@ public class Pacient extends User{
 	}
 
 	public Pacient(int id, String completeName, String telephone, Date birthDate, Address address, Login login,
-			String cns, CurrentMedicStatus currentMedicStatus) {
-		super(id, completeName, telephone, birthDate, address, login);
+			String cns, CurrentMedicStatus currentMedicStatus, String genre) {
+		super(id, completeName, telephone, birthDate, address, login, genre);
 		this.cns = cns;
 		this.currentMedicStatus = currentMedicStatus;
 	}

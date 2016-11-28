@@ -43,7 +43,8 @@ public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfess
 				partialBean.getBirthDate(), 
 				partialBean.getAddress(), 
 				partialBean.getLogin(), 
-				antendimentUnity);
+				antendimentUnity,
+				partialBean.getGenre());
 		
 		return susProfessional;
 	}

@@ -11,8 +11,8 @@ public class SusProfessional extends User{
 		this.atendimentUnity = atendimentUnity;
 	}
 	public SusProfessional(int id, String completeName, String telephone, Date birthDate, Address address, Login login,
-			AtendimentUnity atendimentUnity) {
-		super(id, completeName, telephone, birthDate, address, login);
+			AtendimentUnity atendimentUnity, String genre) {
+		super(id, completeName, telephone, birthDate, address, login, genre);
 		this.atendimentUnity = atendimentUnity;
 	}
 	public SusProfessional(AtendimentUnity atendimentUnity) {

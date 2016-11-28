@@ -53,6 +53,8 @@ public class RegisterPacientController {
 	public ResponseEntity<?> getPacientRegisters(@RequestParam String paramValue, @RequestParam int paramType){
 		HashMap<String, Object> params = new HashMap<String, Object>();
 		
+		
+		//TODO: verificar se há lógica melhor
 		AbstractDao relationedPacientDao;
 		
 		switch(paramType){
@@ -79,6 +81,11 @@ public class RegisterPacientController {
 		HashMap columnsToValues = new HashMap();
 		columnsToValues.put("paciente", pacient.getId());
 		List<MedicRegister> registersByUser = medicRegisterDao.getWithCustomParamSearch(columnsToValues);
+		
+		if(pacient instanceof User){
+			PacientDao pacientDao = new PacientDao();
+			pacient = pacientDao.getById(pacient.getId());
+		}
 		
 		RegisterPacientDto responseDto = new RegisterPacientDto((User)pacient, registersByUser);
 		
