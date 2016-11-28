@@ -41,6 +41,7 @@
 	    		<input type="text" placeholder="Nome completo" ng-model="currentUser.completeName"/>
 	    		<input type="text" placeholder="cpf" ng-model="currentUser.cpf"/>
 	    		<input type="date" ng-model="currentUser.birthDate"/>
+					<input type="text" placeholder="gênero" ng-model="currentUser.genre"/>
 
 	    		<h4>Moradia</h4>
 	    		<input type="text" placeholder="país" ng-model="currentUser.address.country"/>
@@ -64,7 +65,7 @@
     			<h4>Escpecialidade</h4>
     			<input type="text" placeholder="Nome" ng-model="currentUser.speciality.name"/>
     			<input type="text" placeholder="Descriação" ng-model="currentUser.speciality.description"/>
-
+3
     			<h4>Unidade de atendimento</h4>
 					<select ng-options="atendimentUnityOption.name for atendimentUnityOption in atendimentUnities" ng-model="currentUser.atendimentUnity">
 						<option value="">Escolha uma unidade de atendimento</option>
