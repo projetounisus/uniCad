@@ -72,16 +72,7 @@
 
     			<!--<input type="text" placeholder="Nome unidade atendimento" ng-model="currentUser.atendimentUnity.name"/>
     			<input type="text" placeholder="Tipo unidade atendimento" ng-model="currentUser.atendimentUnity.unityType"/>-->
-
-    			<h4>Enedereço da unidade de atendimento</h4>
-	    		<input type="text" placeholder="país" ng-model="currentUser.atendimentUnity.address.country"/>
-	    		<input type="text" placeholder="estado" ng-model="currentUser.atendimentUnity.address.uf"/>
-	    		<input type="text" placeholder="Cidade" ng-model="currentUser.atendimentUnity.address.city"/>
-	    		<input type="text" placeholder="Bairro" ng-model="currentUser.atendimentUnity.address.neighborhood"/>
-	    		<input type="text" placeholder="rua" ng-model="currentUser.atendimentUnity.address.street"/>
-	    		<input type="text" placeholder="numero" ng-model="currentUser.atendimentUnity.address.number"/>
-	        </div>
-	        
+  
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default btn-primary" data-dismiss="modal" ng-click="createOrAdd(currentUser)">Criar</button>
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
