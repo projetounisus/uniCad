@@ -66,14 +66,20 @@ angular.module('app')
 		}
 	};
 }])
-.controller('medicCtrl', ['$scope', 'medicService','atendimentUnityService', function($scope, medicService, atendimentUnityService){
+.controller('medicCtrl', ['$scope', 'medicService','atendimentUnityService','specialityService', function($scope, medicService, atendimentUnityService, specialityService){
 	var request = medicService.getMedics();
 
 	var _buildModal = function(){
-		var request = atendimentUnityService.getAtendimentUnities();
+		var requestGetUnities = atendimentUnityService.getAtendimentUnities();
 
-		request.success(function (unities){
+		requestGetUnities.success(function (unities){
 			$scope.atendimentUnities = unities;
+		});
+
+		var requestGetSpeciatlities = specialityService.getSpecialities();
+
+		requestGetSpeciatlities.success(function(specialities){
+			$scope.specialities = specialities;
 		});
 	};
 	

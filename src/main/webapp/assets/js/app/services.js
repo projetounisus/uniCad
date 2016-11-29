@@ -89,4 +89,13 @@ angular.module('app')
 	return {
 		getAtendimentUnities: _getAtendimentUnities
 	}; 
+}])
+.service('specialityService', ['$http', function($http){
+	var _getSpecialities = function(){
+		return $http.get('speciality/list/');
+	}
+
+	return {
+		getSpecialities: _getSpecialities
+	};
 }]);
