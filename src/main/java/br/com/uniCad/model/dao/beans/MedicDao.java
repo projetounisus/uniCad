@@ -1,59 +1,59 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
-import br.com.uniCad.model.beans.RegisterType;
+import br.com.uniCad.model.beans.Medic;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
-import br.com.uniCad.utils.deserializers.RegisterTypeDeserializer;
+import br.com.uniCad.utils.deserializers.MedicDeserializer;
 
-public class RegisterTypeDao extends AbstractDao<RegisterType> {
+public class MedicDao extends AbstractDaoBean<Medic>{
 
-	public RegisterTypeDao() {
-		super(RegisterType.class);
+	public MedicDao() {
+		super(Medic.class);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	protected String getTableName() {
 		// TODO Auto-generated method stub
-		return "tipo_registro";
+		return "medico";
 	}
 
 	@Override
-	protected AbstractDeserializer<RegisterType> getDeserializer() {
+	protected AbstractDeserializer<Medic> getDeserializer() {
 		// TODO Auto-generated method stub
-		return new RegisterTypeDeserializer();
+		return new MedicDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
-		// TODO Auto-generated method stub
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("nome", "name");
-		map.put("descricao", "description");
-		
+		//TODO: implemenatar mapeamento de muitos para muitos
+		//map.put("especialidade", "speciality");
+		map.put("crm", "crm");
 		return map;
 	}
 
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
 		// TODO Auto-generated method stub
-		return 0;
+		SusProfessionalDao susProfessionalDao = new SusProfessionalDao();
+		int id = susProfessionalDao.insert(bean);
+		
+		return id;
 	}
 
-	@Override
-	protected void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence {
-		// TODO Auto-generated method stub
-		
+	protected void deleteInheritance(AbstractBean bean) {
+
 	}
 
 	@Override
 	protected boolean hasInheritance() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

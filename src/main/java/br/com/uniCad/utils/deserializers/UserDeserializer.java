@@ -12,8 +12,8 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.Address;
 import br.com.uniCad.model.beans.Login;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.AddressDao;
-import br.com.uniCad.model.dao.LoginDao;
+import br.com.uniCad.model.dao.beans.AddressDao;
+import br.com.uniCad.model.dao.beans.LoginDao;
 
 public class UserDeserializer extends AbstractDeserializer<User>{
 

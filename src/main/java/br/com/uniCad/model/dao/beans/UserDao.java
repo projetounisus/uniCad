@@ -1,4 +1,4 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import static org.jooq.impl.DSL.field;
 import static org.jooq.impl.DSL.table;
@@ -23,7 +23,7 @@ import org.jooq.impl.DSL;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.UserDeserializer;
 
-public class UserDao extends AbstractDao<User>{
+public class UserDao extends AbstractDaoBean<User>{
 
 	public UserDao() {
 		super(User.class);

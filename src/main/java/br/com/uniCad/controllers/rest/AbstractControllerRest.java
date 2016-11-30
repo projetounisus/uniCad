@@ -7,15 +7,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import br.com.uniCad.model.beans.AbstractBean;
-import br.com.uniCad.model.dao.AbstractDao;
+import br.com.uniCad.model.dao.beans.AbstractDaoBean;
 
 public abstract class AbstractControllerRest<T extends AbstractBean> {
-	protected abstract AbstractDao getDao();
+	protected abstract AbstractDaoBean getDao();
 	//TODO: implementar dee forma correta
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ResponseEntity<List<T>> list(){
-		AbstractDao dao = getDao();
+		AbstractDaoBean dao = getDao();
 		List<T> result = dao.list();
 		
 		ResponseEntity<List<T>> responseEntity = new ResponseEntity(result, HttpStatus.OK);
@@ -24,7 +24,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 	
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	 public ResponseEntity insert(@RequestBody T bean){
-		 AbstractDao dao = getDao();
+		 AbstractDaoBean dao = getDao();
 		 dao.insert(bean);
 		 
 		 return new ResponseEntity<T>(bean, HttpStatus.OK);
@@ -33,7 +33,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 	 @RequestMapping(value = "/update", method = RequestMethod.POST)
 	 public ResponseEntity<?> update(@RequestBody T bean){
 
-		 AbstractDao dao = getDao();
+		 AbstractDaoBean dao = getDao();
 		 dao.update(bean);
 
 		 return new ResponseEntity(HttpStatus.OK);
@@ -41,7 +41,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 
 	 @RequestMapping(value ="/delete", method = RequestMethod.POST)
 	 public ResponseEntity delete(@RequestParam(value = "id", required = true) int id){
-		 AbstractDao dao = this.getDao();
+		 AbstractDaoBean dao = this.getDao();
 		 dao.delete(id);
 
 		 return new ResponseEntity(HttpStatus.MULTI_STATUS.OK);

@@ -9,8 +9,8 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.Medic;
 import br.com.uniCad.model.beans.Speciality;
 import br.com.uniCad.model.beans.SusProfessional;
-import br.com.uniCad.model.dao.SpecialityDao;
-import br.com.uniCad.model.dao.SusProfessionalDao;
+import br.com.uniCad.model.dao.beans.SpecialityDao;
+import br.com.uniCad.model.dao.beans.SusProfessionalDao;
 
 public class MedicDeserializer extends AbstractDeserializer<Medic>{
 

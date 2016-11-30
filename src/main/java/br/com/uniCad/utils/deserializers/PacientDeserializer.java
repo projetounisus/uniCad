@@ -9,8 +9,8 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.CurrentMedicStatus;
 import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.CurrentMedicStatusDao;
-import br.com.uniCad.model.dao.UserDao;
+import br.com.uniCad.model.dao.beans.CurrentMedicStatusDao;
+import br.com.uniCad.model.dao.beans.UserDao;
 
 public class PacientDeserializer extends AbstractDeserializer<Pacient> {
 

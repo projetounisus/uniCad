@@ -1,4 +1,4 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.List;
 

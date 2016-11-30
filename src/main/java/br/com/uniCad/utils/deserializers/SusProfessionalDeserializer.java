@@ -9,8 +9,8 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.AtendimentUnity;
 import br.com.uniCad.model.beans.SusProfessional;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.AtendimentUnityDao;
-import br.com.uniCad.model.dao.UserDao;
+import br.com.uniCad.model.dao.beans.AtendimentUnityDao;
+import br.com.uniCad.model.dao.beans.UserDao;
 
 public class SusProfessionalDeserializer extends AbstractDeserializer<SusProfessional> {
 

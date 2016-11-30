@@ -10,7 +10,7 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.RegisterType;
 import br.com.uniCad.model.beans.Speciality;
-import br.com.uniCad.model.dao.RegisterTypeDao;
+import br.com.uniCad.model.dao.beans.RegisterTypeDao;
 
 public class SpecialityDeserializer extends AbstractDeserializer<Speciality>{
 

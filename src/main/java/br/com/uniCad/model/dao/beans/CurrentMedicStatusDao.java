@@ -1,37 +1,40 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
-import br.com.uniCad.model.beans.Speciality;
+import br.com.uniCad.model.beans.CurrentMedicStatus;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
-import br.com.uniCad.utils.deserializers.SpecialityDeserializer;
+import br.com.uniCad.utils.deserializers.CurrentMedicStatusDeserializer;
 
-public class SpecialityDao extends AbstractDao<Speciality> {
+public class CurrentMedicStatusDao extends AbstractDaoBean<CurrentMedicStatus>{
 
-	public SpecialityDao() {
-		super(Speciality.class);
-		// TODO Auto-generated constructor stub
+	public CurrentMedicStatusDao() {
+		super(CurrentMedicStatus.class);
 	}
 
 	@Override
 	protected String getTableName() {
-		return "especialidade";
+		return "dados_medicos_auxiliares";
 	}
 
 	@Override
-	protected AbstractDeserializer<Speciality> getDeserializer() {
-		// TODO Auto-generated method stub
-		return new SpecialityDeserializer();
+	protected AbstractDeserializer<CurrentMedicStatus> getDeserializer() {
+		return new CurrentMedicStatusDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("nome", "name");
-		map.put("descricao", "description");
+		
+		map.put("tipo_sanguineo", "bloodType");
+		map.put("peso", "weight");
+		map.put("altura", "height");
+		map.put("alergia", "allergies");
+		map.put("tratamentos_atuais", "currentTreatment");
+		
 		return map;
 	}
 

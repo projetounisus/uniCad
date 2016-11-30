@@ -1,4 +1,4 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,7 +9,7 @@ import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.PacientDeserializer;
 
-public class PacientDao extends AbstractDao<Pacient>{
+public class PacientDao extends AbstractDaoBean<Pacient>{
 
 	public PacientDao() {
 		super(Pacient.class);

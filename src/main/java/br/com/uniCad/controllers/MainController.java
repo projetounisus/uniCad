@@ -13,8 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import br.com.uniCad.model.beans.Login;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.LoginDao;
-import br.com.uniCad.model.dao.UserDao;
+import br.com.uniCad.model.dao.beans.LoginDao;
+import br.com.uniCad.model.dao.beans.UserDao;
 
 @Controller
 @RequestMapping

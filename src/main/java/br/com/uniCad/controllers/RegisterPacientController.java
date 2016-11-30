@@ -15,10 +15,10 @@ import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.AbstractDao;
-import br.com.uniCad.model.dao.MedicRegisterDao;
-import br.com.uniCad.model.dao.PacientDao;
-import br.com.uniCad.model.dao.UserDao;
+import br.com.uniCad.model.dao.beans.AbstractDaoBean;
+import br.com.uniCad.model.dao.beans.MedicRegisterDao;
+import br.com.uniCad.model.dao.beans.PacientDao;
+import br.com.uniCad.model.dao.beans.UserDao;
 
 //TODO: analizar pacote melhor para etse controller
 @Controller
@@ -55,7 +55,7 @@ public class RegisterPacientController {
 		
 		
 		//TODO: verificar se há lógica melhor
-		AbstractDao relationedPacientDao;
+		AbstractDaoBean relationedPacientDao;
 		
 		switch(paramType){
 			case 1:

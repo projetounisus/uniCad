@@ -1,60 +1,52 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
-import br.com.uniCad.model.beans.Address;
-import br.com.uniCad.utils.deserializers.AddressDeserializer;
+import br.com.uniCad.model.beans.Speciality;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
+import br.com.uniCad.utils.deserializers.SpecialityDeserializer;
 
-public class AddressDao extends AbstractDao<Address> {
+public class SpecialityDao extends AbstractDaoBean<Speciality> {
 
-	public AddressDao() {
-		super(Address.class);
+	public SpecialityDao() {
+		super(Speciality.class);
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	protected String getTableName() {
-		// TODO Auto-generated method stub
-		return "endereco";
+		return "especialidade";
 	}
 
 	@Override
-	protected AbstractDeserializer getDeserializer() {
+	protected AbstractDeserializer<Speciality> getDeserializer() {
 		// TODO Auto-generated method stub
-		return new AddressDeserializer();
+		return new SpecialityDeserializer();
 	}
 
 	@Override
 	public Map<String, String> getMapColumnToProperty() {
 		Map<String, String> map = new HashMap<String, String>();
-		
-		map.put("pais", "country");
-		map.put("uf", "uf");
-		map.put("cidade", "city");
-		map.put("bairro", "neighborhood");
-		map.put("rua", "street");
-		map.put("ponto_referencia", "adtionalInfo");
-		
+		map.put("nome", "name");
+		map.put("descricao", "description");
 		return map;
 	}
 
 	@Override
 	protected int insertInheritance(AbstractBean bean) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	protected void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence {
-		throw new DoesntHaveInheritence("Address");
+		throw new DoesntHaveInheritence();
 	}
 
 	@Override
 	protected boolean hasInheritance() {
-		// TODO Auto-generated method stub
 		return false;
 	}
+
 }

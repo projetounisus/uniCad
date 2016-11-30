@@ -1,4 +1,4 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ import br.com.uniCad.model.beans.SusProfessional;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.SusProfessionalDeserializer;
 
-public class SusProfessionalDao extends AbstractDao<SusProfessional> {
+public class SusProfessionalDao extends AbstractDaoBean<SusProfessional> {
 
 	public SusProfessionalDao() {
 		super(SusProfessional.class);

@@ -9,27 +9,27 @@ import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.Speciality;
 import br.com.uniCad.model.beans.SusProfessional;
 import br.com.uniCad.model.beans.User;
-import br.com.uniCad.model.dao.AbstractDao;
-import br.com.uniCad.model.dao.AddressDao;
-import br.com.uniCad.model.dao.AtendimentUnityDao;
-import br.com.uniCad.model.dao.CurrentMedicStatusDao;
-import br.com.uniCad.model.dao.LoginDao;
-import br.com.uniCad.model.dao.PacientDao;
-import br.com.uniCad.model.dao.SpecialityDao;
-import br.com.uniCad.model.dao.SusProfessionalDao;
-import br.com.uniCad.model.dao.UserDao;
+import br.com.uniCad.model.dao.beans.AbstractDaoBean;
+import br.com.uniCad.model.dao.beans.AddressDao;
+import br.com.uniCad.model.dao.beans.AtendimentUnityDao;
+import br.com.uniCad.model.dao.beans.CurrentMedicStatusDao;
+import br.com.uniCad.model.dao.beans.LoginDao;
+import br.com.uniCad.model.dao.beans.PacientDao;
+import br.com.uniCad.model.dao.beans.SpecialityDao;
+import br.com.uniCad.model.dao.beans.SusProfessionalDao;
+import br.com.uniCad.model.dao.beans.UserDao;
 
 //FIXME: substtituir pela inje��o de dependencias do Spring
 public class Mapper {
-	static public AbstractDao beanToDao(AbstractBean bean){
+	static public AbstractDaoBean beanToDao(AbstractBean bean){
 		
-		AbstractDao dao = beanClassToDao(bean.getClass());
+		AbstractDaoBean dao = beanClassToDao(bean.getClass());
 		
 		return dao;
 	}
 	
-	static public AbstractDao beanClassToDao(Class clazz){
-		AbstractDao dao;
+	static public AbstractDaoBean beanClassToDao(Class clazz){
+		AbstractDaoBean dao;
 		
 		if(clazz == Address.class)
 			dao = new AddressDao();

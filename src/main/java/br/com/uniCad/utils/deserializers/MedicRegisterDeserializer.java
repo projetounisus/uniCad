@@ -13,10 +13,10 @@ import br.com.uniCad.model.beans.AtendimentUnity;
 import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.SusProfessional;
-import br.com.uniCad.model.dao.AddressDao;
-import br.com.uniCad.model.dao.AtendimentUnityDao;
-import br.com.uniCad.model.dao.PacientDao;
-import br.com.uniCad.model.dao.SusProfessionalDao;
+import br.com.uniCad.model.dao.beans.AddressDao;
+import br.com.uniCad.model.dao.beans.AtendimentUnityDao;
+import br.com.uniCad.model.dao.beans.PacientDao;
+import br.com.uniCad.model.dao.beans.SusProfessionalDao;
 
 public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegister>{
 

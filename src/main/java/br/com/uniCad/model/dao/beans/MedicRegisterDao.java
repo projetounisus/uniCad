@@ -1,4 +1,4 @@
-package br.com.uniCad.model.dao;
+package br.com.uniCad.model.dao.beans;
 
 import static org.jooq.impl.DSL.field;
 import static org.jooq.impl.DSL.table;
@@ -20,7 +20,7 @@ import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.MedicRegisterDeserializer;
 
-public class MedicRegisterDao extends AbstractDao<MedicRegister> {
+public class MedicRegisterDao extends AbstractDaoBean<MedicRegister> {
 
 	public MedicRegisterDao() {
 		super(MedicRegister.class);

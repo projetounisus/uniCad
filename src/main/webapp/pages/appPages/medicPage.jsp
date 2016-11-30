@@ -37,60 +37,63 @@
 	        </div>
 	        
 	        <div class="modal-body">
-						<div class="container" style="width:100%">
-							<div class="row">
-								<h3>Dados pessoais</h3>
-								<input type="text" placeholder="Nome completo" ng-model="currentUser.completeName"/>
-								<input type="text" placeholder="cpf" ng-model="currentUser.cpf"/>
-								<input type="date" ng-model="currentUser.birthDate"/>
-								<input type="text" placeholder="gênero" ng-model="currentUser.genre"/>
+				<div class="container" style="width:100%">
+					<div class="row"><h3 class="col-md-12">Dados pessoais</h3></div>
+					<div class="row">
+						<div class="col-md-12"><input type="text" placeholder="Nome completo" ng-model="currentUser.completeName"/></div>	
+					</div>
+					<div class="row">
+						<div class="col-md-4"><input type="text" placeholder="cpf" ng-model="currentUser.cpf"/></div>
+						<div class="col-md-4"><input type="date" ng-model="currentUser.birthDate"/></div>
+						<div class="col-md-4"><input type="text" placeholder="gênero" ng-model="currentUser.genre"/></div>
+					</div>
 
-								<h4>Moradia</h4>
-								<input type="text" placeholder="país" ng-model="currentUser.address.country"/>
-								<input type="text" placeholder="estado" ng-model="currentUser.address.uf"/>
-								<input type="text" placeholder="Cidade" ng-model="currentUser.address.city"/>
-								<input type="text" placeholder="Bairro" ng-model="currentUser.address.neighborhood"/>
-								<input type="text" placeholder="rua" ng-model="currentUser.address.street"/>
-								<input type="text" placeholder="numero" ng-model="currentUser.address.number"/>
-							</div>
-							<div class="row">
-								<h3>Dados de login</h3>
-								<div class="col-md-6">
-									<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
-								</div>
-								<div class="col-md-6">
-									<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
-  							</div>
-							</div>
-							
-							<div class="row"> <h3 class="col-md-12">Dados Profissionais</h3> </div>
-							<div class="row">
-								<div class="col-md-4">
-									
-									<input type="text" placeholder="CRM" ng-model="currentUser.crm"/>
-								</div>
-								<!--<select ng-model="currentUser.speciality" ng-repeat="optionSpeciality.id for optionSpeciality in specialities">
-									<option value =""> Seleciosne uma especialidade</option>
-								</select>-->
-
-								<div class="col-md-4">
-									<!--<h4>Escpecialidade</h4>
-									<input type="text" placeholder="Nome" ng-model="currentUser.speciality.name"/>
-									<input type="text" placeholder="Descriação" ng-model="currentUser.speciality.description"/>-->
-
-									<select ng-options="specialityOption.name for specialityOption in specialities" ng-model="currentUser.speciality">
-										<option value="">Especialidade</option>
-									</select>
-								</div>
-								
-								<div class="col-md-4">
-									<select ng-options="atendimentUnityOption.name for atendimentUnityOption in atendimentUnities" ng-model="currentUser.atendimentUnity">
-										<option value="">Unidade de atendimento</option>
-									</select>
-  							</div>	
-								
-							</div>
+					<div class="row"><h3 class="col-md-12">Moradia</h3></div>
+					<div class="row">								
+						<div class="col-xs-12"><input type="text" placeholder="rua" ng-model="currentUser.address.street"/></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4"><input type="text" placeholder="país" ng-model="currentUser.address.country"/></div>
+						<div class="col-xs-4"><input type="text" placeholder="estado" ng-model="currentUser.address.uf"/></div>
+						<div class="col-xs-4"><input type="text" placeholder="Cidade" ng-model="currentUser.address.city"/></div>
+					</div>
+					<div class="row">
+						<div class="col-xs-8"><input type="text" placeholder="Bairro" ng-model="currentUser.address.neighborhood"/></div>
+						<div class="col-xs-4"><input type="text" placeholder="numero" ng-model="currentUser.address.number"/></div>
+					</div>
+					
+					<div class="row"><h3 class="col-md-12">Dados de login</h3></div>
+					<div class="row">
+						<div class="col-xs-6">
+							<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
 						</div>
+						<div class="col-xs-6">
+							<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
+					</div>
+					</div>
+					
+					<div class="row"> <h3 class="col-md-12">Dados Profissionais</h3> </div>
+					<div class="row">
+						<div class="col-xs-4">
+							<input type="text" placeholder="CRM" ng-model="currentUser.crm"/>
+						</div>
+						
+						<div class="col-xs-4">
+							<button class="btn btn-parimary">Adicionar especialidades</button>
+
+							<select ng-options="specialityOption.name for specialityOption in specialities" ng-model="currentUser.speciality">
+								<option value="">Especialidade</option>
+							</select>
+						</div>
+						
+						<div class="col-xs-4">
+							<select ng-options="atendimentUnityOption.name for atendimentUnityOption in atendimentUnities" ng-model="currentUser.atendimentUnity">
+								<option value="">Unidade de atendimento</option>
+							</select>
+						</div>	
+						
+					</div>
+				</div>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default btn-primary" data-dismiss="modal" ng-click="createOrAdd(currentUser)">Criar</button>
