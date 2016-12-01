@@ -1,6 +1,7 @@
 package br.com.uniCad.utils.deserializers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.jooq.Record;
@@ -9,6 +10,7 @@ import org.jooq.Result;
 import br.com.uniCad.model.beans.Medic;
 import br.com.uniCad.model.beans.Speciality;
 import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.dao.auxiliarData.DaoAuxiliarMedicToSpeciality;
 import br.com.uniCad.model.dao.beans.SpecialityDao;
 import br.com.uniCad.model.dao.beans.SusProfessionalDao;
 
@@ -33,10 +35,18 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 		
 		String idStr = record.get("id").toString();
 		String crm = record.get("crm").toString();
-		//String specialityIdStr = record.get("especialidade").toString();
 		
 		SusProfessional partialProfessionalBean = (SusProfessional)susProfessionalDao.getById(Integer.parseInt(idStr));
-		//Speciality speciality = (Speciality)specialityDao.getById(Integer.parseInt(specialityIdStr));
+		
+		DaoAuxiliarMedicToSpeciality daoAuxiliarMedicToSpeciality = new DaoAuxiliarMedicToSpeciality();
+		List<Speciality> specialitiesList = Arrays.asList(new Speciality());
+		
+		try {
+			specialitiesList =  daoAuxiliarMedicToSpeciality.getSelfRelationedData(Integer.parseInt(idStr));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		Medic medic = new Medic(Integer.parseInt(idStr), 
 				partialProfessionalBean.getCompleteName(),
@@ -46,7 +56,7 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 				partialProfessionalBean.getLogin(),
 				partialProfessionalBean.getAtendimentUnity(),
 				crm,
-				new Speciality(),
+				specialitiesList,
 				partialProfessionalBean.getGenre());
 		
 		return medic;

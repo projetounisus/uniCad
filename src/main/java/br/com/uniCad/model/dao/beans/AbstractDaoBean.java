@@ -1,7 +1,6 @@
 package br.com.uniCad.model.dao.beans;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,9 +15,6 @@ import org.jooq.Condition;
 import org.jooq.DSLContext;
 import org.jooq.Field;
 import org.jooq.SQLDialect;
-import org.jooq.UpdateSetFirstStep;
-import org.jooq.UpdateSetMoreStep;
-import org.jooq.conf.ObjectFactory;
 import org.jooq.impl.DSL;
 
 import org.jooq.Record;
@@ -27,13 +23,12 @@ import org.jooq.Result;
 import static org.jooq.impl.DSL.table;
 import static org.jooq.impl.DSL.field;
 
-import br.com.uniCad.constants.Constants;
 import br.com.uniCad.utils.Mapper;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
 public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDao implements Crud<AbstractBean>{
 	public AbstractDaoBean(Class<?> currentBeanClass){
-		this.currentClassBean = currentBeanClass;
+		super(currentBeanClass);
 	}
 	
 	private Class<?> currentClassBean;
@@ -79,7 +74,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 				if(propValue instanceof AbstractBean){
 					AbstractBean beanPropValue = (AbstractBean)propValue;
 					
-					//Caso n�o haja linha refrenciada, insere na tabela referenciada
+					//Caso não haja linha refrenciada, insere na tabela referenciada
 					if(beanPropValue.getId() ==  0)
 					{
 						AbstractDaoBean foreignKeyDao = Mapper.beanToDao(beanPropValue);
@@ -337,7 +332,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 	}
 	
 	//TODO: ver se � poss�vel deslocar esta fun��o para a AbstractBean de forma est�tica 
-	protected abstract String getTableName();
+	
 	protected abstract AbstractDeserializer<T> getDeserializer();
 	public abstract Map<String, String> getMapColumnToProperty();
 	// TODO: esses métodos podem acessar o this?

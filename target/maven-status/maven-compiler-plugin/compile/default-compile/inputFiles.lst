@@ -2,6 +2,7 @@ C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\be
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\beans\AtendimentUnityDao.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\beans\RegisterTypeDao.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\SpecialityDeserializer.java
+C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToSpeciality.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\AdminClincGroup.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\rest\ControllerRestSusProfessional.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\exceptions\DoesntHaveInheritence.java

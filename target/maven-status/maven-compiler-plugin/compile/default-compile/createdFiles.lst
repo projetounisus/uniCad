@@ -24,8 +24,10 @@ br\com\uniCad\utils\deserializers\CurrentMedicStatusDeserializer.class
 br\com\uniCad\constants\Constants$AtendimentUnityType.class
 br\com\uniCad\model\dao\beans\SusProfessionalDao.class
 br\com\uniCad\utils\deserializers\RegisterTypeDeserializer.class
+br\com\uniCad\model\dao\auxiliarData\AbstractDaoAuxiliar$RelationshipType.class
 br\com\uniCad\utils\deserializers\AbstractDeserializer.class
 br\com\uniCad\model\dao\beans\ComomUserDao.class
+br\com\uniCad\model\dao\auxiliarData\AbstractDaoAuxiliar$1.class
 br\com\uniCad\model\dao\beans\AtendimentUnityDao.class
 br\com\uniCad\controllers\rest\AbstractControllerRest.class
 br\com\uniCad\model\dao\beans\UserDao.class
@@ -39,6 +41,7 @@ br\com\uniCad\utils\deserializers\LoginDeserializer.class
 br\com\uniCad\controllers\rest\ControllerRestUser.class
 br\com\uniCad\model\beans\CurrentMedicStatus.class
 br\com\uniCad\model\beans\MedicRegister.class
+br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToSpeciality.class
 br\com\uniCad\controllers\rest\ControllerRestAtendimentUnity.class
 br\com\uniCad\model\dao\auxiliarData\AbstractDaoAuxiliar.class
 br\com\uniCad\model\beans\Pacient.class

@@ -83,11 +83,33 @@ angular.module('app')
 		});
 	};
 	
+	var _intantiateCurrentUser = function(){
+		$scope.currentUser = {
+			specialities:[]
+		};
+	} 
+
 	_buildModal();
+	_intantiateCurrentUser();
+
+	$scope.specialitiesBuffer = [];
 
 	request.success(function(medics){
 		$scope.users = medics;
 	});
+
+	$scope.addUserSpecialityBuffer = function(speciality){
+		$scope.specialitiesBuffer.push(speciality);
+		//$scope.currentUser.specialities.push(speciality);
+	};
+
+	$scope.confirmUserSpecialities = function(specialities){
+		$scope.currentUser.specialities = specialities;
+	}
+
+	$scope.cancelUserSpecialities = function(){
+		$scope.specialitiesBuffer = $scope.currentUser.specialities;
+	}
 
 	$scope.delete = function(bean){
 		var indexToRemove = $scope.users.indexOf(bean);
@@ -118,7 +140,7 @@ angular.module('app')
 	];
 
 	$scope.registers = [];
-
+	
 	$scope.currentSelectionParam = 1;
 
 	$scope.searchPanelVisible = true;
@@ -127,7 +149,7 @@ angular.module('app')
 		$scope.currentSelectionParam = selectionParam.id;
 	};
 
-	// Espeífico... estranho, ajustar isso
+	// Específico... estranho, ajustar isso
 	var _getPacientAgeFromBirthDateString = function(dateString){
 		var pacientBirthDate = new Date(dateString);
 		var currentDate = new Date();

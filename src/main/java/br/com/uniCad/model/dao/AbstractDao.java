@@ -7,7 +7,14 @@ import java.sql.SQLException;
 import br.com.uniCad.constants.Constants;
 
 public abstract class AbstractDao {
-
+	
+	public AbstractDao(Class<?> currentBeanClass){
+		this.currentClassBean = currentBeanClass;
+	}
+	
+	//TODO: tonalo private,ç fazer um getter para isso
+	protected Class<?> currentClassBean;
+	
 	private static Connection connectionSingleton;
 	
 	protected Connection getConnection() throws SQLException, ClassNotFoundException {
@@ -18,5 +25,7 @@ public abstract class AbstractDao {
 		}
 		return AbstractDao.connectionSingleton;
 	}
-
+	
+	protected abstract String getTableName();
+	
 }
