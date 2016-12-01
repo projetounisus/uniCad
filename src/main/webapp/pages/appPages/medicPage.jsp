@@ -126,18 +126,20 @@
 						
 						<div class="row">	
 							<div style="height:250px; width:100%;">
-								<ul style="overflow:auto;">
-									<li ng-repeat="currentSpeciality in specialitiesBuffer">
-										<div>
-											<div class="row-list-title">
-												<span class="list-card-title">{{currentSpeciality.name}}</span> 
-											</div>
-											
-											<div class="row-list-buttons">
-												<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">delete</i></button>
+								<div style="overflow-x:hidden;overflow-y:auto;max-height:100%; width:100%;">
+									<div class="container" style="width:100%; padding:25px;">
+										<div class="row " ng-repeat="currentSpeciality in specialitiesBuffer">
+											<div style="width:100%">
+												<div class="row-list-title">
+													<span class="list-card-title">{{currentSpeciality.name}}</span> 
+												</div>
+												
+												<div class="row-list-buttons">
+													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">delete</i></button>
+												</div>
 											</div>
 										</div>
-									</li>
+									</div>
 								</ul>
 							</div>
 						</div>
