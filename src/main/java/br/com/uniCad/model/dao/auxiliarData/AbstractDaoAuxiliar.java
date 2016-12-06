@@ -44,17 +44,25 @@ public abstract class AbstractDaoAuxiliar<T extends AbstractBean> extends Abstra
 		Table<Record> currentTable = table(this.getTableName());
 		Table<Record> relatedTable = table(relatedTableName);
 		
+		Field<Object> currentForeignKey = field(this.getCurrentForeignKey());
+		Field<Object> joinedForeignKey = field(this.getJoinedForeignKey());
+		
 		AbstractDeserializer<T> deserializer = this.getRelatedDeserializer();
 		
 		switch (this.currentRelationshipType) {
 		case oneToMany:
 			
 			field(this.getCurrentForeignKey());
+//			
+//			Result<Record> resultOneToMany = query.select()
+//			.from(relatedTable)
+//			.innerJoin(currentTable)
+//			.on(field("id").equal(currentTable.field("id")))
+//			.fetch();
 			
 			Result<Record> resultOneToMany = query.select()
 			.from(relatedTable)
-			.innerJoin(currentTable)
-			.on(field("id").equal(currentTable.field("id")))
+			.where(joinedForeignKey.equal(id))
 			.fetch();
 			
 			List<T> beansOneToMany = (List<T>)deserializer.fromDataBaseResult(resultOneToMany);
@@ -66,8 +74,6 @@ public abstract class AbstractDaoAuxiliar<T extends AbstractBean> extends Abstra
 			// Obs: usar equal e não equals para comparação de chaves 
 			
 			Table<Record> auxiliarTable = table(this.getAuxiliarTableName());
-			Field<Object> currentForeignKey = field(this.getCurrentForeignKey());
-			Field<Object> joinedForeignKey = field(this.getJoinedForeignKey());
 			
 			Result<Record> firstJoin = query.select()
 			.from(auxiliarTable)

@@ -81,7 +81,6 @@
 							<section>
 								
 								<div class="mdl-card mdl-cell mdl-cell--12-col mdl-card__supporting-text mdl-shadow--4dp">
-									
 								</div>
 							
 							</section>

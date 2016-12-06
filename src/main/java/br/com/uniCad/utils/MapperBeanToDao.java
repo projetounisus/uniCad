@@ -20,7 +20,7 @@ import br.com.uniCad.model.dao.beans.SusProfessionalDao;
 import br.com.uniCad.model.dao.beans.UserDao;
 
 //FIXME: substtituir pela inje��o de dependencias do Spring
-public class Mapper {
+public class MapperBeanToDao {
 	static public AbstractDaoBean beanToDao(AbstractBean bean){
 		
 		AbstractDaoBean dao = beanClassToDao(bean.getClass());
@@ -52,4 +52,6 @@ public class Mapper {
 		
 		return dao;
 	}
+
+	
 }

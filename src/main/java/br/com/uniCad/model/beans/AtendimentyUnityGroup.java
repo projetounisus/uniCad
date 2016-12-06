@@ -1,6 +1,6 @@
 package br.com.uniCad.model.beans;
 
-public class ClinicGroup extends AbstractBean{
+public class AtendimentyUnityGroup extends AbstractBean{
 	private String name;
 
 	public String getName() {
@@ -11,17 +11,17 @@ public class ClinicGroup extends AbstractBean{
 		this.name = name;
 	}
 
-	public ClinicGroup(String name) {
+	public AtendimentyUnityGroup(String name) {
 		super();
 		this.name = name;
 	}
 
-	public ClinicGroup(int id, String name) {
+	public AtendimentyUnityGroup(int id, String name) {
 		super(id);
 		this.name = name;
 	}
 
-	public ClinicGroup() {
+	public AtendimentyUnityGroup() {
 		super();
 	}
 }

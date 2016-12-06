@@ -63,13 +63,13 @@
 					</div>
 					
 					<div class="row"><h6 class="col-md-12">Dados de login</h6></div>
-					<div class="row">
-						<div class="col-xs-6">
-							<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
+						<div class="row">
+							<div class="col-xs-6">
+								<input type="text" placeholder="login" ng-model="currentUser.login.userName"/>
+							</div>
+							<div class="col-xs-6">
+								<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
 						</div>
-						<div class="col-xs-6">
-							<input type="text" placeholder="senha" ng-model="currentUser.login.userPassword"/>
-					</div>
 					</div>
 					
 					<div class="row"> <h6 class="col-md-12">Dados Profissionais</h6> </div>

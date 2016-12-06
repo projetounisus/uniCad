@@ -30,6 +30,7 @@ public class AddressDeserializer extends AbstractDeserializer<Address> {
 		String number = numero == null? "0" : numero.toString();
 		Object referenceAddress = record.get("ponto_referencia");
 		String referenceAddressStr = referenceAddress != null? referenceAddress.toString() : " ";
+		
 		Address address = new Address(Integer.parseInt(id.toString()),
 				record.get("pais").toString(),
 				record.get("uf").toString(),

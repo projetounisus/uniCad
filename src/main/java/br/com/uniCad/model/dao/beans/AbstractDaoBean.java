@@ -23,15 +23,13 @@ import org.jooq.Result;
 import static org.jooq.impl.DSL.table;
 import static org.jooq.impl.DSL.field;
 
-import br.com.uniCad.utils.Mapper;
+import br.com.uniCad.utils.MapperBeanToDao;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
 public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDao implements Crud<AbstractBean>{
 	public AbstractDaoBean(Class<?> currentBeanClass){
 		super(currentBeanClass);
 	}
-	
-	private Class<?> currentClassBean;
 	
 	private int getLastIndexInserted() throws ClassNotFoundException, SQLException{
 		Connection currentConnection = getConnection();
@@ -65,7 +63,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 				String columnName = currentColumnPropPair.getKey();
 				String propertyName = currentColumnPropPair.getValue();
 				
-				java.lang.reflect.Field declaredField = this.currentClassBean.getDeclaredField(propertyName);
+				java.lang.reflect.Field declaredField = super.currentClassBean.getDeclaredField(propertyName);
 				
 				declaredField.setAccessible(true);
 				Object propValue = declaredField.get(bean);
@@ -77,7 +75,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 					//Caso não haja linha refrenciada, insere na tabela referenciada
 					if(beanPropValue.getId() ==  0)
 					{
-						AbstractDaoBean foreignKeyDao = Mapper.beanToDao(beanPropValue);
+						AbstractDaoBean foreignKeyDao = MapperBeanToDao.beanToDao(beanPropValue);
 						propValue = foreignKeyDao.insert(beanPropValue); //TODO: isto � reatribui��o, consertar
 					}
 					else //Casa haja linha referenciada, user seu Id
@@ -258,7 +256,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 			query.delete(table(this.getTableName())).where(field("id").equal(id)).execute();
 
 			Map<String, String> mapColumnToProperty = this.getMapColumnToProperty();
-
+			
 			for(Entry<String, String> currentEntry : mapColumnToProperty.entrySet()){
 				String property = currentEntry.getValue();
 
@@ -271,7 +269,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 				if(propValue instanceof AbstractBean){
 					AbstractBean foreignBean = (AbstractBean)declaredField.get(currentBean);
 
-					AbstractDaoBean abstractDao = Mapper.beanToDao(foreignBean);
+					AbstractDaoBean abstractDao = MapperBeanToDao.beanToDao(foreignBean);
 					abstractDao.delete(foreignBean.getId());
 				}
 			}
