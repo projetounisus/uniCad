@@ -1,11 +1,14 @@
 package br.com.uniCad.model.dao.beans;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.GroupAtendimentUnity;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
+import br.com.uniCad.model.dao.auxiliarData.DaoAuxiliarGroupUnityToUnity;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.GroupAtendimentUnityDeserializer;
 
@@ -51,6 +54,19 @@ public class GroupAtendimentUnityDao extends AbstractDaoBean<GroupAtendimentUnit
 	protected String getTableName() {
 		// TODO Auto-generated method stub
 		return "rede_unidade_atendimento";
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		AbstractDaoAuxiliar daoAuxiliar = this.getDaoAuxiliar();
+		daoAuxiliar.deleteRelatedData(id);
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
+		return new DaoAuxiliarGroupUnityToUnity();
 	}
 
 }

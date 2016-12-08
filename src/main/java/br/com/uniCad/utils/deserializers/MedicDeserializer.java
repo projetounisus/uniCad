@@ -42,7 +42,7 @@ public class MedicDeserializer extends AbstractDeserializer<Medic>{
 		List<Speciality> specialitiesList = Arrays.asList(new Speciality());
 		
 		try {
-			specialitiesList =  daoAuxiliarMedicToSpeciality.getSelfRelationedData(Integer.parseInt(idStr));
+			specialitiesList =  daoAuxiliarMedicToSpeciality.getSelfRelatedData(Integer.parseInt(idStr));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

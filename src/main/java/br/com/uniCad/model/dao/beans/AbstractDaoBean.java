@@ -10,6 +10,7 @@ import java.util.Map.Entry;
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.dao.AbstractDao;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 
 import org.jooq.Condition;
 import org.jooq.DSLContext;
@@ -248,11 +249,13 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 
 			Connection currentConnection = getConnection();
 			DSLContext query = DSL.using(currentConnection, SQLDialect.MYSQL);
-
+			
+			this.deleRelatedTables(id);
+			
 			if(this.hasInheritance()){
 				this.deleteInheritance(currentBean);
 			}
-
+			
 			query.delete(table(this.getTableName())).where(field("id").equal(id)).execute();
 
 			Map<String, String> mapColumnToProperty = this.getMapColumnToProperty();
@@ -333,10 +336,10 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 	
 	protected abstract AbstractDeserializer<T> getDeserializer();
 	public abstract Map<String, String> getMapColumnToProperty();
-	// TODO: esses métodos podem acessar o this?
 	protected abstract int insertInheritance(AbstractBean bean);
 	protected abstract void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence;
 	protected abstract boolean hasInheritance();
-	
+	protected abstract void deleRelatedTables(int id) throws ClassNotFoundException, SQLException;
+	protected abstract AbstractDaoAuxiliar getDaoAuxiliar();
 
 }

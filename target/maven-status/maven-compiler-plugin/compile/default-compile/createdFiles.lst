@@ -34,6 +34,7 @@ br\com\uniCad\utils\deserializers\SusProfessionalDeserializer.class
 br\com\uniCad\controllers\rest\ControllerRestSpeciality.class
 br\com\uniCad\model\beans\GroupAtendimentUnity.class
 br\com\uniCad\utils\MapperBeanToDao.class
+br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarAtendimentUnityToMedics.class
 br\com\uniCad\model\beans\AdminClincGroup.class
 br\com\uniCad\model\dao\beans\RegisterTypeDao.class
 br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarGroupUnityToUnity.class
@@ -57,6 +58,7 @@ br\com\uniCad\model\dao\beans\SpecialityDao.class
 br\com\uniCad\model\beans\Speciality.class
 br\com\uniCad\model\beans\Medic.class
 br\com\uniCad\utils\deserializers\MedicRegisterDeserializer.class
+br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToRegister.class
 br\com\uniCad\model\dao\beans\CurrentMedicStatusDao.class
 br\com\uniCad\controllers\RegisterPacientController.class
 br\com\uniCad\controllers\rest\ControllerRestGroupAtendimentUnity.class

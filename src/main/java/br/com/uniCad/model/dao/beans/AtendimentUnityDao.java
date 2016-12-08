@@ -1,11 +1,14 @@
 package br.com.uniCad.model.dao.beans;
 
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.AtendimentUnity;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
+import br.com.uniCad.model.dao.auxiliarData.DaoAuxiliarAtendimentUnityToMedics;
 import br.com.uniCad.utils.deserializers.AtendimentUnityDeserializer;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import org.springframework.dao.DeadlockLoserDataAccessException;
@@ -52,6 +55,19 @@ public class AtendimentUnityDao extends AbstractDaoBean<AtendimentUnity> {
 	@Override
 	protected boolean hasInheritance() {
 		return false;
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		final AbstractDaoAuxiliar daoAuxiliar = this.getDaoAuxiliar();
+		daoAuxiliar.deleteRelatedData(id);
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
+		return new DaoAuxiliarAtendimentUnityToMedics();
 	}
 
 }

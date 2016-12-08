@@ -35,7 +35,7 @@ public class GroupAtendimentUnityDeserializer extends AbstractDeserializer<Group
 		
 		DaoAuxiliarGroupUnityToUnity daoGroupUnityToUnity = new DaoAuxiliarGroupUnityToUnity();
 		try {
-			atendimtUnityList = daoGroupUnityToUnity.getSelfRelationedData(id);
+			atendimtUnityList = daoGroupUnityToUnity.getSelfRelatedData(id);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

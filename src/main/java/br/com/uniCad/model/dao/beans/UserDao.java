@@ -12,6 +12,7 @@ import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.Login;
 import br.com.uniCad.model.beans.User;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 
 import org.jooq.DSLContext;
 import org.jooq.Field;
@@ -86,5 +87,17 @@ public class UserDao extends AbstractDaoBean<User>{
 		User deserializedRecord = deserializer.fromDataBaseRecord(record);
 		
 		return deserializedRecord;
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

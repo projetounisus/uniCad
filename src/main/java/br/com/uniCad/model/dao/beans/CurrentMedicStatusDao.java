@@ -6,6 +6,7 @@ import java.util.Map;
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.CurrentMedicStatus;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.CurrentMedicStatusDeserializer;
 
@@ -50,6 +51,18 @@ public class CurrentMedicStatusDao extends AbstractDaoBean<CurrentMedicStatus>{
 	@Override
 	protected boolean hasInheritance() {
 		return false;
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

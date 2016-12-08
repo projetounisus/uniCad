@@ -1,46 +1,47 @@
 package br.com.uniCad.model.dao.auxiliarData;
 
-import br.com.uniCad.model.beans.Medic;
-import br.com.uniCad.model.beans.Speciality;
+import br.com.uniCad.model.beans.MedicRegister;
+import br.com.uniCad.model.beans.SusProfessional;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
-import br.com.uniCad.utils.deserializers.SpecialityDeserializer;
+import br.com.uniCad.utils.deserializers.MedicRegisterDeserializer;
 
-public class DaoAuxiliarMedicToSpeciality extends AbstractDaoAuxiliar<Speciality> {
+public class DaoAuxiliarMedicToRegister extends AbstractDaoAuxiliar<MedicRegister> {
 
-	public DaoAuxiliarMedicToSpeciality() {
-		super(Medic.class, Speciality.class);
+	public DaoAuxiliarMedicToRegister() {
+		super(SusProfessional.class, MedicRegister.class);
 		// TODO Auto-generated constructor stub
-		this.currentRelationshipType = RelationshipType.manyToMany;
+		
+		this.currentRelationshipType = RelationshipType.oneToMany;
 	}
 
 	@Override
 	protected String getRelatedTableName() {
 		// TODO Auto-generated method stub
-		return "especialidade";
+		return "registro";
 	}
 
 	@Override
 	protected String getAuxiliarTableName() {
 		// TODO Auto-generated method stub
-		return "especialidade_x_medico";
+		return null;
 	}
 
 	@Override
-	protected AbstractDeserializer<Speciality> getRelatedDeserializer() {
+	protected AbstractDeserializer<MedicRegister> getRelatedDeserializer() {
 		// TODO Auto-generated method stub
-		return new SpecialityDeserializer();
+		return new MedicRegisterDeserializer();
 	}
 
 	@Override
 	protected String getCurrentForeignKey() {
 		// TODO Auto-generated method stub
-		return "medico";
-	};
+		return null;
+	}
 
 	@Override
 	protected String getRelatedForeignKey() {
 		// TODO Auto-generated method stub
-		return "especialidade";
+		return "profissional_responsavel";
 	}
 
 	@Override

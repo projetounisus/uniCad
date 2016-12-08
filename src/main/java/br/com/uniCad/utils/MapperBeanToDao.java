@@ -5,6 +5,8 @@ import br.com.uniCad.model.beans.Address;
 import br.com.uniCad.model.beans.AtendimentUnity;
 import br.com.uniCad.model.beans.CurrentMedicStatus;
 import br.com.uniCad.model.beans.Login;
+import br.com.uniCad.model.beans.Medic;
+import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.Speciality;
 import br.com.uniCad.model.beans.SusProfessional;
@@ -14,6 +16,8 @@ import br.com.uniCad.model.dao.beans.AddressDao;
 import br.com.uniCad.model.dao.beans.AtendimentUnityDao;
 import br.com.uniCad.model.dao.beans.CurrentMedicStatusDao;
 import br.com.uniCad.model.dao.beans.LoginDao;
+import br.com.uniCad.model.dao.beans.MedicDao;
+import br.com.uniCad.model.dao.beans.MedicRegisterDao;
 import br.com.uniCad.model.dao.beans.PacientDao;
 import br.com.uniCad.model.dao.beans.SpecialityDao;
 import br.com.uniCad.model.dao.beans.SusProfessionalDao;
@@ -47,7 +51,11 @@ public class MapperBeanToDao {
 			dao = new PacientDao();
 		else if(clazz == CurrentMedicStatus.class)
 			dao = new CurrentMedicStatusDao();
-		else
+		else if(clazz == MedicRegister.class)
+			dao = new MedicRegisterDao();
+		else if(clazz == Medic.class)
+			dao = new MedicDao();
+		else	
 			dao = null;
 		
 		return dao;

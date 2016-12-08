@@ -6,6 +6,7 @@ import java.util.Map;
 import br.com.uniCad.exceptions.DoesntHaveInheritence;
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.Address;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 import br.com.uniCad.utils.deserializers.AddressDeserializer;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 
@@ -56,5 +57,17 @@ public class AddressDao extends AbstractDaoBean<Address> {
 	protected boolean hasInheritance() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

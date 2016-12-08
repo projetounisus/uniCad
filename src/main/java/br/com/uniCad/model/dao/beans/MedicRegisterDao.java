@@ -17,6 +17,7 @@ import org.jooq.impl.DSL;
 
 import br.com.uniCad.model.beans.AbstractBean;
 import br.com.uniCad.model.beans.MedicRegister;
+import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.MedicRegisterDeserializer;
 
@@ -94,6 +95,18 @@ public class MedicRegisterDao extends AbstractDaoBean<MedicRegister> {
 		}
 		
 		// TODO: ver se deve ser levanatda um axeceção espécífica para este caso
+		return null;
+	}
+
+	@Override
+	protected void deleRelatedTables(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected AbstractDaoAuxiliar getDaoAuxiliar() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }
