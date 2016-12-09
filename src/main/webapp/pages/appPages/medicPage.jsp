@@ -9,6 +9,25 @@
 					<div class="mdl-card mdl-cell mdl-cell--12-col mdl-card__supporting-text">
 						<h4 class="card-title">Médicos</h4>
 						
+						<div class="row">
+							<!--<div style="bottom:0px; width:100%;">
+								<button class="mdl-button mdl-button--fab mdvai del-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal" style="color-font:#ffffff;">
+									<i class="material-icons" role="presentation">add</i>
+									<span class="visuallyhidden">Add</span>
+										<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
+									</span>
+								</button>
+							</div>
+								-->
+							<div class="col-md-3" style="float:left;">
+								<div style="padding: 10px; margin: 10px;">
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="add" data-target="#create-form" data-toggle="modal"><i class="material-icons">add</i></button>
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">create</i></button>
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">delete</i></button>
+								</div>
+							</div>
+						</div>
+
 						<div class="container mdl-card-container">
 							<div class="row">
 								<div class="col-md-12">
@@ -40,13 +59,6 @@
 								</div>
 							</div>
 						</div>
-						
-						<button class="mdl-button mdl-button--fab mdvai del-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal">
-							<i class="material-icons" role="presentation">add</i>
-							<span class="visuallyhidden">Add</span>
-								<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
-							</span>
-						</button>
 					</div>
 				</section>
 
