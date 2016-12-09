@@ -54,10 +54,22 @@ angular.module('app')
 			});
 	}
 
+	var _update = function(bean){
+		return $http({
+			url:'medic/update/?id=' + bean.id,
+			method: 'POST',
+			data: bean,
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		});
+	}
+
 	return {
 		getMedics: _getMedics,
 		delete: _delete,
-		create: _create
+		create: _create,
+		update: _update
 	};
 }])
 .service('pacientRegisterService', ['$http', function($http){

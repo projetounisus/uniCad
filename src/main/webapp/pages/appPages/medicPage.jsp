@@ -10,20 +10,9 @@
 						<h4 class="card-title">Médicos</h4>
 						
 						<div class="row">
-							<!--<div style="bottom:0px; width:100%;">
-								<button class="mdl-button mdl-button--fab mdvai del-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal" style="color-font:#ffffff;">
-									<i class="material-icons" role="presentation">add</i>
-									<span class="visuallyhidden">Add</span>
-										<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
-									</span>
-								</button>
-							</div>
-								-->
 							<div class="col-md-3" style="float:left;">
 								<div style="padding: 10px; margin: 10px;">
 									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="add" data-target="#create-form" data-toggle="modal"><i class="material-icons">add</i></button>
-									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">create</i></button>
-									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">delete</i></button>
 								</div>
 							</div>
 						</div>
@@ -34,30 +23,37 @@
 									<table id="table-data" data-height="100%" class="table table-hover">
 										<thead>
 											<tr>
-												<th data-sortable="true">
+												<th>
 													Nome
 												</th>
 
-												<th data-sortable="true">
+												<th>
 													CRM
 												</th>
 
-												<th data-sortable="true">
+												<th>
 													Unidade de atendimento
 												</th>
 
-												<th data-sortabale="false">
+												<th>
 													Telefone
+												</th>
+												
+												<th>
 												</th>
 											</tr>
 										</thead>
 
 										<tbody>
-											<tr ng-repeat="currentUser in users">
-												<td>{{currentUser.completeName}}</td>
-												<td>{{currentUser.crm}}</td>
-												<td>{{currentUser.atendimentUnity.name}}</td>
-												<td>{{currentUser.telephone}}</td>
+											<tr ng-repeat="current in users">
+												<td>{{current.completeName}}</td>
+												<td>{{current.crm}}</td>
+												<td>{{current.atendimentUnity.name}}</td>
+												<td>{{current.telephone}}</td>
+												<td>
+													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons" ng-click="setCurrentUser(current)" data-target="#create-form" data-toggle="modal">create</i></button>
+													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons" ng-click="delete(current)">delete</i></button>
+												</td>
 											</tr>
 										</tbody>
 									</table>

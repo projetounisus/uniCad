@@ -122,12 +122,12 @@ angular.module('app')
 
 	$scope.delete = function(bean){
 		var indexToRemove = $scope.users.indexOf(bean);
-		$scope.users.splice(indexToRemove, 1);
-
+		
 		var request = medicService.delete(bean.id);
 
 		request.success(function(response){
 			console.log("bean: " + bean.id + " has deleted");
+			$scope.users.splice(indexToRemove, 1);
 		});
 	};
 
@@ -138,13 +138,39 @@ angular.module('app')
 			.success(function(data, status){
 				$scope.users.push(data);
 			});
+		}else{
+			medicService.update(currentUser)
+			.success(function(userUpdated, status){
+				for(var currentUserIndex = 0; currentUserIndex <  $scope.users.length; currentUserIndex++)
+				{
+					var currrentUser = $scope.users[currentUserIndex];
+					
+					if(currentUser.id == userUpdated.id){
+						$scope.users[currentUserIndex] = userUpdated;
+					}
+				}
+			});
 		}
 	};
-
-	// $scope.buildTable = function(){
-	// 	var table = $('#table-data');
-	// 	table.bootstrapTable();
-	// }; 
+	
+	//FIX-ME: speciality deve ser no plural
+	$scope.setCurrentUser = function(currentUser){
+		var adjustedUser = {
+			id: currentUser.id,
+			completeName: currentUser.completeName,
+			cpf: currentUser.cpf,
+			genre: currentUser.genre,
+			address: currentUser.address,
+			login: currentUser.login,
+			crm: currentUser.crm,
+			speciality: currentUser.speciality,
+			atendimentUnity: currentUser.atendimentUnity,
+			birthDate: new Date(currentUser.birthDate)
+		}; 
+		
+		$scope.currentUser = adjustedUser;
+		$scope.specialitiesBuffer = adjustedUser.speciality;
+	};
 }])
 .controller('medicRegisterCtrl', ['$scope', 'pacientRegisterService', function($scope, $pacientRegisterService){
 	$scope.selectionParams = [
