@@ -33,6 +33,14 @@ angular.module('app')
 		$location.path("/medic-registers");
 	}
 
+	$scope.lisPacient = function(){
+		$location.path("/pacients");
+	}
+
+	$scope.specialities = function(){
+		$location.path("/specialities");
+	}
+
 	$scope.insertSelectionParamInput = function(selectionModeCode){
 		$scope.selectionMode.currentMode = selectionMode;
 	};
@@ -67,6 +75,7 @@ angular.module('app')
 	};
 }])
 .controller('medicCtrl', ['$scope', 'medicService','atendimentUnityService','specialityService', function($scope, medicService, atendimentUnityService, specialityService){
+	
 	var request = medicService.getMedics();
 
 	var _buildModal = function(){
@@ -95,7 +104,15 @@ angular.module('app')
 	$scope.specialitiesBuffer = [];
 
 	request.success(function(medics){
+
 		$scope.users = medics;
+
+		var table = $('#table-data');
+		table.bootstrapTable(
+			{
+				data: medics
+			});
+
 	});
 
 	$scope.addUserSpecialityBuffer = function(speciality){
@@ -131,6 +148,11 @@ angular.module('app')
 			});
 		}
 	};
+
+	// $scope.buildTable = function(){
+	// 	var table = $('#table-data');
+	// 	table.bootstrapTable();
+	// }; 
 }])
 .controller('medicRegisterCtrl', ['$scope', 'pacientRegisterService', function($scope, $pacientRegisterService){
 	$scope.selectionParams = [
@@ -149,7 +171,7 @@ angular.module('app')
 		$scope.currentSelectionParam = selectionParam.id;
 	};
 
-	// Específico... estranho, ajustar isso
+	// Específico... estranho, ajustar isso, torná-lo genérico
 	var _getPacientAgeFromBirthDateString = function(dateString){
 		var pacientBirthDate = new Date(dateString);
 		var currentDate = new Date();

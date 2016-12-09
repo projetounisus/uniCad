@@ -1,31 +1,59 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-15" pageEncoding="ISO-8859-15"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-15" pageEncoding="UTF-8"%>
 <div ng-controller="medicCtrl">
-	<div class = container>
-		<div class="row">
-				
-			<div ng-repeat="user in users" class="mdl-card mdl-card__supporting-text mdl-shadow--2dp list-card">
-				<div>
-					<div class="row-list-title">
-						<span class="list-card-title">{{user.completeName}}</span> 
-					</div>
-					
-					<div class="row-list-buttons">
-						<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons">create</i></button>
-						<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" ng-click="delete(user)"><i class="material-icons">delete</i></button>
-					</div>
-				</div>
-			</div>
+	<div class="main-container">
+	<div class = "container">
+		<div class="mdl-layout__tab-panel is-active">
+			<div class="row">
 		
+				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp section-main-page">
+					<div class="mdl-card mdl-cell mdl-cell--12-col mdl-card__supporting-text">
+						<h4 class="card-title">Médicos</h4>
+						
+						<div class="container mdl-card-container">
+							<div class="row">
+								<div class="col-md-12">
+									<table id="table-data" data-height="100%" class="table table-hover">
+										<thead>
+											<tr>
+												<th data-field="completeName"
+												data-sortable="true">
+													Nome
+												</th>
+
+												<th data-field="crm"
+												data-sortable="true">
+													CRM
+												</th>
+
+												<th data-field="atendimentUnity.name"
+												data-sortable="true">
+													Unidade de atendimento
+												</th>
+
+												<th data-field="telephone"
+												data-sortabale="false">
+													Telefone
+												</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+						
+						<button class="mdl-button mdl-button--fab mdvai del-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal">
+							<i class="material-icons" role="presentation">add</i>
+							<span class="visuallyhidden">Add</span>
+								<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
+							</span>
+						</button>
+					</div>
+				</section>
+
+			</div>
 		</div>
 	</div>
 	
-	<button class="mdl-button mdl-button--fab mdl-button--colored mdl-shadow--4dp mdl-color--accent add-bean" id="add" data-target="#create-form" data-toggle="modal">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-				<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span>
-			</span>
-	</button>
-
   	<div class="modal fade" id="create-form" role="dialog">
 	    <div class="modal-dialog">
 	    

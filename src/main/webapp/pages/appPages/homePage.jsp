@@ -11,7 +11,7 @@
 						<div class="container mdl-card-container">
 							<div class="row">
 								
-								<div class="col-md-4 box-col">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<h4>
 											<a ng-click="listMedicRegisters()">Histórico de pacientes</a>
@@ -26,7 +26,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4 box-col">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 									
 										<h4>
@@ -41,7 +41,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4 box-col">
+								<!--<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 									
 										<h4>
@@ -53,7 +53,7 @@
 										<br/>
 										
 									</div>
-								</div>								
+								</div>								-->
 							</div>
 						</div>					
 					</div>
@@ -61,16 +61,16 @@
 				
 				<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--4dp section-main-page">
 					<div class="mdl-card mdl-cell mdl-cell--12-col mdl-card__supporting-text">
-						<h4 class="card-title">Gerenciamento da clínica</h4>
+						<h4 class="card-title">Rede de sáude/Clínicas</h4>
 						
 						<div class="container mdl-card-container">
 							<div class="row">
-								<div class="col-md-4 box-col">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados usuários possibilitando a pesquisa do mesmo via CPF, CNS ou número da identidade -->
 
 										<h4>
-											<a href="/pacient-list">Pacientes</a>
+											<a ng-click="listPacient()">Pacientes</a>
 										</h4>
 
 										<div>
@@ -79,7 +79,7 @@
 									</div>
 								</div>
 
-								<div class="col-md-4 box-col ">
+								<div class="col-md-6 box-col ">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->
@@ -93,8 +93,10 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="col-md-4 box-col">
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->
@@ -105,6 +107,21 @@
 
 										<div>
 											Lista todas as unidades de atendimento relacionadas a esta rede de clínicas.
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 box-col">
+									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
+										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
+										-->
+
+										<h4>
+											<a ng-click="listMedics()">Rede de clínicas</a>
+										</h4>
+
+										<div>
+											Atualize os dados administrativos da clínica
 										</div>
 									</div>
 								</div>								
@@ -119,7 +136,7 @@
 						
 						<div class="container mdl-card-container">
 							<div class="row">
-								<div class="col-md-6 box-col">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados usuários possibilitando a pesquisa do mesmo via CPF, CNS ou número da identidade -->
 
@@ -133,13 +150,28 @@
 									</div>
 								</div>
 
-								<div class="col-md-6 box-col">
+								<div class="col-md-4 box-col">
 									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
 										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
 										-->
 
 										<h4>
 											<a ng-click="listMedics()">Tipos de registros médicos</a>
+										</h4>
+
+										<div>
+											Tipos de registros médicos relacionados as suas correspondentes especialidades.
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 box-col">
+									<div class="box mdl-card mdl-shadow--2dp mdl-card__supporting-text">
+										<!-- O foco desta tela é manipulação de dados de médicos possibilitando a pesquisa do mesmo via CPF, CRM, estabalecimento ou número da identidade 
+										-->
+
+										<h4>
+											<a ng-click="listMedics()">Redes de clínicas</a>
 										</h4>
 
 										<div>

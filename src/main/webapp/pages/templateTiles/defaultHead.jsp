@@ -10,10 +10,12 @@
 
 <link href="<c:url value="/assets/3rdparty/bootstrap/css/bootstrap.css"/>" rel="stylesheet" type="text/css"/>
 <link href="<c:url value="/assets/css/3rdParty/material.css"/>" rel="stylesheet" type="text/css"/>
+<link href="<c:url value="/assets/css/3rdParty/bootstrap-table.css"/>" rel="stylesheet" type="text/css"/>
 
 <link href="<c:url value="/assets/css/style.css"/>" rel="stylesheet" type="text/css"/>
 <link href="<c:url value="/assets/css/pages/templates/tileBox.css"/>" rel="stylesheet" type="text/css"/>
 <link href="<c:url value="/assets/css/pages/form.css"/>" rel="stylesheet" type="text/css"/>
+
 
 <!--ui-bootstrap-tpls-2.2.0.js-->
 
@@ -22,6 +24,7 @@
 <script src="<c:url value="/assets/js/app/resources/angular.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/assets/js/app/resources/angular-route.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/assets/3rdparty/bootstrap/js/bootstrap.js"/>" type="text/javascript"></script>
+<script src="<c:url value="/assets/js/3rdParty/bootstrap-table.js"/>" type="text/javascript"></script>
 <!--<script src="<c:url value="/assets/js/3rdParty/ui-bootstrap-tpls-2.2.0.js"/>" type="text/javascript"></script>-->
 
 <script src="<c:url value="/assets/js/app/app.js"/>" type="text/javascript"></script>
