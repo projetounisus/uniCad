@@ -34,27 +34,32 @@
 									<table id="table-data" data-height="100%" class="table table-hover">
 										<thead>
 											<tr>
-												<th data-field="completeName"
-												data-sortable="true">
+												<th data-sortable="true">
 													Nome
 												</th>
 
-												<th data-field="crm"
-												data-sortable="true">
+												<th data-sortable="true">
 													CRM
 												</th>
 
-												<th data-field="atendimentUnity.name"
-												data-sortable="true">
+												<th data-sortable="true">
 													Unidade de atendimento
 												</th>
 
-												<th data-field="telephone"
-												data-sortabale="false">
+												<th data-sortabale="false">
 													Telefone
 												</th>
 											</tr>
 										</thead>
+
+										<tbody>
+											<tr ng-repeat="currentUser in users">
+												<td>{{currentUser.completeName}}</td>
+												<td>{{currentUser.crm}}</td>
+												<td>{{currentUser.atendimentUnity.name}}</td>
+												<td>{{currentUser.telephone}}</td>
+											</tr>
+										</tbody>
 									</table>
 								</div>
 							</div>

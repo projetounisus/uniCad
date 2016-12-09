@@ -104,15 +104,7 @@ angular.module('app')
 	$scope.specialitiesBuffer = [];
 
 	request.success(function(medics){
-
 		$scope.users = medics;
-
-		var table = $('#table-data');
-		table.bootstrapTable(
-			{
-				data: medics
-			});
-
 	});
 
 	$scope.addUserSpecialityBuffer = function(speciality){
