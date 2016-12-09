@@ -62,4 +62,10 @@ public class SpecialityDao extends AbstractDaoBean<Speciality> {
 		return null;
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

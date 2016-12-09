@@ -151,6 +151,10 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 			.where(idField.equal(bean.getId()))
 			.execute();
 			
+			if(this.hasInheritance()){
+				this.updateInheritance(bean);
+			}
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -338,6 +342,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 	public abstract Map<String, String> getMapColumnToProperty();
 	protected abstract int insertInheritance(AbstractBean bean);
 	protected abstract void deleteInheritance(AbstractBean bean) throws DoesntHaveInheritence;
+	protected abstract void updateInheritance(AbstractBean bean);
 	protected abstract boolean hasInheritance();
 	protected abstract void deleRelatedTables(int id) throws ClassNotFoundException, SQLException;
 	protected abstract AbstractDaoAuxiliar getDaoAuxiliar();

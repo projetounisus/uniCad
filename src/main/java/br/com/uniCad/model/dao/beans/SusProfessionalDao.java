@@ -66,4 +66,11 @@ public class SusProfessionalDao extends AbstractDaoBean<SusProfessional> {
 		return new DaoAuxiliarMedicToRegister();
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		final UserDao userDao = new UserDao();
+		userDao.update(bean);
+	}
+
 }

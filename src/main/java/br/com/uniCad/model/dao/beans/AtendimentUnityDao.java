@@ -70,4 +70,10 @@ public class AtendimentUnityDao extends AbstractDaoBean<AtendimentUnity> {
 		return new DaoAuxiliarAtendimentUnityToMedics();
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

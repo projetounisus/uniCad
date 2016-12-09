@@ -70,4 +70,10 @@ public class AddressDao extends AbstractDaoBean<Address> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
 }

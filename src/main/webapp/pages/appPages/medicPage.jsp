@@ -12,7 +12,7 @@
 						<div class="row">
 							<div class="col-md-3" style="float:left;">
 								<div style="padding: 10px; margin: 10px;">
-									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="add" data-target="#create-form" data-toggle="modal"><i class="material-icons">add</i></button>
+									<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" id="add" data-target="#create-form" data-toggle="modal"><i class="material-icons">add</i></button>Adicionar
 								</div>
 							</div>
 						</div>

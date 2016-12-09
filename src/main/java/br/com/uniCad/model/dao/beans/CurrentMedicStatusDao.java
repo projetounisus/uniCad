@@ -65,4 +65,10 @@ public class CurrentMedicStatusDao extends AbstractDaoBean<CurrentMedicStatus>{
 		return null;
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

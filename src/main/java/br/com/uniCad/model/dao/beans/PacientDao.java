@@ -64,4 +64,11 @@ public class PacientDao extends AbstractDaoBean<Pacient>{
 		return null;
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		final UserDao userDao = new UserDao();
+		userDao.update(bean);
+	}
+
 }

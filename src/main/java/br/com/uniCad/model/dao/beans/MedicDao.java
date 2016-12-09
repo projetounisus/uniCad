@@ -73,4 +73,11 @@ public class MedicDao extends AbstractDaoBean<Medic>{
 		return new DaoAuxiliarMedicToSpeciality();
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		final SusProfessionalDao susProfessionalDao = new SusProfessionalDao();
+		susProfessionalDao.update(bean);
+	}
+
 }

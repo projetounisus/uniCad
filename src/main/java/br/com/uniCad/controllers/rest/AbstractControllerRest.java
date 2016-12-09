@@ -36,7 +36,7 @@ public abstract class AbstractControllerRest<T extends AbstractBean> {
 		 AbstractDaoBean dao = getDao();
 		 dao.update(bean);
 
-		 return new ResponseEntity(HttpStatus.OK);
+		 return new ResponseEntity(bean, HttpStatus.OK);
 	 }
 
 	 @RequestMapping(value ="/delete", method = RequestMethod.POST)

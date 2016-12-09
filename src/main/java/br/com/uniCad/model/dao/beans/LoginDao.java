@@ -103,4 +103,10 @@ public class LoginDao extends AbstractDaoBean<Login> {
 		return null;
 	}
 
+	@Override
+	protected void updateInheritance(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
