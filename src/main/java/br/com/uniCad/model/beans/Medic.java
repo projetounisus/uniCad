@@ -3,7 +3,7 @@ package br.com.uniCad.model.beans;
 import java.util.Date;
 import java.util.List;
 
-public class Medic extends SusProfessional {
+public class Medic extends Professional {
 	private List<Speciality> speciality;
 	private String crm;
 

@@ -75,4 +75,10 @@ public class RegisterTypeDao extends AbstractDaoBean<RegisterType> {
 		
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

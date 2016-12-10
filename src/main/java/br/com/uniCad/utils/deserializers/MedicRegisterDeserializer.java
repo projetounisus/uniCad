@@ -12,7 +12,7 @@ import br.com.uniCad.model.beans.Address;
 import br.com.uniCad.model.beans.AtendimentUnity;
 import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.model.beans.Pacient;
-import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.Professional;
 import br.com.uniCad.model.dao.beans.AddressDao;
 import br.com.uniCad.model.dao.beans.AtendimentUnityDao;
 import br.com.uniCad.model.dao.beans.PacientDao;
@@ -52,7 +52,7 @@ public class MedicRegisterDeserializer extends AbstractDeserializer<MedicRegiste
 			
 			Address address = (Address)addressDao.getById(Integer.parseInt(addressId));
 			AtendimentUnity atendimentUnity = (AtendimentUnity)atendimentUnityDao.getById(Integer.parseInt(atendimentUnityId));
-			SusProfessional medic = (SusProfessional)susProfessionalDao.getById(Integer.parseInt(medicId));
+			Professional medic = (Professional)susProfessionalDao.getById(Integer.parseInt(medicId));
 			Pacient pacient = (Pacient)pacientDao.getById(Integer.parseInt(pacientId));
 			java.util.Date beginDate = simpleDateFormat.parse(record.get("dt_inicio").toString());
 			java.util.Date endDate = simpleDateFormat.parse(record.get("dt_fim").toString());

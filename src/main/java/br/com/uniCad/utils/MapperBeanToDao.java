@@ -9,7 +9,7 @@ import br.com.uniCad.model.beans.Medic;
 import br.com.uniCad.model.beans.MedicRegister;
 import br.com.uniCad.model.beans.Pacient;
 import br.com.uniCad.model.beans.Speciality;
-import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.Professional;
 import br.com.uniCad.model.beans.User;
 import br.com.uniCad.model.dao.beans.AbstractDaoBean;
 import br.com.uniCad.model.dao.beans.AddressDao;
@@ -41,7 +41,7 @@ public class MapperBeanToDao {
 			dao = new LoginDao();
 		else if(clazz == User.class)
 			dao = new UserDao();	
-		else if(clazz == SusProfessional.class)
+		else if(clazz == Professional.class)
 			dao = new SusProfessionalDao();
 		else if(clazz == AtendimentUnity.class)
 			dao = new AtendimentUnityDao();

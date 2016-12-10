@@ -9,7 +9,7 @@ public class MedicRegister extends AbstractBean{
 	private String description;
 	private AtendimentUnity atendimentUnity;
 	private Pacient pacient;
-	private SusProfessional responsible;
+	private Professional responsible;
 	public Address getRegisterLocal() {
 		return registerLocal;
 	}
@@ -46,14 +46,14 @@ public class MedicRegister extends AbstractBean{
 	public void setPacient(Pacient pacient) {
 		this.pacient = pacient;
 	}
-	public SusProfessional getResponsible() {
+	public Professional getResponsible() {
 		return responsible;
 	}
-	public void setResponsible(SusProfessional responsible) {
+	public void setResponsible(Professional responsible) {
 		this.responsible = responsible;
 	}
 	public MedicRegister(int id, Address registerLocal, Date beginDate, Date endDate, String description,
-			AtendimentUnity atendimentUnity, Pacient pacient, SusProfessional responsible) {
+			AtendimentUnity atendimentUnity, Pacient pacient, Professional responsible) {
 		super(id);
 		this.registerLocal = registerLocal;
 		this.beginDate = beginDate;
@@ -64,7 +64,7 @@ public class MedicRegister extends AbstractBean{
 		this.responsible = responsible;
 	}
 	public MedicRegister(Address registerLocal, Date beginDate, Date endDate, String description,
-			AtendimentUnity atendimentUnity, Pacient pacient, SusProfessional responsible) {
+			AtendimentUnity atendimentUnity, Pacient pacient, Professional responsible) {
 		super();
 		this.registerLocal = registerLocal;
 		this.beginDate = beginDate;

@@ -108,5 +108,11 @@ public class LoginDao extends AbstractDaoBean<Login> {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

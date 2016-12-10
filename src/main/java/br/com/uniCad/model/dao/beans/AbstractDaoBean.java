@@ -49,7 +49,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 			
 			int beanId = bean.getId();
 			
-			// Casa haja herança, insere os dados do bean em todas as "super-tabelas"
+			// Caso haja herança, insere os dados do bean em todas as "super-tabelas"
 			if(this.hasInheritance())
 				beanId = this.insertInheritance(bean);
 			
@@ -95,8 +95,13 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 			.returning()
 			.execute();
 			
-			int id = getLastIndexInserted();
-			return id;
+			int generatedId = getLastIndexInserted();
+			
+			bean.setId(generatedId);
+			
+			this.insertRelatedTables(bean);
+			
+			return generatedId;
 			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -345,6 +350,7 @@ public abstract class AbstractDaoBean<T extends AbstractBean> extends AbstractDa
 	protected abstract void updateInheritance(AbstractBean bean);
 	protected abstract boolean hasInheritance();
 	protected abstract void deleRelatedTables(int id) throws ClassNotFoundException, SQLException;
+	protected abstract void insertRelatedTables(AbstractBean bean) throws ClassNotFoundException, SQLException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException;
 	protected abstract AbstractDaoAuxiliar getDaoAuxiliar();
 
 }

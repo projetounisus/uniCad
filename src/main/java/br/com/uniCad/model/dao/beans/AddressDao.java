@@ -76,4 +76,10 @@ public class AddressDao extends AbstractDaoBean<Address> {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
 }

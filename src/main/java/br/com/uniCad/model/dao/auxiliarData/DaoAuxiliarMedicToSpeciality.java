@@ -48,5 +48,11 @@ public class DaoAuxiliarMedicToSpeciality extends AbstractDaoAuxiliar<Speciality
 		// TODO Auto-generated method stub
 		return "medico";
 	}
+
+	@Override
+	protected String getRelatedFieldName() {
+		// TODO Auto-generated method stub
+		return "speciality";
+	}
 	
 }

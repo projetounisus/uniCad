@@ -1,14 +1,14 @@
 package br.com.uniCad.model.dao.auxiliarData;
 
 import br.com.uniCad.model.beans.MedicRegister;
-import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.Professional;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
 import br.com.uniCad.utils.deserializers.MedicRegisterDeserializer;
 
 public class DaoAuxiliarMedicToRegister extends AbstractDaoAuxiliar<MedicRegister> {
 
 	public DaoAuxiliarMedicToRegister() {
-		super(SusProfessional.class, MedicRegister.class);
+		super(Professional.class, MedicRegister.class);
 		// TODO Auto-generated constructor stub
 		
 		this.currentRelationshipType = RelationshipType.oneToMany;
@@ -48,6 +48,12 @@ public class DaoAuxiliarMedicToRegister extends AbstractDaoAuxiliar<MedicRegiste
 	protected String getTableName() {
 		// TODO Auto-generated method stub
 		return "medico";
+	}
+
+	@Override
+	protected String getRelatedFieldName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

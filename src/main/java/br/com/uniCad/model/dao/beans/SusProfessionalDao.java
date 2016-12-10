@@ -5,16 +5,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 import br.com.uniCad.model.beans.AbstractBean;
-import br.com.uniCad.model.beans.SusProfessional;
+import br.com.uniCad.model.beans.Professional;
 import br.com.uniCad.model.dao.auxiliarData.AbstractDaoAuxiliar;
 import br.com.uniCad.model.dao.auxiliarData.DaoAuxiliarMedicToRegister;
 import br.com.uniCad.utils.deserializers.AbstractDeserializer;
-import br.com.uniCad.utils.deserializers.SusProfessionalDeserializer;
+import br.com.uniCad.utils.deserializers.ProfessionalDeserializer;
 
-public class SusProfessionalDao extends AbstractDaoBean<SusProfessional> {
+public class SusProfessionalDao extends AbstractDaoBean<Professional> {
 
 	public SusProfessionalDao() {
-		super(SusProfessional.class);
+		super(Professional.class);
 	}
 
 	@Override
@@ -23,8 +23,8 @@ public class SusProfessionalDao extends AbstractDaoBean<SusProfessional> {
 	}
 
 	@Override
-	protected AbstractDeserializer<SusProfessional> getDeserializer() {
-		return new SusProfessionalDeserializer();
+	protected AbstractDeserializer<Professional> getDeserializer() {
+		return new ProfessionalDeserializer();
 	}
 
 	@Override
@@ -71,6 +71,12 @@ public class SusProfessionalDao extends AbstractDaoBean<SusProfessional> {
 		// TODO Auto-generated method stub
 		final UserDao userDao = new UserDao();
 		userDao.update(bean);
+	}
+
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

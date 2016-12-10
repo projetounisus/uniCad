@@ -30,8 +30,8 @@ br\com\uniCad\model\dao\auxiliarData\AbstractDaoAuxiliar$1.class
 br\com\uniCad\model\dao\beans\AtendimentUnityDao.class
 br\com\uniCad\controllers\rest\AbstractControllerRest.class
 br\com\uniCad\model\dao\beans\UserDao.class
-br\com\uniCad\utils\deserializers\SusProfessionalDeserializer.class
 br\com\uniCad\controllers\rest\ControllerRestSpeciality.class
+br\com\uniCad\model\beans\Professional.class
 br\com\uniCad\model\beans\GroupAtendimentUnity.class
 br\com\uniCad\utils\MapperBeanToDao.class
 br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarAtendimentUnityToMedics.class
@@ -47,10 +47,10 @@ br\com\uniCad\model\beans\MedicRegister.class
 br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToSpeciality.class
 br\com\uniCad\model\dao\beans\GroupAtendimentUnityDao.class
 br\com\uniCad\controllers\rest\ControllerRestAtendimentUnity.class
+br\com\uniCad\utils\deserializers\ProfessionalDeserializer.class
 br\com\uniCad\model\dao\auxiliarData\AbstractDaoAuxiliar.class
 br\com\uniCad\model\beans\Pacient.class
 br\com\uniCad\utils\deserializers\UserDeserializer.class
-br\com\uniCad\model\beans\SusProfessional.class
 br\com\uniCad\utils\deserializers\AddressDeserializer.class
 br\com\uniCad\utils\deserializers\GroupAtendimentUnityDeserializer.class
 br\com\uniCad\utils\AbstractMapperColumnToProperty.class

@@ -115,4 +115,10 @@ public class MedicRegisterDao extends AbstractDaoBean<MedicRegister> {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
 }

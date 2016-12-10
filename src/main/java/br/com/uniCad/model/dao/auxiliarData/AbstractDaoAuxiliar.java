@@ -6,7 +6,11 @@ import static org.jooq.impl.DSL.field;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import org.jooq.DSLContext;
 import org.jooq.Field;
@@ -138,6 +142,80 @@ public abstract class AbstractDaoAuxiliar<T extends AbstractBean> extends Abstra
 		}
 	}
 	
+	public void updateRelatedData(AbstractBean bean) throws ClassNotFoundException, SQLException, IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{
+		Connection connection = getConnection();
+		DSLContext query = DSL.using(connection, SQLDialect.MYSQL);
+		
+		switch(this.currentRelationshipType){
+			case oneToMany:
+				
+				final java.lang.reflect.Field relatedOneToManyField = this.relatedByClass.getField(this.getRelatedFieldName());
+				final AbstractDaoBean relatedDaoOneToMany = MapperBeanToDao.beanClassToDao(this.relatedByClass);
+				final List<AbstractBean> listRelatedOneToManyBean = (List<AbstractBean>)relatedOneToManyField.get(bean);
+				
+				for(AbstractBean currentRelatedBean: listRelatedOneToManyBean)
+				{
+					relatedDaoOneToMany.update(currentRelatedBean);
+				}
+				
+				break;
+			case manyToMany:
+				
+				//TODO: implementar...
+				
+				break;
+		}
+	}
+	
+	public void insertRelatedData(AbstractBean bean) throws ClassNotFoundException, SQLException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+		Connection connection = getConnection();
+		DSLContext query = DSL.using(connection, SQLDialect.MYSQL);
+		
+		switch(this.currentRelationshipType){
+		case oneToMany:
+				final AbstractDaoBean relatedDao = MapperBeanToDao.beanClassToDao(this.relatedByClass);
+				final Map<String, String> mapColumnToProperty = relatedDao.getMapColumnToProperty();
+				
+				Collection<Field<?>> columnsOneToMany = new ArrayList<Field<?>>();
+				List<Object> values = new ArrayList<Object>();
+				
+				for(Entry<String, String> currentColumnToProperty : mapColumnToProperty.entrySet()){
+					final String column = currentColumnToProperty.getKey();
+					final String value = currentColumnToProperty.getValue();
+					
+					columnsOneToMany.add(field(column));
+					values.add(value);
+				}
+				
+				query.insertInto(this.relatedTable)
+				.columns(columnsOneToMany)
+				.values(values)
+				.execute();
+			
+			break;
+		case manyToMany:
+			
+			final String relatedFieldName = this.getRelatedFieldName();
+			final java.lang.reflect.Field relatedManyToManyField = bean.getClass().getDeclaredField(relatedFieldName);
+			relatedManyToManyField.setAccessible(true);
+			
+			final List<AbstractBean> listRelatedManyToMany = (List<AbstractBean>)relatedManyToManyField.get(bean);
+			
+			final Table<Record> auxiliarTable = table(this.getAuxiliarTableName());
+			
+			final List<Field<Object>> columnsManyToMany = Arrays.asList(this.currentForeignKey, this.joinedForeignKey);
+			
+			for(AbstractBean currentRelatedBean : listRelatedManyToMany){
+				query.insertInto(auxiliarTable)
+				.columns(columnsManyToMany)
+				.values(bean.getId(), currentRelatedBean.getId())
+				.execute();
+			}
+			
+			break;
+		}
+	}
+	
 	private List<Integer> getRelatedKeys(Result<Record> indexes){
 		List<Integer> indexesList = new ArrayList<Integer>();
 		
@@ -156,6 +234,8 @@ public abstract class AbstractDaoAuxiliar<T extends AbstractBean> extends Abstra
 	
 	protected abstract String getCurrentForeignKey();
 	protected abstract String getRelatedForeignKey();
+	
+	protected abstract String getRelatedFieldName();
 	
 	private String relatedTableName;
 	private String tableName;

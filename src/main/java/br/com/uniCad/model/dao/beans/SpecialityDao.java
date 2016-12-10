@@ -68,4 +68,10 @@ public class SpecialityDao extends AbstractDaoBean<Speciality> {
 		
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

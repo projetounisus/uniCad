@@ -76,4 +76,10 @@ public class AtendimentUnityDao extends AbstractDaoBean<AtendimentUnity> {
 		
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

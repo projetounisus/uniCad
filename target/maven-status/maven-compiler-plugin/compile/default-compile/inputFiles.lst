@@ -5,6 +5,7 @@ C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\be
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\SpecialityDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToSpeciality.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\AdminClincGroup.java
+C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\ProfessionalDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\rest\ControllerRestSusProfessional.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\exceptions\DoesntHaveInheritence.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\RegisterTypeDeserializer.java
@@ -46,16 +47,15 @@ C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\AbstractDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\PacientDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\Medic.java
-C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\SusProfessional.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\rest\ControllerRestUser.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\LoginDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\CurrentMedicStatus.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\controllers\rest\ControllerRestAtendimentUnity.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\beans\SusProfessionalDao.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\UserDeserializer.java
-C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\SusProfessionalDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\auxiliarData\DaoAuxiliarMedicToRegister.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\Address.java
+C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\Professional.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\utils\deserializers\MedicDeserializer.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\beans\AtendimentUnity.java
 C:\Users\Pedro Queiroz\workspace\uniCad\src\main\java\br\com\uniCad\model\dao\beans\UserDao.java

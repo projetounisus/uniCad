@@ -50,4 +50,10 @@ public class DaoAuxiliarGroupUnityToUnity extends AbstractDaoAuxiliar<Atendiment
 		return "rede_unidade_atendimento";
 	}
 
+	@Override
+	protected String getRelatedFieldName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

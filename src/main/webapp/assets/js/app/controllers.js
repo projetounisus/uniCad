@@ -113,11 +113,11 @@ angular.module('app')
 	};
 
 	$scope.confirmUserSpecialities = function(specialities){
-		$scope.currentUser.specialities = specialities;
+		$scope.currentUser.speciality = specialities;
 	}
 
 	$scope.cancelUserSpecialities = function(){
-		$scope.specialitiesBuffer = $scope.currentUser.specialities;
+		$scope.specialitiesBuffer = $scope.currentUser.speciality;
 	}
 
 	$scope.delete = function(bean){

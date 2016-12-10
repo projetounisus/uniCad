@@ -80,4 +80,11 @@ public class MedicDao extends AbstractDaoBean<Medic>{
 		susProfessionalDao.update(bean);
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) throws ClassNotFoundException, SQLException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+		// TODO Auto-generated method stub
+		final DaoAuxiliarMedicToSpeciality daoAuxiliarMedicToSpeciality = new DaoAuxiliarMedicToSpeciality();
+		daoAuxiliarMedicToSpeciality.insertRelatedData(bean);
+	}
+
 }

@@ -71,4 +71,10 @@ public class PacientDao extends AbstractDaoBean<Pacient>{
 		userDao.update(bean);
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

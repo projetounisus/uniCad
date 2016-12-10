@@ -106,4 +106,10 @@ public class UserDao extends AbstractDaoBean<User>{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
 }

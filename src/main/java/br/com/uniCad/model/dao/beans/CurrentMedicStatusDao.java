@@ -71,4 +71,10 @@ public class CurrentMedicStatusDao extends AbstractDaoBean<CurrentMedicStatus>{
 		
 	}
 
+	@Override
+	protected void insertRelatedTables(AbstractBean bean) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
