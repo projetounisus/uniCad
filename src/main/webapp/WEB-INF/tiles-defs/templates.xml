@@ -46,6 +46,11 @@
 		<put-attribute name="content" value="/pages/appPages/medicPage.jsp"/>
 	</definition>
 
+	<definition name="unityPage" template="/pages/appPages/appPageTemplate.jsp">
+		<put-attribute name="content" value="/pages/appPages/unityPage.jsp"/>
+	</definition>
+	
+
 	<definition name="medicRegisters" template="/pages/appPages/appPageTemplate.jsp">
 		<put-attribute name="content" value="/pages/appPages/medicRegisterPage.jsp"/>
 	</definition>

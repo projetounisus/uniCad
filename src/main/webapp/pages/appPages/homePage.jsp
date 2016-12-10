@@ -102,7 +102,7 @@
 										-->
 
 										<h4>
-											<a ng-click="listMedics()">Unidades de atendimento</a>
+											<a ng-click="listUnities()">Unidades de atendimento</a>
 										</h4>
 
 										<div>

@@ -27,14 +27,14 @@ public class CurrentMedicStatusDeserializer extends AbstractDeserializer<Current
 		String bloodType = record.get("tipo_sanguineo").toString();
 		String weightStr = record.get("peso").toString();
 		String heightStr = record.get("altura").toString();
-		String allergies = record.get("alergia").toString();
-		String currentTreatment = record.get("tratamentos_atuais").toString();
+		//String allergies = record.get("alergia").toString();
+		//String currentTreatment = record.get("tratamentos_atuais").toString();
 		
 		CurrentMedicStatus currentMedicStatus = new CurrentMedicStatus(
 				Integer.parseInt(idStr),
 				bloodType,
-				allergies, 
-				currentTreatment, 
+				"inutilizado", 
+				"inutilizado", 
 				Float.parseFloat(heightStr),
 				Float.parseFloat(weightStr));
 		

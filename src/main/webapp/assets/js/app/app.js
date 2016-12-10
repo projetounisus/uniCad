@@ -24,5 +24,10 @@ angular.module('app',['ngRoute'])
 		templateUrl: '/uniCad/appPages/pacientPage',
 		controller: 'pacientCtrl'
 	})
+	.when('/unity-list',
+	{
+		templateUrl: '/uniCad/appPages/unityPage',
+		controller: 'unityCtrl'
+	})
 	.otherwise('/');
 });

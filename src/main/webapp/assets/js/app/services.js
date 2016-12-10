@@ -131,11 +131,18 @@ angular.module('app')
 		});
 	};
 
-	
-
 	return {
 		getPacients: _getPacients,
 		delete: _delete,
 		create: _create
 	}; 
+}])
+.service('unityService', ['$http', function($http){
+	var _getUnities = function(){
+		return $http.get('unity/list/');
+	};
+
+	return {
+		getUnities: _getUnities
+	};
 }]);

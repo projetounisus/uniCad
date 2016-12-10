@@ -32,6 +32,10 @@ angular.module('app')
 		$location.path("/specialities");
 	}
 
+	$scope.listUnities = function(){
+		$location.path("/unity-list");
+	}
+
 	$scope.insertSelectionParamInput = function(selectionModeCode){
 		$scope.selectionMode.currentMode = selectionMode;
 	};
@@ -240,4 +244,11 @@ angular.module('app')
 			});
 		}
 	}
+}])
+.controller('unityCtrl', ['$scope','unityService',  function($scope, unityService){
+	var request = unityService.getUnities();
+
+	request.success(function(unities){
+		$scope.unities = unities;
+	});
 }]);

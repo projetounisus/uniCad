@@ -10,6 +10,14 @@ public class AtendimentUnity extends AbstractBean {
 	private String name;
 	private String unityType;
 	private List<Professional> medics;
+	private GroupAtendimentUnity groupAtendimentUnity;	
+	
+	public GroupAtendimentUnity getGroupAtendimentUnity() {
+		return groupAtendimentUnity;
+	}
+	public void setGroupAtendimentUnity(GroupAtendimentUnity groupAtendimentUnity) {
+		this.groupAtendimentUnity = groupAtendimentUnity;
+	}
 	public List<Professional> getMedics() {
 		return medics;
 	}
@@ -35,19 +43,21 @@ public class AtendimentUnity extends AbstractBean {
 		this.unityType = type;
 	}
 	
-	public AtendimentUnity(int id, Address address, String name, String type, List<Professional> medics) {
+	public AtendimentUnity(int id, Address address, String name, String type, List<Professional> medics, GroupAtendimentUnity group) {
 		super(id);
 		this.address = address;
 		this.name = name;
 		this.unityType = type;
 		this.medics = medics;
+		this.groupAtendimentUnity = group;
 	}
-	public AtendimentUnity(Address address, String name, String type, List<Professional> medics) {
+	public AtendimentUnity(Address address, String name, String type, List<Professional> medics, GroupAtendimentUnity group) {
 		super();
 		this.address = address;
 		this.name = name;
 		this.unityType = type;
 		this.medics = medics;
+		this.groupAtendimentUnity = group;
 	}
 	public AtendimentUnity() {
 		super();
