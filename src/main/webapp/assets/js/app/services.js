@@ -105,9 +105,37 @@ angular.module('app')
 .service('specialityService', ['$http', function($http){
 	var _getSpecialities = function(){
 		return $http.get('speciality/list/');
-	}
+	};
 
 	return {
-		getSpecialities: _getSpecialities
+		getSpecialities: _getSpecialities,
 	};
+}])
+.service('pacientService', ['$http', function($http){
+	var _getPacients = function(){
+		return $http.get('pacient/list/');
+	};
+
+	var _delete = function(id){
+		return $http.post('pacient/delete/?id=' + id);
+	};
+
+	var _create = function(bean){
+		return $http({
+			url: 'pacient/create/',
+			method: 'POST',
+			data: bean,
+			headers: {
+				'Content-Type': 'application/json'				
+			}
+		});
+	};
+
+	
+
+	return {
+		getPacients: _getPacients,
+		delete: _delete,
+		create: _create
+	}; 
 }]);

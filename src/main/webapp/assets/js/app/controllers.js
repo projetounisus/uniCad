@@ -7,16 +7,7 @@ angular.module('app')
 	});
 }])
 .controller('mainPageCtrl', ['$scope', '$location', '$window', function($scope, $location, $window){
-	$scope.selectionParams = [
-		{paramName:"CNS", paramCode: 0},
-		{paramName:"CPF", paramCode: 1},
-		{paramName: "RG", paramCode: 2}
-	];
-
-	$scope.selectionMode = {
-		currentMode: 0
-	};
-
+	
 	$scope.listUsers = function(){
 		$location.path("/user-list");
 	};
@@ -33,8 +24,8 @@ angular.module('app')
 		$location.path("/medic-registers");
 	}
 
-	$scope.lisPacient = function(){
-		$location.path("/pacients");
+	$scope.listPacient = function(){
+		$location.path("/pacients-list");
 	}
 
 	$scope.specialities = function(){
@@ -104,7 +95,7 @@ angular.module('app')
 	$scope.specialitiesBuffer = [];
 
 	request.success(function(medics){
-		$scope.users = medics;
+		$scope.medics = medics;
 	});
 
 	$scope.addUserSpecialityBuffer = function(speciality){
@@ -131,22 +122,22 @@ angular.module('app')
 		});
 	};
 
-	$scope.createOrAdd = function(currentUser){
+	$scope.createOrAddMedic = function(currentUser){
 		if(currentUser.id === undefined || currentUser.id === null || currentUser.id === 0)
 		{
 			medicService.create(currentUser)
 			.success(function(data, status){
-				$scope.users.push(data);
+				$scope.medics.push(data);
 			});
 		}else{
 			medicService.update(currentUser)
 			.success(function(userUpdated, status){
-				for(var currentUserIndex = 0; currentUserIndex <  $scope.users.length; currentUserIndex++)
+				for(var currentUserIndex = 0; currentUserIndex <  $scope.medics.length; currentUserIndex++)
 				{
-					var currrentUser = $scope.users[currentUserIndex];
+					var currrentUser = $scope.medics[currentUserIndex];
 					
 					if(currentUser.id == userUpdated.id){
-						$scope.users[currentUserIndex] = userUpdated;
+						$scope.medics[currentUserIndex] = userUpdated;
 					}
 				}
 			});
@@ -220,4 +211,33 @@ angular.module('app')
 			$scope.pacient.age = _getPacientAgeFromBirthDateString(data.pacient.birthDate);
 		});
 	};
+}])
+.controller('pacientCtrl', ['$scope', 'pacientService', function($scope, pacientService){
+	var request = pacientService.getPacients();
+
+	request.success(function(pacients){
+		$scope.pacients = pacients;
+	});
+
+	$scope.createOrAddPacient = function(currentUser){
+		if(currentUser.id === undefined || currentUser.id === null || currentUser.id === 0)
+		{
+			pacientService.create(currentUser)
+			.success(function(data, status){
+				$scope.pacients.push(data);
+			});
+		}else{
+			pacientService.update(currentUser)
+			.success(function(userUpdated, status){
+				for(var currentUserIndex = 0; currentUserIndex <  $scope.pacient.length; currentUserIndex++)
+				{
+					var currrentUser = $scope.pacient[currentUserIndex];
+					
+					if(currentUser.id == userUpdated.id){
+						$scope.pacient[currentUserIndex] = userUpdated;
+					}
+				}
+			});
+		}
+	}
 }]);

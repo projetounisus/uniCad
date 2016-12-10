@@ -37,6 +37,10 @@
 	<definition name="usersPage" template="/pages/appPages/appPageTemplate.jsp">
 		<put-attribute name="content" value="/pages/appPages/usersPage.jsp"/>
 	</definition>
+	
+	<definition name="pacientPage" template="/pages/appPages/appPageTemplate.jsp">
+		<put-attribute name="content" value="/pages/appPages/pacientPage.jsp"/>
+	</definition>
 
 	<definition name="medicPage" template="/pages/appPages/appPageTemplate.jsp">
 		<put-attribute name="content" value="/pages/appPages/medicPage.jsp"/>

@@ -45,14 +45,14 @@
 										</thead>
 
 										<tbody>
-											<tr ng-repeat="current in users">
+											<tr ng-repeat="current in medics">
 												<td>{{current.completeName}}</td>
 												<td>{{current.crm}}</td>
 												<td>{{current.atendimentUnity.name}}</td>
 												<td>{{current.telephone}}</td>
 												<td>
-													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons" ng-click="setCurrentUser(current)" data-target="#create-form" data-toggle="modal">create</i></button>
-													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored"><i class="material-icons" ng-click="delete(current)">delete</i></button>
+													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" style="float:right"><i class="material-icons" ng-click="setCurrentUser(current)" data-target="#create-form" data-toggle="modal">create</i></button>
+													<button class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" style="float:right"><i class="material-icons" ng-click="delete(current)">delete</i></button>
 												</td>
 											</tr>
 										</tbody>
@@ -133,7 +133,7 @@
 				</div>
 	        </div>
 	        <div class="modal-footer">
-	          <button type="button" class="btn btn-default btn-primary" data-dismiss="modal" ng-click="createOrAdd(currentUser)">Criar</button>
+	          <button type="button" class="btn btn-default btn-primary" data-dismiss="modal" ng-click="createOrAddMedic(currentUser)">Criar</button>
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
 	        </div>
 	      
